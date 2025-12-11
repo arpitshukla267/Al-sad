@@ -43,7 +43,8 @@ export async function getSubcategoryBySlugs(
   if (!category) return null;
 
   const subcategory = category.subcategories?.find(
-    (subcat) => getSubcategorySlug(subcat.name) === subcategorySlug
+    (subcat: { name: string }) =>
+      getSubcategorySlug(subcat.name) === subcategorySlug
   );
   return subcategory || null;
 }

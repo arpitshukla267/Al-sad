@@ -25,7 +25,7 @@ export async function getCachedProductData(): Promise<ProductData> {
       const path = await import("path");
       const filePath = path.join(process.cwd(), "data", "all-products.json");
       const fileContents = fs.readFileSync(filePath, "utf8");
-      cachedData = JSON.parse(fileContents);
+      cachedData = JSON.parse(fileContents) as ProductData;
       return cachedData;
     } catch (error) {
       console.error("Error reading product data file:", error);
@@ -42,7 +42,7 @@ export async function getCachedProductData(): Promise<ProductData> {
       if (!response.ok) {
         throw new Error("Failed to fetch product data");
       }
-      cachedData = await response.json();
+      cachedData = (await response.json()) as ProductData;
       return cachedData;
     } catch (error) {
       console.error("Error loading product data:", error);
