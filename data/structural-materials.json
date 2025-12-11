@@ -1,0 +1,535 @@
+{
+  "category": "Structural Materials",
+  "subcategories": [
+    {
+      "name": "Metal Sections & Profiles",
+      "products": [
+        {
+          "section": "Stainless Steel Sheet",
+          "type": "MS Flat Bar",
+          "thickness": "3 – 25",
+          "width": "20 – 300",
+          "length": 6000,
+          "material": "Mild Steel",
+          "finish": "Black / Painted",
+          "applications": "Fabrication, Grills, Frames, Structural Support"
+        },
+        {
+          "section": "Stainless Steel Sheet",
+          "type": "Aluminum Flat Bar",
+          "thickness": "3 – 25",
+          "width": "12 – 150",
+          "length": "3000 / 6000",
+          "material": "Aluminum 6063 / 6082",
+          "finish": "Mill / Anodized",
+          "applications": "Brackets, Fabrication, Window Framing"
+        },
+        {
+          "section": "Stainless Steel Sheet",
+          "type": "Stainless Steel Flat Bar",
+          "thickness": "3 – 25",
+          "width": "12 – 150",
+          "length": "3000 / 6000",
+          "material": "SS 304 / 316",
+          "finish": "Polished / Matte",
+          "applications": "Railings, Furniture, Decorative Frames"
+        },
+        {
+          "section": "Stainless Steel Sheet",
+          "type": "Brass Flat Bar",
+          "thickness": "3 – 20",
+          "width": "20 – 100",
+          "length": 3000,
+          "material": "Brass",
+          "finish": "Polished",
+          "applications": "Decorative, Signage, Antique Finishes"
+        },
+        {
+          "section": "Copper Sheet",
+          "type": "Round Bar",
+          "thickness": "",
+          "width": "",
+          "length": "",
+          "material": "",
+          "finish": "",
+          "applications": ""
+        },
+        {
+          "section": "Copper Sheet",
+          "type": "Square bar",
+          "thickness": "",
+          "width": "",
+          "length": "",
+          "material": "",
+          "finish": "",
+          "applications": ""
+        },
+        {
+          "section": "Architectural Profiles",
+          "type": "Profile Type",
+          "thickness": "Material",
+          "width": "Thickness (mm)",
+          "length": "Standard Sizes (mm) *",
+          "material": "Length (mm) *",
+          "finish": "Surface Finish",
+          "applications": "Common Applications"
+        },
+        {
+          "section": "Channel (U Profile)",
+          "type": "Box / Square Hollow",
+          "thickness": "Aluminum",
+          "width": "1.5 – 6",
+          "length": "25x25 / 40x40 / 50x50",
+          "material": "3000 / 6000",
+          "finish": "Mill / Powder / Anodized",
+          "applications": "Partition Frames, Handrails, Windows"
+        },
+        {
+          "section": "Rectangular Tube",
+          "type": "T Profile",
+          "thickness": "Aluminum",
+          "width": "2 – 5",
+          "length": "25 / 38 / 50",
+          "material": "3000 / 6000",
+          "finish": "Mill / Anodized / Wood Finish",
+          "applications": "Glass Joinery, Partitions"
+        }
+      ]
+    },
+    {
+      "name": "Fastening & Anchor System",
+      "products": [
+        {
+          "productType": "Anchor Bolts",
+          "subTypes": [
+            "L-Type Anchor Bolt",
+            "J-Type Anchor Bolt",
+            "U-Bolt",
+            "Eye/Hook Anchor Bolt",
+            "Hex Head Bolt"
+          ],
+          "material": "Mild Steel, SS, Galvanized",
+          "applications": "Foundation, Base Plate Fixing, Machinery Mounting"
+        },
+        {
+          "productType": "Mechanical & Expansion\nAnchors",
+          "subTypes": [
+            "Wedge Anchor",
+            "Shield Anchor",
+            "Bullet Anchor",
+            "Hook / Eye Sleeve Anchors",
+            "Rawl Plug Anchor"
+          ],
+          "material": "Carbon Steel, SS",
+          "applications": "Brick, Concrete, Stone anchoring"
+        },
+        {
+          "productType": "Through Bolts",
+          "subTypes": ["Standard Through Bolt", "Heavy Duty Through Bolt"],
+          "material": "Steel / SS",
+          "applications": "Structural, Fixing Beams and Columns"
+        },
+        {
+          "productType": "Toggle Bolts",
+          "subTypes": ["Spring Toggle Bolt", "Wing Toggle Anchor"],
+          "material": "Steel / SS",
+          "applications": "Hollow Wall Mounting, Ceilings"
+        },
+        {
+          "productType": "Threaded Rods",
+          "subTypes": ["Full Thread Rod", "Stud Bolt"],
+          "material": "Mild Steel, SS",
+          "applications": "Custom Length Fixing, Pipe Support"
+        },
+        {
+          "productType": "Anchor Nuts & Washers",
+          "subTypes": ["Hex Nuts", "Dome Nuts", "Spring / Flat Washers"],
+          "material": "Mild Steel, SS, Brass",
+          "applications": "Structural and Machine Fixing"
+        },
+        {
+          "productType": "Nail Anchors",
+          "subTypes": ["Ceiling Anchor"],
+          "material": "Steel with Nylon / PE",
+          "applications": "Fast & Light-duty Fixing"
+        }
+      ]
+    },
+    {
+      "name": "Screws & Nails",
+      "products": [
+        {
+          "type": "Screws & Nails",
+          "productType": "Drywall Screw",
+          "subTypes": ["Fine Thread", "Coarse Thread"],
+          "material": "Carbon Steel",
+          "finish": "Black Phosphate",
+          "applications": "Fixing drywall to metal/wood studs"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Self Tapping Screw",
+          "subTypes": ["Pan Head", "Countersunk Head"],
+          "material": "SS / Carbon Steel",
+          "finish": "Zinc Plated / SS",
+          "applications": "Sheet metal, plastic, light fabrication"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Self Drilling Screw",
+          "subTypes": ["Hex Head", "Wafer Head", "Pan Head"],
+          "material": "Carbon Steel / SS",
+          "finish": "Zinc / SS / Ruspert",
+          "applications": "Metal-to-metal, roofing, light steelwork"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Machine Screw",
+          "subTypes": ["Pan Head", "Countersunk Head", "Allen Head"],
+          "material": "Mild Steel / SS",
+          "finish": "Zinc / Black / SS",
+          "applications": "Mechanical assembly, electrical enclosures"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Chipboard Screw",
+          "subTypes": ["Countersunk", "Pozi Drive"],
+          "material": "Hardened Steel",
+          "finish": "Yellow Zinc / Bronze",
+          "applications": "Furniture, particle board, cabinetry"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Wood Screw ",
+          "subTypes": ["Countersunk"],
+          "material": "Hardened Steel",
+          "finish": "Yellow Zinc / Bronze",
+          "applications": "Furniture, particle board, cabinetry"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Steel Nails",
+          "subTypes": ["Common Nail", "Bright Steel Nail"],
+          "material": "Mild Steel",
+          "finish": "Bright / Galvanized",
+          "applications": "General construction, woodwork"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Concrete Nail",
+          "subTypes": ["Smooth Shank", "Twisted Shank"],
+          "material": "Hardened Steel",
+          "finish": "Galvanized / Black",
+          "applications": "Fixing into concrete, blockwork"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Wood Nails",
+          "subTypes": ["Head", "Headless"],
+          "material": "Mild Steel",
+          "finish": "Bright / Painted",
+          "applications": "Timber joinery, carpentry"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Shoe Nails",
+          "subTypes": ["Round Head", "Horseshoe Nails"],
+          "material": "Low Carbon Steel",
+          "finish": "Uncoated / Polished",
+          "applications": "Footwear, leather industry"
+        },
+        {
+          "type": "Screws & Nails",
+          "productType": "Brad / Stapler Nails",
+          "subTypes": ["F Series", "J Series"],
+          "material": "",
+          "finish": "",
+          "applications": ""
+        }
+      ],
+      "rivets": [
+        {
+          "type": "Rivets",
+          "productType": "Blind Rivet (Pop Rivet)",
+          "subTypes": ["- Dome Head- Countersunk Head- Large Flange"],
+          "material": "Aluminum, Steel, SS, Copper",
+          "finish": "Plain / Zinc / Painted",
+          "applications": "Sheet metal, HVAC, signage, enclosures"
+        },
+        {
+          "type": "Rivets",
+          "productType": "Solid Rivet",
+          "subTypes": ["- Round Head- Flat Head"],
+          "material": "Steel, Aluminum, Brass",
+          "finish": "Plain / Polished",
+          "applications": "Aerospace, bridges, heavy equipment"
+        },
+        {
+          "type": "Rivets",
+          "productType": "Semi-Tubular Rivet",
+          "subTypes": ["- Oval Head- Truss Head"],
+          "material": "Steel, Brass, Aluminum",
+          "finish": "Zinc / Nickel Plated",
+          "applications": "Leather, luggage, hardware fittings"
+        }
+      ]
+    },
+    {
+      "name": "Industrial Materials",
+      "products": [
+        {
+          "category": "Adhesives",
+          "productType": "Epoxy Adhesive",
+          "applications": "Metal, concrete, structural bonding",
+          "remarks": "Two-component, strong bond"
+        },
+        {
+          "category": "Adhesives",
+          "productType": "Construction Adhesive",
+          "applications": "Wood, drywall, metal, tile",
+          "remarks": "High-strength, fast grab"
+        },
+        {
+          "category": "Adhesives",
+          "productType": "Super Glue (Cyanoacrylate)",
+          "applications": "Plastic, rubber, ceramics, instant bonding",
+          "remarks": "Quick drying, precision work"
+        },
+        {
+          "category": "Adhesives",
+          "productType": "Wood Glue (PVA)",
+          "applications": "Furniture, woodwork",
+          "remarks": "Water-based, interior use"
+        },
+        {
+          "category": "Adhesives",
+          "productType": "Contact Adhesive",
+          "applications": "Laminate, rubber, leather",
+          "remarks": "Spread on both surfaces"
+        },
+        {
+          "category": "Adhesives",
+          "productType": "PU Adhesive",
+          "applications": "Concrete, wood, insulation panels",
+          "remarks": "Flexible and waterproof"
+        },
+        {
+          "category": "Silicone Sealants",
+          "productType": "General Purpose Silicone",
+          "applications": "Gaps and joints in bathrooms, windows",
+          "remarks": "Mould resistant, flexible"
+        },
+        {
+          "category": "Silicone Sealants",
+          "productType": "Neutral Cure Silicone",
+          "applications": " Aluminum, glass, stone",
+          "remarks": "No acid release, non-corrosive "
+        },
+        {
+          "category": "Silicone Sealants",
+          "productType": "Acetoxy Silicone",
+          "applications": "Sanitary areas, kitchen, bathroom",
+          "remarks": " Strong smell, not for metals"
+        },
+        {
+          "category": "Silicone Sealants",
+          "productType": "High-Temperature Silicone",
+          "applications": "Chimneys, engines, ovens",
+          "remarks": " Heat resistant up to 300°C"
+        },
+        {
+          "category": "Silicone Sealants",
+          "productType": "Fire Rated Silicone",
+          "applications": " Firestop systems, penetration seals",
+          "remarks": "Up to 4 hours fire rating"
+        },
+        {
+          "category": "Silicone Sealants",
+          "productType": "Structural Glazing Silicone",
+          "applications": " Curtain wall, façade bonding ",
+          "remarks": "UV resistant, high modulus "
+        },
+        {
+          "category": "Foams",
+          "productType": "PU Foam – Standard",
+          "applications": "General gap filling, sealing cracks, bonding light materials, sound insulation",
+          "remarks": "Easy to use, fast curing, economical solution"
+        },
+        {
+          "category": "Foams",
+          "productType": "PU Foam – Fire Rated",
+          "applications": "Fireproof sealing in doors, windows, cable ducts, partition joints",
+          "remarks": "Certified fire resistance (up to 4 hrs), used in fire-safety applications"
+        },
+        {
+          "category": "Polish Cleaning & Lubrication",
+          "productType": "Multi-Purpose Spray",
+          "applications": "Hinges, bolts, locks, rust protection ",
+          "remarks": "Anti-corrosion, water displacer"
+        },
+        {
+          "category": "Polish Cleaning & Lubrication",
+          "productType": "Metal Polish",
+          "applications": "Brass, copper, stainless steel, aluminum",
+          "remarks": "Restores shine, removes tarnish"
+        },
+        {
+          "category": "Polish Cleaning & Lubrication",
+          "productType": "Wood Polish",
+          "applications": "Furniture, doors, cabinets",
+          "remarks": "Enhances grain, protective coating"
+        },
+        {
+          "category": "Polish Cleaning & Lubrication",
+          "productType": "Marble & Stone Polish",
+          "applications": "Marble, granite, tiles",
+          "remarks": "Gloss finish, stain protection"
+        },
+        {
+          "category": "Polish Cleaning & Lubrication",
+          "productType": "Car/Automotive Polish",
+          "applications": "Vehicle paint & chrome parts",
+          "remarks": "Enhances shine, UV protection"
+        },
+        {
+          "category": "Welding Rods & Electrodes",
+          "productType": "Mild Steel Electrodes",
+          "applications": "General fabrication, mild steel structures",
+          "remarks": "Economical, multipurpose"
+        },
+        {
+          "category": "Welding Rods & Electrodes",
+          "productType": "Stainless Steel Electrodes",
+          "applications": "SS fabrication, tanks, piping",
+          "remarks": "Corrosion resistant"
+        },
+        {
+          "category": "Welding Rods & Electrodes",
+          "productType": "Cast Iron Electrodes",
+          "applications": "Repairing cast iron, machinery parts",
+          "remarks": "High carbon compatibility"
+        },
+        {
+          "category": "Welding Rods & Electrodes",
+          "productType": "Aluminum Electrodes",
+          "applications": "Aluminum fabrication, automotive",
+          "remarks": "Lightweight, corrosion resistant"
+        },
+        {
+          "category": "Welding Wire & Filler Rods",
+          "productType": "MIG Welding Wire (Mild Steel)",
+          "applications": "Automotive, fabrication, general welding",
+          "remarks": "High deposition rate"
+        },
+        {
+          "category": "Welding Wire & Filler Rods",
+          "productType": "MIG Welding Wire (Stainless Steel)",
+          "applications": "Food industry, SS fabrication",
+          "remarks": "Corrosion resistant"
+        },
+        {
+          "category": "Welding Wire & Filler Rods",
+          "productType": "TIG Filler Rods (Mild Steel)",
+          "applications": "Precision welding, thin sections",
+          "remarks": "Clean finish, strong joints"
+        },
+        {
+          "category": "Welding Wire & Filler Rods",
+          "productType": "TIG Filler Rods (Stainless Steel)",
+          "applications": "Pipe welding, SS tanks",
+          "remarks": "High corrosion resistance"
+        },
+        {
+          "category": "Welding Wire & Filler Rods",
+          "productType": "Aluminum Filler Rods",
+          "applications": "Marine, aerospace, automotive",
+          "remarks": "Lightweight, good strength"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Stretch Film / Cling Film",
+          "applications": "Pallet wrapping, cargo securing",
+          "remarks": "Protects from dust, moisture, scratches"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Bubble Wrap",
+          "applications": "Fragile items, electronics, glassware",
+          "remarks": "Cushioning, shock protection"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Packing Tape (BOPP/Masking/Cloth)",
+          "applications": "Carton sealing, bundling, insulation",
+          "remarks": "Available in transparent, brown, printed"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Carton Boxes (Corrugated)",
+          "applications": "Shipping, storage, moving goods",
+          "remarks": "Various ply strengths, recyclable"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Strapping Rolls (PP/PET/Steel)",
+          "applications": "Pallet strapping, heavy load securing",
+          "remarks": "Manual & machine use"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Strapping Clips/Buckles",
+          "applications": "Securing strapping on cartons/pallets",
+          "remarks": "Steel, plastic or wire options"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Foam Sheets & Rolls",
+          "applications": "Furniture, glass, electronic appliances",
+          "remarks": "Cushioning & impact protection"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Jute / Woven Bags",
+          "applications": "Industrial packing, grains, cement",
+          "remarks": "Heavy-duty, reusable"
+        },
+        {
+          "category": "Packaging",
+          "productType": "Trolley & Dispensers",
+          "applications": "Warehouse packing operations",
+          "remarks": "Improves speed & efficiency"
+        },
+        {
+          "category": "Sub-Category",
+          "productType": "Product Type / Variant",
+          "applications": "Material",
+          "remarks": "Mesh Size / Opening"
+        },
+        {
+          "category": "Wire Mesh",
+          "productType": "Welded Wire Mesh",
+          "applications": "MS, GI, SS",
+          "remarks": "6×6 mm, 12×12 mm, 25×25 mm, 50×50 mm"
+        },
+        {
+          "category": "Wire Mesh",
+          "productType": "Woven Wire Mesh (Square / Crimped)",
+          "applications": "SS304, SS316, MS, GI",
+          "remarks": "2 mesh – 500 mesh"
+        },
+        {
+          "category": "Wire Mesh",
+          "productType": "Hexagonal Wire Mesh (Chicken Mesh)",
+          "applications": "GI, PVC, SS",
+          "remarks": "13 mm, 25 mm, 50 mm"
+        },
+        {
+          "category": "Wire Mesh",
+          "productType": "Mosquito Netting / Insect Screen",
+          "applications": "Fiberglass, Aluminum, SS, Nylon",
+          "remarks": "14×14, 16×16, 18×18, 20×20"
+        }
+      ]
+    }
+  ]
+}

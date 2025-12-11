@@ -1,0 +1,377 @@
+{
+  "category": "Professional Tools & Gear",
+  "subcategories": [
+    {
+      "name": "Hand Tools ",
+      "productTypes": [
+        {
+          "name": "General Hand Tools with Handles",
+          "tools": [
+            {
+              "name": "Hammer",
+              "commonUse": "Driving nails, breaking objects"
+            },
+            {
+              "name": "Screwdriver",
+              "commonUse": "Driving or removing screws"
+            },
+            {
+              "name": "Wrench / Spanner",
+              "commonUse": "Tightening/loosening nuts and bolts"
+            },
+            {
+              "name": "Pliers",
+              "commonUse": "Gripping, twisting, or cutting wires"
+            },
+            {
+              "name": "Utility Knife / Cutter",
+              "commonUse": "Cutting materials like cardboard or plastic"
+            },
+            {
+              "name": "HandSaw/Hacksaw",
+              "commonUse": "Cutting wood manually"
+            },
+            {
+              "name": "Allen Key (Hex Key)",
+              "commonUse": "Driving bolts and screws with hexagonal sockets"
+            },
+            {
+              "name": "Chisel",
+              "commonUse": "Shaping wood, metal, or stone"
+            },
+            {
+              "name": "File / Rasp",
+              "commonUse": "Smoothing or shaping metal, wood, or plastic"
+            },
+            {
+              "name": "Riveters",
+              "commonUse": "fasteners that join two or more materials by forming a permanent bond"
+            }
+          ]
+        },
+        {
+          "name": "Heavy-Duty Tools with Handles",
+          "tools": [
+            {
+              "name": "Sledgehammer",
+              "commonUse": "Breaking concrete or heavy demolition"
+            },
+            {
+              "name": "Mattock",
+              "commonUse": "Digging and chopping soil"
+            },
+            {
+              "name": "Crowbar / Pry Bar",
+              "commonUse": "Prying, lifting, or demolition"
+            }
+          ]
+        },
+        {
+          "name": "Precision and Small Handle Tools",
+          "tools": [
+            {
+              "name": "Precision Screwdrivers",
+              "commonUse": "Electronics or watch repair"
+            },
+            {
+              "name": "Awl",
+              "commonUse": "Making holes in leather or wood"
+            },
+            {
+              "name": "Punch Tool",
+              "commonUse": "Marking or shaping material with a pointed tip"
+            },
+            {
+              "name": "Hand Crank Drill",
+              "commonUse": "Manual drilling of small holes"
+            },
+            {
+              "name": "Tapping & Threading",
+              "commonUse": "Making threads in hollow surface"
+            }
+          ]
+        },
+        {
+          "name": "Gardening Tools with Handles",
+          "tools": [
+            {
+              "name": "Shovel",
+              "commonUse": "Digging and lifting soil"
+            },
+            {
+              "name": "Spade",
+              "commonUse": "Edging and cutting soil"
+            },
+            {
+              "name": "Hoe",
+              "commonUse": "Weeding or cultivating soil"
+            },
+            {
+              "name": "Trowel",
+              "commonUse": "Small digging tool for gardening"
+            },
+            {
+              "name": "Rake",
+              "commonUse": "Collecting leaves or leveling soil"
+            },
+            {
+              "name": "Lopper / Pruner",
+              "commonUse": "Cutting branches or shrubs"
+            }
+          ]
+        },
+        {
+          "name": "Carpentry & Woodworking Tools",
+          "tools": [
+            {
+              "name": "Wooden Mallet",
+              "commonUse": "Driving chisels without damaging them"
+            },
+            {
+              "name": "Block Plane",
+              "commonUse": "Smoothing wooden surfaces"
+            },
+            {
+              "name": "Drawknife",
+              "commonUse": "Shaving wood manually"
+            }
+          ]
+        },
+        {
+          "name": "Measuring & Leveling Tools",
+          "tools": [
+            {
+              "name": "Measuring Tape ",
+              "commonUse": "Measuring room and wall lengths manually"
+            },
+            {
+              "name": "Spirit Level",
+              "commonUse": "Aligning and leveling surfaces accurately"
+            },
+            {
+              "name": "Stud Finder",
+              "commonUse": "Locating studs and wiring inside walls"
+            },
+            {
+              "name": "Digital Caliper",
+              "commonUse": "Precise dimensional measurements"
+            },
+            {
+              "name": "Laser Distance Meter",
+              "commonUse": "Measuring room and wall lengths quickly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Power Tools",
+      "productTypes": [
+        {
+          "name": "Drilling & Fastening Tools",
+          "tools": [
+            {
+              "name": "Electric Drill",
+              "commonUse": "Drilling holes in wood, metal, plastic"
+            },
+            {
+              "name": "Impact Driver",
+              "commonUse": "Driving screws and fasteners with high torque"
+            },
+            {
+              "name": "Hammer Drill",
+              "commonUse": "Drilling into masonry and concrete"
+            },
+            {
+              "name": "Cordless Screwdriver",
+              "commonUse": "Driving screws, light tasks"
+            },
+            {
+              "name": "Nail Gun (Nailer)",
+              "commonUse": "Driving nails quickly for framing or trim work"
+            }
+          ]
+        },
+        {
+          "name": "2. Cutting Tools",
+          "tools": [
+            {
+              "name": "Circular Saw",
+              "commonUse": "Straight cuts in wood, plywood, MDF"
+            },
+            {
+              "name": "Jigsaw",
+              "commonUse": "Curved and irregular cuts in various materials"
+            },
+            {
+              "name": "Miter Saw",
+              "commonUse": "Angled crosscuts for framing, trim, etc."
+            },
+            {
+              "name": "Angle Grinder",
+              "commonUse": "Cutting metal, tiles, grinding and polishing"
+            },
+            {
+              "name": "Cut-Off Saw",
+              "commonUse": "Heavy-duty metal and masonry cutting"
+            },
+            {
+              "name": "Oscillating Multi-Tool",
+              "commonUse": "Versatile tool for cutting, sanding, scraping"
+            }
+          ]
+        },
+        {
+          "name": "3. Sanding & Finishing Tools",
+          "tools": [
+            {
+              "name": "Orbital Sander",
+              "commonUse": "Smoothing wood and removing finishes"
+            },
+            {
+              "name": "Belt Sander",
+              "commonUse": "Rapid material removal on wood surfaces"
+            },
+            {
+              "name": "Polisher / Buffer",
+              "commonUse": "Polishing paint, metal, or stone"
+            }
+          ]
+        },
+        {
+          "name": "4. Grinding & Sharpening Tools",
+          "tools": [
+            {
+              "name": "Bench Grinder",
+              "commonUse": "Sharpening tools, shaping metal"
+            },
+            {
+              "name": "Die Grinder",
+              "commonUse": "Grinding in small or hard-to-reach areas"
+            },
+            {
+              "name": "Angle Grinder",
+              "commonUse": "Cutting, grinding, polishing metal or concrete"
+            }
+          ]
+        },
+        {
+          "name": "5. Welding & Heat Tools",
+          "tools": [
+            {
+              "name": "Welding Machine (MIG/TIG/Arc)",
+              "commonUse": "Metal joining and fabrication"
+            },
+            {
+              "name": "Heat Gun",
+              "commonUse": "Paint removal, shrinking plastic, softening glue"
+            },
+            {
+              "name": "Soldering Iron",
+              "commonUse": "Electronic circuit soldering"
+            },
+            {
+              "name": "Hot Glue Gun",
+              "commonUse": "Quick bonding of materials"
+            }
+          ]
+        },
+        {
+          "name": "6. Woodworking / Carpentry Tools",
+          "tools": [
+            {
+              "name": "Router",
+              "commonUse": "Shaping edges, hollowing, joinery"
+            },
+            {
+              "name": "Electric Hand Planer",
+              "commonUse": "Smoothing wood surfaces"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Safety & Protective Gear",
+      "productTypes": [
+        {
+          "name": "1. Head & Face Protection",
+          "tools": [
+            {
+              "name": "Safety Helmet ",
+              "commonUse": "Protects against falling objects and head impact"
+            },
+            {
+              "name": "Face Shield",
+              "commonUse": "Full-face protection from splashes, debris, or sparks"
+            },
+            {
+              "name": "Welding Helme / Shield",
+              "commonUse": "Shields face and eyes from welding arc and UV rays"
+            },
+            {
+              "name": "Safety Goggles",
+              "commonUse": "Protects eyes from dust, chemicals, or sparks"
+            },
+            {
+              "name": "Dust Mask",
+              "commonUse": "Protection from non-toxic dust and particles"
+            },
+            {
+              "name": "Half_Full Face Respirator",
+              "commonUse": "Used with filters for gases, vapors, or particulates"
+            }
+          ]
+        },
+        {
+          "name": "5. Hand Protection",
+          "tools": [
+            {
+              "name": "Nitrile Gloves",
+              "commonUse": "Chemical and puncture resistance in light tasks"
+            },
+            {
+              "name": "Cut-Resistant Gloves",
+              "commonUse": "Protection against sharp edges and blades"
+            }
+          ]
+        },
+        {
+          "name": "6. Foot Protection",
+          "tools": [
+            {
+              "name": "Safety Shoes",
+              "commonUse": "Protection from heavy objects or crushing forces"
+            },
+            {
+              "name": "Gum Boots",
+              "commonUse": "Enhances grip on oily or wet surfaces"
+            }
+          ]
+        },
+        {
+          "name": "7. Body Protection",
+          "tools": [
+            {
+              "name": "Safety Harness",
+              "commonUse": "Arrests fall during elevated work (scaffolding, roofs)"
+            }
+          ]
+        },
+        {
+          "name": "9. Support & Additional Protection",
+          "tools": [
+            {
+              "name": "Tool Belt",
+              "commonUse": "Carrying tools with added visibility"
+            },
+            {
+              "name": "First Aid Kit",
+              "commonUse": "Quick treatment of cuts, burns, and injuries"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
