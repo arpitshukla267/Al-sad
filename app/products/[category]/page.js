@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import Breadcrumb from "./components/Breadcrumb";
@@ -14,6 +14,7 @@ import {
 import { getSubcategorySlug } from "@/lib/product-data";
 
 const Layer1Page = ({ params }) => {
+  const { category: categorySlug } = use(params || Promise.resolve({ category: "" }));
   const [categoryData, setCategoryData] = useState({
     title: "",
     breadcrumb: [{ name: "Home", path: "/" }],
@@ -24,10 +25,10 @@ const Layer1Page = ({ params }) => {
   useEffect(() => {
     const loadCategoryData = async () => {
       try {
-        const category = await getCategoryBySlug(params.category);
+        const category = await getCategoryBySlug(categorySlug);
         const categoryName = category
           ? category.category
-          : getCategoryNameFromSlug(params.category);
+          : getCategoryNameFromSlug(categorySlug);
 
         if (category) {
           // Build subcategories for display
@@ -37,7 +38,7 @@ const Layer1Page = ({ params }) => {
               const subcategorySlug = getSubcategorySlug(subcat.name);
               return {
                 name: subcat.name.trim(),
-                path: `/products/${params.category}/${subcategorySlug}`,
+                path: `/products/${categorySlug}/${subcategorySlug}`,
               };
             }) || [];
 
@@ -45,7 +46,7 @@ const Layer1Page = ({ params }) => {
             title: categoryName,
             breadcrumb: [
               { name: "Home", path: "/" },
-              { name: categoryName, path: `/products/${params.category}` },
+              { name: categoryName, path: `/products/${categorySlug}` },
             ],
             subcategories,
           });
@@ -55,7 +56,7 @@ const Layer1Page = ({ params }) => {
             title: categoryName,
             breadcrumb: [
               { name: "Home", path: "/" },
-              { name: categoryName, path: `/products/${params.category}` },
+              { name: categoryName, path: `/products/${categorySlug}` },
             ],
             subcategories: [],
           });
@@ -68,7 +69,7 @@ const Layer1Page = ({ params }) => {
     };
 
     loadCategoryData();
-  }, [params.category]);
+  }, [categorySlug]);
 
   if (loading) {
     return (

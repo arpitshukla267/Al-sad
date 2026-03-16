@@ -15,6 +15,14 @@ export default function Home() {
   const [showSplash, setShowSplash] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
 
+  // Scroll to top on load/refresh and prevent scroll restoration
+  useEffect(() => {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   // Check sessionStorage to see if splash has been shown in this session
   useEffect(() => {
     const splashShown = sessionStorage.getItem("splashShown");
@@ -39,7 +47,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex flex-col flex-1 justify-start items-center relative min-h-screen overflow-x-hidden">
+      <main className="flex flex-col flex-1 justify-start items-center relative min-h-screen overflow-x-clip">
         {/* Splash screen - shown first for 3 seconds, covers everything */}
         {showSplash && (
           <div className="masked h-screen w-full fixed top-0 left-0 z-[10]" />
@@ -47,7 +55,7 @@ export default function Home() {
 
         {/* Categories component - shown after splash animation completes, animates cards sliding up */}
         {!showSplash && (
-          <div className="w-full mx-auto h-full">
+          <div className="w-full mx-auto">
             <Categories onAnimationComplete={setShowHeader} />
             {showHeader && (
               <>

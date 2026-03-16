@@ -129,20 +129,29 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
             };
           }) || [];
 
-        // Merge dynamic categories with static ones
-        // Replace Structural Materials and Professional Tools & Gear with real data
+        // Replace static placeholders with real data from JSON
+        const dynamicIds = new Set(
+          dynamicCategories.map((c) => c.id)
+        );
+        const staticExcluded = (catId) => {
+          if (catId === "architectural" && dynamicIds.has("architectural-components"))
+            return true;
+          if (catId === "retail-home" && dynamicIds.has("retail-and-home-solutions"))
+            return true;
+          return false;
+        };
+
         const mergedCategories = [
-          ...STATIC_CATEGORIES.filter(
-            (cat) =>
-              cat.id !== "structural" && cat.id !== "professional-tools-gear"
-          ),
+          ...STATIC_CATEGORIES.filter((cat) => !staticExcluded(cat.id)),
           ...dynamicCategories,
         ].sort((a, b) => {
-          // Sort to maintain consistent order
           const order = [
+            "architectural-components",
             "architectural",
+            "structural-materials",
             "structural",
             "professional-tools-gear",
+            "retail-and-home-solutions",
             "retail-home",
             "electrical",
             "specials",

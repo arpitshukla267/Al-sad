@@ -1,0 +1,1954 @@
+{
+  "category": "Architectural Components",
+  "subcategories": [
+    {
+      "name": "Architectural Hardware",
+      "products": [
+        {
+          "name": "Surface Mounted / Overhead Closer",
+          "type": "Door Closer",
+          "rootCategory": "Door Control",
+          "commonUse": "Most common type; mounted on door surface; used in residential, offices, schools.",
+          "description": "Surface-mounted door closers are the most widely used door control devices, installed directly on the door or frame. They ensure controlled closing speed, prevent door slamming, and improve safety and longevity of doors. Commonly used in residential buildings, offices, schools, hospitals, and commercial interiors, these closers are easy to install and maintain. Available in multiple power sizes, they can accommodate light to heavy doors while complying with fire and accessibility regulations.",
+          "brands": [
+            "Yale",
+            "Dormakaba",
+            "GEZE",
+            "BAONE"
+          ],
+          "seriesModelExamples": "Yale 300, 722, 3000, 4000, 5000, 7000 Dormakaba TS68, TS71, TS83; GEZE TS1500; BAONE BA272, BA275"
+        },
+        {
+          "name": "Concealed Door Closer",
+          "type": "Door Closer",
+          "rootCategory": "Door Control",
+          "commonUse": "Hidden inside door/frame; clean modern look; used in interiors & hotels.",
+          "description": "Concealed door closers are installed within the door leaf or frame, offering controlled closing action while remaining completely hidden. Preferred for premium interiors, hotels, and modern architectural spaces, they provide a clean and minimal aesthetic without visible hardware. Despite their discreet appearance, they deliver reliable performance and smooth operation for interior doors where design continuity is important.",
+          "brands": [
+            "Dorint"
+          ],
+          "seriesModelExamples": "383, 385"
+        },
+        {
+          "name": "Floor Spring Door Closer",
+          "type": "Door Closer",
+          "rootCategory": "Door Control",
+          "commonUse": "Mounted in floor; supports heavy wood/glass doors; ideal for commercial spaces.",
+          "description": "Floor spring door closers are mounted below floor level and are designed to support heavy wooden, metal, or glass doors. Commonly used in commercial buildings, malls, showrooms, and office entrances, they allow controlled closing and optional hold-open functionality. Floor springs are ideal for high-traffic areas and double-action doors, offering durability, stability, and smooth movement.",
+          "brands": [
+            "Dormakaba",
+            "MAB",
+            "GEZE"
+          ],
+          "seriesModelExamples": "BTS65, BTS75, BTS80, BTS84; MAB 7300, 7305; GEZE 500 NV"
+        },
+        {
+          "name": "Spring Door Closer",
+          "type": "Door Closer",
+          "rootCategory": "Door Control",
+          "commonUse": "Cost-effective option; for light internal doors, partitions, small enclosures.",
+          "description": "Spring door closers are cost-effective mechanical closers used for lightweight internal doors, partitions, and enclosures. They rely on spring tension rather than hydraulic damping and are commonly used in residential or low-traffic commercial applications. Available in various barrel and roller designs, they offer basic self-closing functionality where precision speed control is not critical.",
+          "brands": [
+            "Generic / BAONE"
+          ],
+          "seriesModelExamples": "Single Roller, Tube Style, Double Barrel, Slim Barrel"
+        },
+        {
+          "name": "Pneumatic Door Closer",
+          "type": "Door Closer",
+          "rootCategory": "Door Control",
+          "commonUse": "Uses air pressure; mainly for screen/storm doors in homes.",
+          "description": "Pneumatic door closers use air pressure to control door movement and are commonly installed on screen and storm doors in residential settings. They provide smooth, adjustable closing while being resistant to outdoor weather conditions. These closers are simple, economical, and ideal for lightweight doors requiring basic controlled operation.",
+          "brands": [
+            "Generic"
+          ],
+          "seriesModelExamples": "Standard Pneumatic Models"
+        },
+        {
+          "name": "Butt Hinges",
+          "type": "Standard Door Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Most common hinge; used for interior/exterior wooden doors.",
+          "description": "Butt hinges are the most common door hinges used for interior and exterior wooden doors. Installed between the door and frame, they provide smooth pivoting and reliable load support. Available in various sizes and finishes, butt hinges are suitable for residential homes, offices, and commercial interiors.",
+          "brands": [
+            "Steel",
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Brass, Antique, Powder Coated"
+        },
+        {
+          "name": "Ball Bearing Hinges",
+          "type": "Standard Door Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Smooth operation; ideal for heavy or frequently used doors.",
+          "description": "Ball bearing hinges feature internal bearings that reduce friction and ensure smooth operation, even under heavy loads. Ideal for frequently used or heavy doors, they are commonly installed in offices, hotels, hospitals, and commercial buildings where durability and quiet movement are essential.",
+          "brands": [
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Satin Chrome, Brass, Antique"
+        },
+        {
+          "name": "Flush Hinges",
+          "type": "Standard Door Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Used when doors need to close flush with the frame; lightweight doors/cabinets.",
+          "description": "Flush hinges allow doors to close flush against the frame without recessing, making them suitable for lightweight doors and cabinets. Easy to install and compact in design, they are commonly used in furniture, wardrobes, and interior doors where minimal hardware visibility is desired.",
+          "brands": [
+            "Steel",
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Brass, Antique, Black"
+        },
+        {
+          "name": "Strap / T-Hinges",
+          "type": "Heavy Door Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Traditional gates, barn doors, and heavy wooden doors.",
+          "description": "Strap and T-hinges are heavy-duty hinges traditionally used for gates, barn doors, shutters, and rustic wooden doors. Their long arms provide strong support and distribute weight evenly, making them ideal for large or heavy doors with exposed hardware aesthetics.",
+          "brands": [
+            "Steel",
+            "Wrought Iron"
+          ],
+          "seriesModelExamples": "Black, Antique, Galvanized"
+        },
+        {
+          "name": "Parliament Hinges",
+          "type": "Heavy Door Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Allows door to open 180°; used where doors need to fold flat against walls.",
+          "description": "Parliament hinges allow doors to open a full 180 degrees and fold flat against adjacent walls. They are commonly used in hospitals, corridors, and areas requiring maximum door clearance. These hinges improve accessibility and space efficiency in tight environments.",
+          "brands": [
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Brass, Antique"
+        },
+        {
+          "name": "Welding Hinges",
+          "type": "Heavy Door Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Heavy-duty welding type; for gates, shutters, and industrial doors.",
+          "description": "Welding hinges are designed for metal doors, gates, shutters, and industrial applications. Welded directly onto frames, they provide high strength and durability for heavy-duty installations where bolted hinges are unsuitable.",
+          "brands": [
+            "Mild Steel"
+          ],
+          "seriesModelExamples": "Zinc Coated, Black, Galvanized"
+        },
+        {
+          "name": "Flag Hinges",
+          "type": "Heavy Door Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Detachable design; often used in UPVC and aluminum doors/windows.",
+          "description": "Flag hinges feature a detachable design, allowing doors or panels to be lifted off easily for maintenance or removal. Commonly used in aluminum and uPVC doors and windows, they provide flexibility, ease of installation, and clean appearance.",
+          "brands": [
+            "Steel",
+            "SS"
+          ],
+          "seriesModelExamples": "SS, Chrome, Powder Coated"
+        },
+        {
+          "name": "W Hinges",
+          "type": "Specialty Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Decorative or specialized doors requiring unique movements.",
+          "description": "W hinges are decorative hinges used for specialty doors and traditional designs. They provide both functional support and visual character, often seen in rustic, heritage, or custom architectural applications.",
+          "brands": [
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Chrome, Brass"
+        },
+        {
+          "name": "L Hinges",
+          "type": "Specialty Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Used for corner fitting or lightweight cabinet/door fixing.",
+          "description": "L hinges are used for lightweight doors, cabinets, and corner installations. Their simple design makes them ideal for basic fixing applications where compact support is sufficient.",
+          "brands": [
+            "Steel",
+            "SS"
+          ],
+          "seriesModelExamples": "SS, Chrome, Antique"
+        },
+        {
+          "name": "Spring Hinges",
+          "type": "Specialty Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Auto-closing feature; used for swing doors and self-closing applications.",
+          "description": "Spring hinges include an internal spring mechanism that automatically closes doors after opening. Used in swing doors, fire doors, and self-closing applications, they enhance safety and convenience in commercial and residential spaces.",
+          "brands": [
+            "Steel",
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Brass, Satin, Black"
+        },
+        {
+          "name": "Soss Hinges",
+          "type": "Invisible / Concealed Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Concealed hinge for flush doors; modern minimal interiors.",
+          "description": "Concealed hinges are hidden within the door and frame, creating a seamless and modern appearance. Commonly used in flush doors and premium interiors, they provide smooth movement while maintaining a minimalist aesthetic.",
+          "brands": [
+            "SS",
+            "Zinc Alloy"
+          ],
+          "seriesModelExamples": "SS, Satin, Black"
+        },
+        {
+          "name": "Barrel Hinges",
+          "type": "Invisible / Concealed Hinges",
+          "rootCategory": "Door Hinges",
+          "commonUse": "Small concealed hinge; used for lightweight cabinet and furniture doors.",
+          "description": "Barrel hinges are small concealed hinges used in cabinets, furniture, and lightweight doors. Their compact cylindrical design allows discreet installation while providing reliable pivoting.",
+          "brands": [
+            "Brass",
+            "SS"
+          ],
+          "seriesModelExamples": "Brass, SS, Antique"
+        },
+        {
+          "name": "Lever Handle",
+          "type": "Functional Handle",
+          "rootCategory": "Door Handle",
+          "commonUse": "Most common type; easy operation; used for residential and office doors.",
+          "description": "Lever handles are the most commonly used door handles, offering ease of use and ergonomic operation. Suitable for residential, office, and commercial doors, they are available in a wide range of styles and finishes."
+        },
+        {
+          "name": "Rose Handle",
+          "type": "Functional Handle",
+          "rootCategory": "Door Handle",
+          "commonUse": "Mounted on a round plate (rose); widely used for modern interior doors.",
+          "description": "Rose handles are mounted on a circular back plate, providing a modern and minimal appearance. Widely used in contemporary interior doors, they combine functionality with clean design."
+        },
+        {
+          "name": "Round Knob",
+          "type": "Functional Handle",
+          "rootCategory": "Door Handle",
+          "commonUse": "Traditional option; turned to operate latch; common in older or classic style doors.",
+          "description": "Round knobs are traditional door handles operated by turning. Often used in classic interiors and older buildings, they provide a timeless aesthetic while serving standard door functions."
+        },
+        {
+          "name": "Fixed Pull Handle",
+          "type": "Pull and Push Hardware",
+          "rootCategory": "Door Handle",
+          "commonUse": "Used on glass/wooden doors; ideal for shops, offices, and commercial entrances.",
+          "description": "Pull handles are fixed handles used on glass or wooden doors where no latch is required. Common in shops, offices, and commercial entrances, they offer durability and ease of access."
+        },
+        {
+          "name": "Push/Pull Plates with Handle",
+          "type": "Pull and Push Hardware",
+          "rootCategory": "Door Handle",
+          "commonUse": "Combines protective plate with handle; common in hotels, hospitals, and heavy-use doors.",
+          "description": "Push plates protect door surfaces while allowing easy pushing or pulling. Common in hotels, hospitals, and high-traffic areas, they improve hygiene and reduce wear on doors."
+        },
+        {
+          "name": "Tower Bolt",
+          "type": "Surface Bolts",
+          "rootCategory": "Door Bolts",
+          "commonUse": "Most common door/window bolt; used for general security.",
+          "description": "Tower bolts are surface-mounted bolts used for securing doors and windows. Simple and reliable, they are widely used in residential and commercial applications.",
+          "brands": [
+            "Steel",
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Brass, Antique, Powder Coated"
+        },
+        {
+          "name": "Cranked Bolt",
+          "type": "Surface Bolts",
+          "rootCategory": "Door Bolts",
+          "commonUse": "Designed with bend; suitable for doors with offset frames.",
+          "description": "Cranked bolts are designed with an offset to suit doors with stepped or uneven frames. They provide secure locking where standard straight bolts cannot be used.",
+          "brands": [
+            "Steel",
+            "SS"
+          ],
+          "seriesModelExamples": "SS, Black, Brass"
+        },
+        {
+          "name": "Spring Bolts",
+          "type": "Surface Bolts",
+          "rootCategory": "Door Bolts",
+          "commonUse": "Auto-locking action; used for extra security on gates/doors.",
+          "description": "Spring bolts feature an automatic locking action and are commonly used for added security on gates and doors.",
+          "brands": [
+            "Steel",
+            "SS"
+          ],
+          "seriesModelExamples": "SS, Chrome, Black"
+        },
+        {
+          "name": "Aldrop",
+          "type": "Surface Bolts",
+          "rootCategory": "Door Bolts",
+          "commonUse": "Traditional bolt for main doors; widely used in Indian/Asian markets.",
+          "description": "Aldrops are traditional heavy-duty door bolts commonly used on main entrance doors. Popular in Indian and Asian markets, they offer strong security with a decorative appearance.",
+          "brands": [
+            "Steel",
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Brass, Antique, Powder Coated"
+        },
+        {
+          "name": "Flush Bolt",
+          "type": "Concealed / Integrated Bolts",
+          "rootCategory": "Door Bolts",
+          "commonUse": "Concealed inside door edge; used for double doors (inactive leaf locking).",
+          "description": "Flush bolts are concealed within the door edge and are used to secure inactive leaves of double doors. They provide discreet locking while maintaining clean door aesthetics.",
+          "brands": [
+            "SS",
+            "Brass"
+          ],
+          "seriesModelExamples": "SS, Brass, Satin, Antique, Black"
+        },
+        {
+          "name": "Mortise Lock",
+          "type": "Mechanical Lock Systems",
+          "rootCategory": "Door Security",
+          "commonUse": "Heavy-duty; used in main doors for residential and commercial security.",
+          "description": "Mortise locks are heavy-duty locking systems installed inside the door body. Widely used for main doors, they provide high security, durability, and compatibility with handles and cylinders."
+        },
+        {
+          "name": "Cylindrical Lock",
+          "type": "Mechanical Lock Systems",
+          "rootCategory": "Door Security",
+          "commonUse": "Easy installation; commonly used for interior doors and offices.",
+          "description": "Cylindrical locks are easy-to-install locksets commonly used for interior doors and offices. They offer reliable security with minimal installation effort."
+        },
+        {
+          "name": "Hook/Dead Lock",
+          "type": "Mechanical Lock Systems",
+          "rootCategory": "Door Security",
+          "commonUse": "Provides extra security; often installed on main entrances.",
+          "description": "Hook and dead locks provide enhanced security for main entrances. Often used as secondary locks, they offer resistance against forced entry."
+        },
+        {
+          "name": "Rim Lock / Night Latch",
+          "type": "Mechanical Lock Systems",
+          "rootCategory": "Door Security",
+          "commonUse": "Surface-mounted; commonly used for apartments and internal security.",
+          "description": "Rim locks are surface-mounted locks used for internal security, especially in apartments. They are easy to install and operate."
+        },
+        {
+          "name": "Electric Strike Lock",
+          "type": "Electronic Locking Devices",
+          "rootCategory": "Door Security",
+          "commonUse": "Works with access systems; used in offices, hotels, and smart homes.",
+          "description": "Electric strike locks integrate with access control systems to allow remote or electronic unlocking. Common in offices, hotels, and smart buildings."
+        },
+        {
+          "name": "Electrical Rim Lock",
+          "type": "Electronic Locking Devices",
+          "rootCategory": "Door Security",
+          "commonUse": "Automated surface lock; suitable for gates, main doors, and access control systems.",
+          "description": "Electrical rim locks provide automated locking for gates and main doors, offering convenience and enhanced security."
+        },
+        {
+          "name": "Panic Bars",
+          "type": "Emergency Exit Doors",
+          "rootCategory": "Door Security",
+          "commonUse": "Push-bar system for fast egress; used in malls, schools, and public buildings.",
+          "description": "Panic hardware allows doors to open instantly during emergencies. Essential for fire exits in public buildings, malls, and schools, they ensure fast and safe evacuation."
+        },
+        {
+          "name": "Panic Locks",
+          "type": "Emergency Exit Doors",
+          "rootCategory": "Door Security",
+          "commonUse": "Ensures quick evacuation during emergencies; essential in fire and safety doors.",
+          "description": "Panic hardware allows doors to open instantly during emergencies. Essential for fire exits in public buildings, malls, and schools, they ensure fast and safe evacuation."
+        },
+        {
+          "name": "Kickdown Stoppers",
+          "type": "Manual Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Common in commercial spaces; keeps door open by kicking lever down.",
+          "description": "Kickdown door stoppers are foot-operated stoppers commonly used in commercial and high-traffic spaces. Mounted at the bottom of the door, they allow users to hold doors open by pressing the stopper down with the foot, eliminating the need for bending or hand operation. When released, the stopper lifts back up, allowing the door to close normally. These stoppers help protect walls and doors from impact while providing convenience in offices, hospitals, retail spaces, and service areas where frequent door operation is required."
+        },
+        {
+          "name": "Foot Press Stoppers",
+          "type": "Manual Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Hands-free option for hygienic environments like hospitals and kitchens.",
+          "description": "Foot press door stoppers offer hands-free operation, making them ideal for hygienic environments such as kitchens, hospitals, laboratories, and food-processing areas. Installed on the door or floor, they allow the door to be secured in an open position using light foot pressure. Designed for durability and ease of use, foot press stoppers reduce wall damage, improve accessibility, and enhance safety in both residential and commercial applications."
+        },
+        {
+          "name": "Half Round",
+          "type": "Floor-Mounted Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Protects wall from door impact; widely used in homes and offices.",
+          "description": "Half-round floor-mounted door stoppers are compact protective devices installed directly on the floor. They prevent doors from hitting walls, furniture, or fixtures by absorbing impact. Commonly used in homes, offices, and apartments, these stoppers are discreet, easy to install, and suitable for light to medium-duty doors while maintaining a clean visual appearance."
+        },
+        {
+          "name": "Full Round",
+          "type": "Floor-Mounted Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Heavy-duty; ideal for high-traffic commercial doors.",
+          "description": "Full-round door stoppers are heavy-duty floor-mounted stoppers designed for high-traffic and commercial environments. Their solid construction provides enhanced impact resistance, making them ideal for offices, hotels, malls, and public buildings. They effectively protect walls, glass panels, and doors from repeated impact while offering long-term durability."
+        },
+        {
+          "name": "Rubber Stoppers",
+          "type": "Floor-Mounted Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Basic cost-effective stopper; suitable for light interior doors.",
+          "description": "Rubber door stoppers are economical and flexible stoppers used primarily for lightweight interior doors. Their shock-absorbing material reduces noise and minimizes damage to doors and walls. Suitable for residential use, they offer a simple and cost-effective solution for basic door protection."
+        },
+        {
+          "name": "Pipe Stopper",
+          "type": "Wall-Mounted Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Prevents door handle from damaging walls.",
+          "description": "Wall-mounted pipe door stoppers are installed on walls to prevent door handles from striking the surface. Designed for spaces where floor mounting is not practical, they are commonly used in residential and commercial interiors. Their sturdy construction ensures long-lasting protection while maintaining a neat appearance."
+        },
+        {
+          "name": "Pipe Stopper with Coat Hook",
+          "type": "Wall-Mounted Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Dual purpose – stops door and acts as a hook for coats or bags.",
+          "description": "This dual-purpose stopper functions as both a door stopper and a utility hook. In addition to preventing door impact, it provides a convenient hanging point for coats, bags, or accessories. Ideal for bedrooms, offices, and hotel rooms, it maximizes functionality while saving space."
+        },
+        {
+          "name": "Spring Stopper",
+          "type": "Wall-Mounted Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Flexible spring design; reduces impact force and protects walls/doors.",
+          "description": "Spring door stoppers feature a flexible spring design that absorbs impact when the door is opened forcefully. Mounted on walls or doors, they reduce noise and prevent surface damage. Commonly used in homes and offices, they are simple, durable, and effective for everyday door protection."
+        },
+        {
+          "name": "PVC Models",
+          "type": "Magnetic Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Lightweight and affordable; used in residential/light-duty spaces.",
+          "description": "PVC magnetic door stoppers are lightweight and affordable solutions for holding doors securely in an open position. The magnetic mechanism keeps the door from swinging due to air movement. Suitable for residential and light-duty applications, they offer ease of installation and practical functionality."
+        },
+        {
+          "name": "SS Models",
+          "type": "Magnetic Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Strong hold; preferred in hotels, offices, and modern apartments.",
+          "description": "Stainless steel magnetic door stoppers provide strong holding force and enhanced durability. Preferred in hotels, offices, and premium interiors, they securely hold doors open while offering a modern, polished appearance and long service life."
+        },
+        {
+          "name": "Rubber Models",
+          "type": "Wedge Door Stoppers",
+          "rootCategory": "Door Stoppers",
+          "commonUse": "Portable; used to temporarily hold doors open in homes, offices, schools.",
+          "description": "Rubber wedge door stoppers are portable and versatile stoppers placed under the door to prevent movement. Commonly used in homes, schools, and offices, they require no installation and provide quick, temporary door control."
+        },
+        {
+          "name": "Door Viewer",
+          "type": "Security Accessories",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Allows visual identification before opening door; common in apartments and homes.",
+          "description": "Door viewers allow occupants to safely identify visitors before opening the door. Installed at eye level, they provide a wide-angle view while maintaining privacy and security. Commonly used in apartments, villas, and residential buildings, door viewers enhance safety without compromising door aesthetics."
+        },
+        {
+          "name": "Pad / Shutter Locks",
+          "type": "Security Accessories",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Used for shutters, garages, warehouses, and storage units.",
+          "description": "Pad and shutter locks are heavy-duty locking solutions used for shutters, garages, warehouses, and storage units. Designed for strength and durability, they offer reliable protection against unauthorized access in industrial and commercial environments."
+        },
+        {
+          "name": "Door Chain / Door Guard",
+          "type": "Security Accessories",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Provides partial opening security; prevents forced entry.",
+          "description": "Door chains and guards allow partial door opening while preventing forced entry. Commonly used in residential homes and apartments, they provide an added layer of security, especially during visitor interaction."
+        },
+        {
+          "name": "Soundproofing Seals",
+          "type": "Weather & Sound Protection",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Blocks noise and drafts; used in hotels, studios, offices.",
+          "description": "Soundproofing seals are installed along door frames to block noise, drafts, and light gaps. Widely used in hotels, studios, offices, and conference rooms, they improve acoustic comfort and energy efficiency."
+        },
+        {
+          "name": "Door Brush & Rubber",
+          "type": "Weather & Sound Protection",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Prevents dust, insects, and sound leakage at bottom of doors.",
+          "description": "Door brushes and rubber seals are fixed at the bottom of doors to prevent dust, insects, noise, and air leakage. Suitable for residential and commercial interiors, they improve cleanliness and indoor comfort."
+        },
+        {
+          "name": "Fire Strip (with brush)",
+          "type": "Weather & Sound Protection",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Fire-rated sealing; expands under heat to block smoke and flames.",
+          "description": "Fire strips are safety accessories installed in fire-rated doors. When exposed to heat, they expand to seal gaps and block the spread of smoke and flames. Commonly used in commercial buildings, they are essential for fire safety compliance."
+        },
+        {
+          "name": "Weather Strips",
+          "type": "Weather & Sound Protection",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Prevents air leakage and rain penetration; improves insulation.",
+          "description": "Weather strips seal gaps around doors to prevent air leakage, rain penetration, and dust ingress. They improve insulation and energy efficiency, making them ideal for exterior doors in residential and commercial buildings."
+        },
+        {
+          "name": "Sign Plates",
+          "type": "Door Signages",
+          "rootCategory": "Door Accessories",
+          "commonUse": "For marking doors (Toilet, Office, Staff Only, etc.).",
+          "description": "Door sign plates are used to identify rooms such as offices, toilets, staff areas, or restricted zones. Common in commercial buildings, hospitals, and hotels, they improve navigation and communication while maintaining a professional appearance."
+        },
+        {
+          "name": "Push Plates",
+          "type": "Door Signages",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Protects door surface; used in commercial doors.",
+          "description": "Push plates protect door surfaces from wear caused by repeated pushing. Widely used in hotels, hospitals, restaurants, and commercial buildings, they extend door life and maintain a clean appearance."
+        },
+        {
+          "name": "Number & Alphabets",
+          "type": "Door Signages",
+          "rootCategory": "Door Accessories",
+          "commonUse": "For residential/commercial identification (house numbers, office codes).",
+          "description": "Numbers and alphabets are used for house numbering, office identification, and room labeling. Available in various finishes and styles, they enhance visibility and aesthetics in residential and commercial spaces."
+        },
+        {
+          "name": "Kick Plates",
+          "type": "Door Signages",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Protects lower part of doors from damage; common in restaurants, hospitals.",
+          "description": "Kick plates are installed at the lower portion of doors to protect against scuffs, impacts, and damage. Commonly used in high-traffic environments such as hospitals, kitchens, and restaurants, they improve door durability."
+        },
+        {
+          "name": "Square Models",
+          "type": "Escutcheon Plates / Keyhole Covers",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Decorative plate covering keyholes; used with mortise locks.",
+          "description": "Escutcheon plates cover keyholes and lock cut-outs, providing a clean, finished appearance. Used with mortise and cylinder locks, they enhance both security and visual appeal of doors."
+        },
+        {
+          "name": "Round Models",
+          "type": "Escutcheon Plates / Keyhole Covers",
+          "rootCategory": "Door Accessories",
+          "commonUse": "Aesthetic finish; available in SS, brass, black.",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Furniture Hardware",
+      "products": [
+        {
+          "name": "Mini Hinge",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "26mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "26mm",
+              "Opening Angle": "95°–110°",
+              "Mounting Type": "Screw-on",
+              "Overlay Type": "Full Overlay, Half Overlay, Inset",
+              "Closing Action": "Self-close",
+              "Common Use": "Small/light doors, shallow depth"
+            }
+          ]
+        },
+        {
+          "name": "Regular Hinges (2 Hole / 4 Hole / Butterfly Plate)",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "35mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "35mm",
+              "Opening Angle": "110°–120°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Full Overlay, Half Overlay, Inset",
+              "Closing Action": "Soft-close / Self-close",
+              "Common Use": "Kitchen Cabinets"
+            }
+          ]
+        },
+        {
+          "name": "3D Hinges",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "35mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "35mm",
+              "Opening Angle": "110°–120°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Full Overlay, Half Overlay, Inset",
+              "Closing Action": "Soft-close",
+              "Common Use": "Thick cabinet doors (up to 32mm)"
+            }
+          ]
+        },
+        {
+          "name": "Wide Angle Hinge 165° (2 Hole / 4 Hole / Butterfly)",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "35mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "35mm",
+              "Opening Angle": "155°–170°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Full Overlay, Half Overlay, Inset",
+              "Closing Action": "Soft-close / Self-close",
+              "Common Use": "Cabinets requiring full access"
+            }
+          ]
+        },
+        {
+          "name": "Jumbo Hinges",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "40mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "40mm",
+              "Opening Angle": "110°–120°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Full Overlay, Half Overlay, Inset",
+              "Closing Action": "Soft-close / Self-close",
+              "Common Use": "Large / heavy doors"
+            }
+          ]
+        },
+        {
+          "name": "Glass Door Hinge",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "No cup (plate)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "No cup (plate)",
+              "Opening Angle": "90°–110°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Glass Panel",
+              "Closing Action": "Soft-close / Self-close",
+              "Common Use": "Frameless glass cabinet doors"
+            }
+          ]
+        },
+        {
+          "name": "Pie-Corner Hinge 135°",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "35mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "35mm",
+              "Opening Angle": "135°",
+              "Mounting Type": "Clip-on",
+              "Overlay Type": "Corner Cabinet",
+              "Closing Action": "Self-close",
+              "Common Use": "Pie-cut corner cabinets (L-shape doors)"
+            }
+          ]
+        },
+        {
+          "name": "45° Angle Hinge",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "35mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "35mm",
+              "Opening Angle": "30°–180°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Various",
+              "Closing Action": "Self-close / Soft-close",
+              "Common Use": "Custom angled door applications"
+            }
+          ]
+        },
+        {
+          "name": "Blind Corner Hinge 90°",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "35mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "35mm",
+              "Opening Angle": "90°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Corner Cabinet",
+              "Closing Action": "Soft-close / Self-close",
+              "Common Use": "Blind corner cabinets"
+            }
+          ]
+        },
+        {
+          "name": "Short Arm Hinges",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "35mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "35mm",
+              "Opening Angle": "90° / 110° / 135°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Full / Half / Inset",
+              "Closing Action": "Normal / Soft Closing",
+              "Common Use": "Used in shallow cabinets or when door thickness is less, space-saving wardrobes"
+            }
+          ]
+        },
+        {
+          "name": "Magnum Hinges",
+          "type": "Cabinet Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "No cup (plate)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "No cup (plate)",
+              "Opening Angle": "90° / 110° / 135°",
+              "Mounting Type": "Screw-on / Clip-on",
+              "Overlay Type": "Full / Half / Inset",
+              "Closing Action": "Normal / Soft Closing",
+              "Common Use": "Heavy-duty doors, thick cabinet doors, long-lasting furniture"
+            }
+          ]
+        },
+        {
+          "name": "Piano Hinges\nMini Piano Hinges",
+          "type": "Specialty Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "Length: 300mm – 1800mm (12”–72”)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Length: 300mm – 1800mm (12”–72”)",
+              "Opening Angle": "SS, Brass, Antique Brass, Black, Zinc",
+              "Mounting Type": "SS 304/316, Brass, Steel",
+              "Common Use": "Long continuous hinge; used in wardrobes, folding tables, lids, and storage boxes."
+            }
+          ]
+        },
+        {
+          "name": "Pivot Hinges",
+          "type": "Specialty Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "Pin Size: 6mm – 20mm (varies by load)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Pin Size: 6mm – 20mm (varies by load)",
+              "Opening Angle": "SS, Chrome, Brass, Black",
+              "Mounting Type": "SS, Brass, Mild Steel",
+              "Common Use": "Allows door to pivot from top & bottom; used in wardrobes, display units, partitions."
+            }
+          ]
+        },
+        {
+          "name": "Rising Hinges",
+          "type": "Specialty Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "3” – 6” (75mm – 150mm)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "3” – 6” (75mm – 150mm)",
+              "Opening Angle": "SS, Chrome, Antique Brass, Zinc",
+              "Mounting Type": "SS, Brass, Steel",
+              "Common Use": "Lifts door slightly as it opens; used for doors over carpets or floor mats."
+            }
+          ]
+        },
+        {
+          "name": "Knife Hinges",
+          "type": "Specialty Hinges",
+          "rootCategory": "Furniture Hinges",
+          "commonUse": "Small (25mm – 50mm)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Small (25mm – 50mm)",
+              "Opening Angle": "SS, Chrome, Black",
+              "Mounting Type": "SS",
+              "Common Use": "Invisible hinge type for cabinets and specialty woodwork."
+            }
+          ]
+        },
+        {
+          "name": "Roller Slides (Single Extension)",
+          "type": "Specialty Hinges",
+          "rootCategory": "Drawer Fittings",
+          "commonUse": "250–500 mm (10″–20″)",
+          "description": "Concealed Cabinet Hinges",
+          "specifications": [
+            {
+              "Cup Diameter": "250–500 mm (10″–20″)",
+              "Opening Angle": "Basic option for light-duty drawers (office tables, bedside cabinets)."
+            }
+          ]
+        },
+        {
+          "name": "45mm Ball Bearing Slides (Full Extension)\n27mm Ball Bearing Slides\n17mm Ball Bearing Slides",
+          "type": "Specialty Hinges",
+          "rootCategory": "Drawer Fittings",
+          "commonUse": "250–600 mm (10″–24″)",
+          "description": "Piano Hinges",
+          "specifications": [
+            {
+              "Cup Diameter": "250–600 mm (10″–24″)",
+              "Opening Angle": "Smooth operation; used in kitchen drawers, wardrobe pull-outs, office desks."
+            }
+          ]
+        },
+        {
+          "name": "Soft-Close Ball Bearing Slides",
+          "type": "Specialty Hinges",
+          "rootCategory": "Drawer Fittings",
+          "commonUse": "300–600 mm (12″–24″)",
+          "description": "Pivot Hinges",
+          "specifications": [
+            {
+              "Cup Diameter": "300–600 mm (12″–24″)",
+              "Opening Angle": "Premium drawers; kitchen, wardrobe, office furniture with noise-free close."
+            }
+          ]
+        },
+        {
+          "name": "Push-to-Open Slides",
+          "type": "Specialty Hinges",
+          "rootCategory": "Drawer Fittings",
+          "commonUse": "300–550 mm (12″–22″)",
+          "description": "Rising Hinges",
+          "specifications": [
+            {
+              "Cup Diameter": "300–550 mm (12″–22″)",
+              "Opening Angle": "Handle-less cabinets; wardrobes and modern kitchen drawers."
+            }
+          ]
+        },
+        {
+          "name": "Heavy-Duty Slides",
+          "type": "Specialty Hinges",
+          "rootCategory": "Drawer Fittings",
+          "commonUse": "400–1000 mm (16″–40″)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "400–1000 mm (16″–40″)",
+              "Opening Angle": "Industrial drawers, tool cabinets, filing cabinets, safes."
+            }
+          ]
+        },
+        {
+          "name": "Undermount Slides (Concealed)",
+          "type": "Specialty Hinges",
+          "rootCategory": "Drawer Fittings",
+          "commonUse": "300–600 mm (12″–24″)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "300–600 mm (12″–24″)",
+              "Opening Angle": "Premium concealed look; used in luxury kitchens & wardrobes."
+            }
+          ]
+        },
+        {
+          "name": "Keyboard / Shallow Slides",
+          "type": "Specialty Hinges",
+          "rootCategory": "Drawer Fittings",
+          "commonUse": "250–350 mm (10″–14″)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "250–350 mm (10″–14″)",
+              "Opening Angle": "Used in office desks, pull-out trays, shallow drawers."
+            }
+          ]
+        },
+        {
+          "name": "T-Bar Handle",
+          "type": "Bar Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "96mm, 128mm, 160mm, 192mm, 224mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "96mm, 128mm, 160mm, 192mm, 224mm",
+              "Opening Angle": "SS, Zinc, Aluminum, Black, Chrome, Brass",
+              "Mounting Type": "Modern kitchens, wardrobes, drawers, office furniture."
+            }
+          ]
+        },
+        {
+          "name": "D-Bar Handle",
+          "type": "Bar Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "96mm, 128mm, 160mm, 192mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "96mm, 128mm, 160mm, 192mm",
+              "Opening Angle": "SS, Zinc, Black, Chrome, Antique",
+              "Mounting Type": "Wardrobes, cabinets, drawers; ergonomic grip handle."
+            }
+          ]
+        },
+        {
+          "name": "C-Bar Handle",
+          "type": "Bar Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "96mm, 128mm, 160mm, 192mm, 224mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "96mm, 128mm, 160mm, 192mm, 224mm",
+              "Opening Angle": "SS, Zinc, Black, Antique, Brass",
+              "Mounting Type": "Contemporary furniture, modular kitchens, sliding drawers."
+            }
+          ]
+        },
+        {
+          "name": "PVC Knob",
+          "type": "Knobs",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "Ø 25–40mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 25–40mm",
+              "Opening Angle": "PVC, Coated",
+              "Mounting Type": "Economical option; wardrobes, shoe racks, kids’ furniture."
+            }
+          ]
+        },
+        {
+          "name": "Wood/ Crystal / Ceramic",
+          "type": "Knobs",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "Ø 25–40mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 25–40mm",
+              "Opening Angle": "Wood, Plastic, Ceramic",
+              "Mounting Type": "General furniture; affordable and durable."
+            }
+          ]
+        },
+        {
+          "name": "SS Knob",
+          "type": "Knobs",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "Ø 25–40mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 25–40mm",
+              "Opening Angle": "SS304/316, Chrome, Matte",
+              "Mounting Type": "Premium wardrobes, cabinets, kitchen furniture."
+            }
+          ]
+        },
+        {
+          "name": "Brass Knob",
+          "type": "Knobs",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "Ø 25–40mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 25–40mm",
+              "Opening Angle": "Brass, Antique Brass, Gold Plated",
+              "Mounting Type": "Traditional & decorative furniture, vintage styling."
+            }
+          ]
+        },
+        {
+          "name": "Circle Handle",
+          "type": "Concealed Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "Ø 40–80mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 40–80mm",
+              "Opening Angle": "Zinc, SS, Aluminum, Black",
+              "Mounting Type": "Sleek wardrobes and cabinets, modern furniture."
+            }
+          ]
+        },
+        {
+          "name": "Oval Handle",
+          "type": "Concealed Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "80–120mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "80–120mm",
+              "Opening Angle": "Zinc, SS, Aluminum",
+              "Mounting Type": "Slim wardrobes, modular furniture."
+            }
+          ]
+        },
+        {
+          "name": "Rectangular Handle",
+          "type": "Concealed Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "80–150mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "80–150mm",
+              "Opening Angle": "SS, Zinc, Powder Coated",
+              "Mounting Type": "Modern flush look in kitchens & wardrobes."
+            }
+          ]
+        },
+        {
+          "name": "Square Handle",
+          "type": "Concealed Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "60–120mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "60–120mm",
+              "Opening Angle": "SS, Zinc, Brass, Matte Black",
+              "Mounting Type": "Premium wardrobes, office & modular setups."
+            }
+          ]
+        },
+        {
+          "name": "C-Section Handle",
+          "type": "Section Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "Length: 300–2400mm (custom cut to size)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Length: 300–2400mm (custom cut to size)",
+              "Opening Angle": "Aluminum, SS, Anodized, Powder Coated",
+              "Mounting Type": "Wardrobe shutters, sliding doors, and kitchen cabinets."
+            }
+          ]
+        },
+        {
+          "name": "D-Section Handle",
+          "type": "Section Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "Length: 300–2400mm (custom cut to size)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Length: 300–2400mm (custom cut to size)",
+              "Opening Angle": "Aluminum, SS, Anodized, Powder Coated",
+              "Mounting Type": "Wardrobes and drawer fronts; popular in modular furniture."
+            }
+          ]
+        },
+        {
+          "name": "Zinc Chest Handle",
+          "type": "Chest Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "75mm–150mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "75mm–150mm",
+              "Opening Angle": "Zinc Die-Cast, Black, Antique",
+              "Mounting Type": "Trunks, chest boxes, heavy wooden furniture."
+            }
+          ]
+        },
+        {
+          "name": "SS Chest Handle",
+          "type": "Chest Handles",
+          "rootCategory": "Handles & Knobs",
+          "commonUse": "75mm–150mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "75mm–150mm",
+              "Opening Angle": "SS304/316, Satin, Chrome",
+              "Mounting Type": "Heavy-duty chest handles; industrial and commercial furniture."
+            }
+          ]
+        },
+        {
+          "name": "Single Push Catch",
+          "type": "Push Catches",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "Standard",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Standard",
+              "Opening Angle": "Zinc, Nickel, SS",
+              "Mounting Type": "Zinc Alloy, SS",
+              "Overlay Type": "Used in wardrobes, cabinets; push-to-open function."
+            }
+          ]
+        },
+        {
+          "name": "Double Push Catch",
+          "type": "Push Catches",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "Standard",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Standard",
+              "Opening Angle": "Zinc, Nickel, SS",
+              "Mounting Type": "Zinc Alloy, SS",
+              "Overlay Type": "Heavier doors needing extra holding strength."
+            }
+          ]
+        },
+        {
+          "name": "Elephant Catch",
+          "type": "Push Catches",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "Standard",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Standard",
+              "Opening Angle": "Zinc, Antique Brass, Black",
+              "Mounting Type": "Zinc Alloy, Brass",
+              "Overlay Type": "Traditional wardrobes, chest boxes."
+            }
+          ]
+        },
+        {
+          "name": "PVC Magnetic Catch",
+          "type": "Magnetic Catches",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "30–50mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "30–50mm",
+              "Opening Angle": "White, Brown, Black",
+              "Mounting Type": "PVC + Magnet",
+              "Overlay Type": "Light-weight cabinet doors; economical option."
+            }
+          ]
+        },
+        {
+          "name": "SS Magnetic Catch",
+          "type": "Magnetic Catches",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "30–50mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "30–50mm",
+              "Opening Angle": "SS Finish, Black Powder Coated",
+              "Mounting Type": "SS + Magnet",
+              "Overlay Type": "Premium wardrobes, kitchen shutters."
+            }
+          ]
+        },
+        {
+          "name": "Brass Roll Catch",
+          "type": "Roll Catches",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "30–50mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "30–50mm",
+              "Opening Angle": "Brass, Antique Brass",
+              "Mounting Type": "Brass, Steel",
+              "Overlay Type": "Wooden doors; smooth spring-loaded action."
+            }
+          ]
+        },
+        {
+          "name": "Normal Toggle Latch",
+          "type": "Toggle Latch",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "40–80mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "40–80mm",
+              "Opening Angle": "Zinc, SS, Chrome",
+              "Mounting Type": "Steel, SS, Zinc Alloy",
+              "Overlay Type": "Used for boxes, cases, and industrial closures."
+            }
+          ]
+        },
+        {
+          "name": "Toggle Latch with Lock",
+          "type": "Toggle Latch",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "50–100mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "50–100mm",
+              "Opening Angle": "Zinc, SS, Black",
+              "Mounting Type": "Steel, SS, Zinc Alloy",
+              "Overlay Type": "Secure locking; toolboxes, trunks, industrial enclosures."
+            }
+          ]
+        },
+        {
+          "name": "Security Door Latch",
+          "type": "Door Latch",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "100–150mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "100–150mm",
+              "Opening Angle": "SS, Brass, Chrome, Antique",
+              "Mounting Type": "Brass, SS, Zinc Alloy",
+              "Overlay Type": "Used in main doors; extra security against forced entry."
+            }
+          ]
+        },
+        {
+          "name": "Tubular Latch",
+          "type": "Spring Latch",
+          "rootCategory": "Catchers & Latches",
+          "commonUse": "2.5″, 3″, 4″ (64–100mm)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "2.5″, 3″, 4″ (64–100mm)",
+              "Opening Angle": "Brass, SS, Antique, Black",
+              "Mounting Type": "Brass, SS, Steel",
+              "Overlay Type": "Used in internal wooden doors with handles or knobs."
+            }
+          ]
+        },
+        {
+          "name": "Fluted Wooden Dowels",
+          "type": "Dowels",
+          "rootCategory": "Furniture Fittings",
+          "commonUse": "Ø 6mm, 8mm, 10mm, 12mm; Length: 30–60mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 6mm, 8mm, 10mm, 12mm; Length: 30–60mm",
+              "Opening Angle": "Natural",
+              "Mounting Type": "Hardwood",
+              "Overlay Type": "Grooved for strong glue bonding; modular furniture assembly."
+            }
+          ]
+        },
+        {
+          "name": "Knock-Down (KD) Dowels Fitting",
+          "type": "Dowels",
+          "rootCategory": "Furniture Fittings",
+          "commonUse": "Ø 6mm–12mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 6mm–12mm",
+              "Opening Angle": "Zinc, Nickel",
+              "Mounting Type": "Steel, Zinc Alloy",
+              "Overlay Type": "Used with KD connectors for easy assembly/disassembly of furniture."
+            }
+          ]
+        },
+        {
+          "name": "Aluminum Turntable",
+          "type": "Turntable",
+          "rootCategory": "Furniture Fittings",
+          "commonUse": "Ø 6″–18″",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 6″–18″",
+              "Opening Angle": "White, Black, Grey",
+              "Mounting Type": "ABS, Nylon, Aluminum",
+              "Overlay Type": "Lightweight furniture, display stands, craft items."
+            }
+          ]
+        },
+        {
+          "name": "360° Swivel Plate",
+          "type": "Turntable",
+          "rootCategory": "Furniture Fittings",
+          "commonUse": "Ø 6″–12″",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 6″–12″",
+              "Opening Angle": "Zinc, Black Powder Coated",
+              "Mounting Type": "Steel",
+              "Overlay Type": "Chairs, bar stools, small display turntables."
+            }
+          ]
+        },
+        {
+          "name": "Standard Lid Stay / Table Chain",
+          "type": "Lid Stay",
+          "rootCategory": "Furniture Fittings",
+          "commonUse": "150–300 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "150–300 mm",
+              "Opening Angle": "Zinc Plated, Nickel, SS",
+              "Mounting Type": "Steel, SS, Zinc",
+              "Overlay Type": "Supports top-opening lids on cabinets, toy boxes, storage chests."
+            }
+          ]
+        },
+        {
+          "name": "Soft-Close Lid Stay",
+          "type": "Lid Stay",
+          "rootCategory": "Furniture Fittings",
+          "commonUse": "150–300 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "150–300 mm",
+              "Opening Angle": "Nickel, SS, Chrome, Black",
+              "Mounting Type": "Steel, SS",
+              "Overlay Type": "Smooth & silent closing; used in kitchen overhead cabinets & premium chests."
+            }
+          ]
+        },
+        {
+          "name": "Folding Lid Stay",
+          "type": "Lid Stay",
+          "rootCategory": "Furniture Fittings",
+          "commonUse": "150–300 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "150–300 mm",
+              "Opening Angle": "Nickel, SS, Antique Brass",
+              "Mounting Type": "Steel, SS, Brass",
+              "Overlay Type": "Folding desks, study tables, convertible furniture."
+            }
+          ]
+        },
+        {
+          "name": "Square End Caps",
+          "type": "End Caps",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "10×10 mm – 100×100 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "10×10 mm – 100×100 mm",
+              "Opening Angle": "Black, White, Grey",
+              "Mounting Type": "PVC, Nylon, Rubber",
+              "Overlay Type": "Protects tube ends; used in furniture, racks, pipes."
+            }
+          ]
+        },
+        {
+          "name": "Round End Caps",
+          "type": "End Caps",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "Ø 10–100 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 10–100 mm",
+              "Opening Angle": "Black, White, Grey",
+              "Mounting Type": "PVC, Nylon, Rubber",
+              "Overlay Type": "Used for chair legs, table legs, pipes, and profiles."
+            }
+          ]
+        },
+        {
+          "name": "Rectangular End Caps",
+          "type": "End Caps",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "10×20 mm – 50×100 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "10×20 mm – 50×100 mm",
+              "Opening Angle": "Black, White, Grey",
+              "Mounting Type": "PVC, Nylon",
+              "Overlay Type": "Wardrobes, shelves, aluminum/steel profiles."
+            }
+          ]
+        },
+        {
+          "name": "Upholstery Nails",
+          "type": "Chair Nails",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "Ø 10–20 mm head size",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 10–20 mm head size",
+              "Opening Angle": "Nickel, Brass, Antique, Black",
+              "Mounting Type": "Steel, Brass",
+              "Overlay Type": "Decorative fixing for chairs, sofas, and furniture."
+            }
+          ]
+        },
+        {
+          "name": "Heavy-Duty Chair Nails",
+          "type": "Chair Nails",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "Ø 15–25 mm head size",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 15–25 mm head size",
+              "Opening Angle": "Zinc Plated, Black, Brass",
+              "Mounting Type": "Steel",
+              "Overlay Type": "Securing chair legs and heavy furniture bases."
+            }
+          ]
+        },
+        {
+          "name": "Adjustable Chair Glide",
+          "type": "Chair Glides",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "Ø 15–30 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 15–30 mm",
+              "Opening Angle": "White, Black, Brown",
+              "Mounting Type": "Nylon, Teflon, Steel",
+              "Overlay Type": "Strong attachment for heavy furniture on wooden or tile floors."
+            }
+          ]
+        },
+        {
+          "name": "Self-Adhesive Chair Pads",
+          "type": "Chair Glides",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "Ø 15–50 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 15–50 mm",
+              "Opening Angle": "Transparent, White, Brown, Black",
+              "Mounting Type": "Felt, Rubber, PU",
+              "Overlay Type": "Quick fix for chairs/tables; reduces noise & protects flooring."
+            }
+          ]
+        },
+        {
+          "name": "Plastic Screw Caps",
+          "type": "Screw Caps & Stickers",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "Ø 6–20 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 6–20 mm",
+              "Opening Angle": "White, Black, Brown, Grey",
+              "Mounting Type": "PVC, ABS",
+              "Overlay Type": "Covers screw heads; used in wardrobes, cabinets, and furniture."
+            }
+          ]
+        },
+        {
+          "name": "Decorative Screw Stickers",
+          "type": "Screw Caps & Stickers",
+          "rootCategory": "Caps & Gliders",
+          "commonUse": "Ø 10–20 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 10–20 mm",
+              "Opening Angle": "Wood Grain, White, Black, Custom Prints",
+              "Mounting Type": "PVC, Paper Sticker",
+              "Overlay Type": "Matches surface finish; used to hide screws in modular furniture."
+            }
+          ]
+        },
+        {
+          "name": "Thickness (mm)",
+          "type": "Material",
+          "rootCategory": "Category",
+          "commonUse": "Width (mm)",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Width (mm)",
+              "Opening Angle": "Color / Design",
+              "Mounting Type": "Finish / Texture",
+              "Overlay Type": "Length per Roll (m)",
+              "Closing Action": "Remarks"
+            }
+          ]
+        },
+        {
+          "name": "0.45 / 0.8 / 1.0 / 2.0",
+          "type": "PVC Edge Band",
+          "rootCategory": "Edge Banding",
+          "commonUse": "19 / 22 / 25 / 35 / 45",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "19 / 22 / 25 / 35 / 45",
+              "Opening Angle": "Solid / Woodgrain",
+              "Mounting Type": "Matt / Gloss / Woodgrain",
+              "Overlay Type": "50 / 100",
+              "Closing Action": "Standard PVC for furniture & cabinets"
+            }
+          ]
+        },
+        {
+          "name": "0.5",
+          "type": "Melamine Edge Band",
+          "rootCategory": "Edge Banding",
+          "commonUse": "20",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "20",
+              "Opening Angle": "Solid / Woodgrain",
+              "Mounting Type": "Matt",
+              "Overlay Type": "50 / 100 / 200",
+              "Closing Action": "Budget-friendly for low-cost furniture"
+            }
+          ]
+        },
+        {
+          "name": "0.5 / 1.0 / 2.0",
+          "type": "Veneer Edge Band",
+          "rootCategory": "Edge Banding",
+          "commonUse": "22 / 30 / 45",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "22 / 30 / 45",
+              "Opening Angle": "Oak / Walnut / Beech / Teak",
+              "Mounting Type": "Natural Wood Texture",
+              "Overlay Type": "50",
+              "Closing Action": "For premium & natural wood furniture"
+            }
+          ]
+        },
+        {
+          "name": "Self-Adhesive Bumper Pads(Sound Proof)",
+          "type": "Drawer Buffers",
+          "rootCategory": "Furniture fitting",
+          "commonUse": "Ø 6–20 mm",
+          "description": "",
+          "specifications": [
+            {
+              "Cup Diameter": "Ø 6–20 mm",
+              "Opening Angle": "Transparent, White, Brown, Grey",
+              "Mounting Type": "PU, Rubber, Silicone",
+              "Overlay Type": "For soft-closing drawers, cabinet doors, furniture protection."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Glass Hardware",
+      "products": [
+        {
+          "name": "Top Patch",
+          "type": "Patch Fittings",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "",
+          "description": "Top patch fittings are used to securely fix frameless glass doors at the top edge. They connect the glass door to overhead pivots, closers, or transoms while distributing load evenly to prevent stress on the glass. Commonly used in commercial entrances, offices, and retail spaces, top patch fittings provide strength, stability, and clean aesthetics. Manufactured from high-grade stainless steel or aluminum, they ensure durability and smooth door operation."
+        },
+        {
+          "name": "Bottom Patch",
+          "type": "Patch Fittings",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "",
+          "description": "Bottom patch fittings are installed at the lower edge of glass doors and are typically used in conjunction with floor springs or pivot systems. They bear the majority of the door’s weight and ensure smooth rotation and stability. Widely used in commercial glass doors, they provide long-lasting performance and precise alignment while maintaining a minimal, frameless appearance."
+        },
+        {
+          "name": "Corner Patch",
+          "type": "Patch Fittings",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "Top Keeper, Lock Keeper, L Top,  Top Male",
+          "description": "Corner patch fittings are used at the corners of glass doors to connect glass panels to pivot systems or side supports. Designed to handle structural loads efficiently, they are commonly used in glass-to-glass or glass-to-wall installations. Their compact design ensures safety while maintaining a sleek architectural look."
+        },
+        {
+          "name": "Lock Patch",
+          "type": "Patch Fittings",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "Lock 514, Glass to Glass Lock, Square Lock",
+          "description": "Lock patch fittings integrate locking mechanisms directly into frameless glass doors without drilling holes through the glass. Used in single or double glass doors, they provide security while preserving clean design. Common in office cabins, retail stores, and commercial interiors, they offer compatibility with glass-to-glass and glass-to-wall applications."
+        },
+        {
+          "name": "Side Patch",
+          "type": "Patch Fittings",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "",
+          "description": "Side patch fittings are installed on the vertical edge of glass doors or panels to connect them to adjacent fixed glass or walls. They provide lateral stability and are commonly used in glass partition systems and cabin doors. Their compact design ensures strength without compromising visual transparency."
+        },
+        {
+          "name": "Fixed Panel",
+          "type": "Patch Fittings",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "",
+          "description": "Fixed panel patches are used to secure stationary glass panels in frameless systems. They ensure proper alignment and load distribution while allowing movable glass doors to operate smoothly. Commonly used in office partitions, shopfronts, and glass enclosures."
+        },
+        {
+          "name": "Double Door Patch",
+          "type": "Patch Fittings",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "",
+          "description": "Double door patch fittings are used in paired glass door systems, enabling proper alignment and synchronized operation of both doors. Commonly used in commercial entrances and conference rooms, they provide structural stability and smooth functionality for double glass doors."
+        },
+        {
+          "name": "Pivot Patch Fitting",
+          "type": "Patch Fittings",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "Alu Top,",
+          "description": "Aluminum top pivot patches connect glass doors to overhead pivot systems or floor springs. Lightweight yet strong, they provide smooth rotation and are widely used in commercial and architectural glass door installations."
+        },
+        {
+          "name": "Pull Handle (Round & Square)",
+          "type": "Glass Door Handles",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "Type A, H, S , C, D ,O",
+          "description": "Glass pull handles are mounted on frameless glass doors to allow easy manual operation. Available in various shapes and profiles, they are commonly used in offices, retail stores, hotels, and commercial entrances. Designed for durability and ergonomic grip, they enhance both functionality and aesthetics of glass doors."
+        },
+        {
+          "name": "Glass Connectors",
+          "type": "Glass & Mirror Fixture",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "L-Connector, T-Connector, Cross Connector",
+          "description": "Glass connectors join multiple glass panels at different angles in frameless partition systems. L, T, and cross connectors allow flexible layouts for glass enclosures, offices, and display areas. They provide strong structural connections while maintaining transparency and clean design."
+        },
+        {
+          "name": "Glass Standoffs",
+          "type": "Glass & Mirror Fixture",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "Wall Standoff / Point Fixing",
+          "description": "Glass standoffs are point-fixing hardware used to mount glass panels away from walls or structures. Commonly used in signage, balustrades, partitions, and decorative installations, they create a floating glass effect while ensuring secure anchoring and precise alignment."
+        },
+        {
+          "name": "Mirror Clips",
+          "type": "Glass & Mirror Fixture",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "Standard Mirror Clip",
+          "description": "Standard mirror clips are used to mount mirrors securely onto walls. Simple and reliable, they are widely used in bathrooms, wardrobes, and commercial washrooms. They allow easy installation while providing adequate support and safety."
+        },
+        {
+          "name": "Single / Double Sliding, Soft-Close",
+          "type": "Sliding Door Systems",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "Top Hung / Telescopic Systems",
+          "description": "Sliding door systems allow glass doors to slide smoothly along tracks instead of swinging. Used in offices, wardrobes, partitions, and balconies, they save space and enhance accessibility. Available in single or double configurations for various layouts."
+        },
+        {
+          "name": "Floor Spring Door Closer",
+          "type": "Floor Spring Door Closer",
+          "rootCategory": "Glass Door Fittings",
+          "commonUse": "",
+          "description": "A light-duty floor spring suitable for interior glass and wooden doors. It provides controlled closing without hold-open functionality, making it ideal for low-traffic commercial and residential applications."
+        },
+        {
+          "name": "1-Way Spider",
+          "type": "1-Way Spider",
+          "rootCategory": "Spider Fittings",
+          "commonUse": "",
+          "description": "Spider fittings are structural glass connectors used in façade glazing and large glass installations. They support glass panels at multiple points while allowing transparency and architectural expression. Used in façades, atriums, and commercial buildings."
+        },
+        {
+          "name": "180° / 90°",
+          "type": "2-Way Spider",
+          "rootCategory": "Spider Fittings",
+          "commonUse": "",
+          "description": "Spider fittings are structural glass connectors used in façade glazing and large glass installations. They support glass panels at multiple points while allowing transparency and architectural expression. Used in façades, atriums, and commercial buildings."
+        },
+        {
+          "name": "3-Way Spider",
+          "type": "3-Way Spider",
+          "rootCategory": "Spider Fittings",
+          "commonUse": "",
+          "description": "Spider fittings are structural glass connectors used in façade glazing and large glass installations. They support glass panels at multiple points while allowing transparency and architectural expression. Used in façades, atriums, and commercial buildings."
+        },
+        {
+          "name": "4-Way Spider",
+          "type": "4-Way Spider",
+          "rootCategory": "Spider Fittings",
+          "commonUse": "",
+          "description": "Spider fittings are structural glass connectors used in façade glazing and large glass installations. They support glass panels at multiple points while allowing transparency and architectural expression. Used in façades, atriums, and commercial buildings."
+        },
+        {
+          "name": "Bolts, Fin Covers",
+          "type": "Spider Accessories",
+          "rootCategory": "Spider Fittings",
+          "commonUse": "SS304 / SS316",
+          "description": "Spider accessories complete the spider fitting system, ensuring secure fastening and clean finishing. Made from stainless steel, they enhance durability and aesthetics in façade installations."
+        },
+        {
+          "name": "Wall-to-Glass",
+          "type": "Shower Hinges",
+          "rootCategory": "Shower Fittings",
+          "commonUse": "90°",
+          "description": "Shower hinges support frameless glass shower doors, allowing smooth opening and closing. Designed for wet environments, they provide corrosion resistance, strength, and precise alignment."
+        },
+        {
+          "name": "Glass-to-Glass",
+          "type": "Shower Hinges",
+          "rootCategory": "Shower Fittings",
+          "commonUse": "135° / 180°",
+          "description": "Specially designed handles and knobs for shower enclosures, offering secure grip and moisture resistance. They enhance safety and usability in bathroom applications."
+        },
+        {
+          "name": "Unequal Handle",
+          "type": "Shower Door Handles & Knobs",
+          "rootCategory": "Shower Fittings",
+          "commonUse": "",
+          "description": "Specially designed handles and knobs for shower enclosures, offering secure grip and moisture resistance. They enhance safety and usability in bathroom applications."
+        },
+        {
+          "name": "Knobs",
+          "type": "Shower Door Handles & Knobs",
+          "rootCategory": "Shower Fittings",
+          "commonUse": "",
+          "description": "Specially designed handles and knobs for shower enclosures, offering secure grip and moisture resistance. They enhance safety and usability in bathroom applications."
+        },
+        {
+          "name": "Magnetic Seal, Rubber Seal, Polycarbonate",
+          "type": "Shower Seals & Gaskets",
+          "rootCategory": "Shower Fittings",
+          "commonUse": "Transparent / Black",
+          "description": "Shower seals prevent water leakage by sealing gaps between glass panels. Magnetic seals provide firm closure, while rubber and polycarbonate seals ensure waterproofing and flexibility."
+        },
+        {
+          "name": "Wall-to-Glass, Support Bars",
+          "type": "Shower Brackets",
+          "rootCategory": "Shower Fittings",
+          "commonUse": "Adjustable / Fixed Types",
+          "description": "Shower brackets and support bars provide structural reinforcement for fixed glass panels. Adjustable and fixed variants ensure stability, safety, and durability in shower enclosures."
+        },
+        {
+          "name": "Round / Square Base",
+          "type": "Glass Spigots",
+          "rootCategory": "Balustrade & Railing",
+          "commonUse": "Adjustable Height, Floor-Mounted",
+          "description": "Glass spigots are floor-mounted supports used to hold glass balustrades without drilling into the glass. Commonly used in balconies, staircases, and terraces, they provide strong support and clean aesthetics."
+        },
+        {
+          "name": "Wall-to-Glass, Glass-to-Glass, Pipe to Pipe",
+          "type": "Handrail Brackets",
+          "rootCategory": "Balustrade & Railing",
+          "commonUse": "SS304 / SS316, Chrome, Matte Black",
+          "description": "Handrail brackets connect handrails to glass panels or walls in railing systems. Designed for safety and durability, they are widely used in staircases, balconies, and commercial railings."
+        },
+        {
+          "name": "Product Attribution",
+          "type": "Handrail Brackets",
+          "rootCategory": "Balustrade & Railing",
+          "commonUse": "",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Aluminum Hardware",
+      "products": [
+        {
+          "name": "Profile Hinges",
+          "type": "Hinges",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Profile hinges are designed specifically for aluminum doors and window sections. Integrated seamlessly into aluminum profiles, they provide smooth operation, clean aesthetics, and long-term durability. Commonly used in aluminum doors, partitions, and commercial framing systems, these hinges ensure proper alignment and consistent movement while maintaining the slim visual language of aluminum installations."
+        },
+        {
+          "name": "2 Part Profile Hinges",
+          "type": "Hinges",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "2-part profile hinges consist of two interlocking hinge components fitted into aluminum profiles. They are widely used in standard aluminum doors and windows where moderate load capacity is required. Easy to install and maintain, these hinges provide reliable performance for residential and light commercial applications."
+        },
+        {
+          "name": "3 Part Profile Hinges",
+          "type": "Hinges",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "3-part profile hinges offer enhanced strength and load distribution compared to 2-part variants. Designed for heavier aluminum shutters and frequently used doors, they improve stability and reduce wear over time. Commonly used in commercial aluminum doors, partitions, and shopfront systems."
+        },
+        {
+          "name": "Heavy Duty Profile Hinges",
+          "type": "Hinges",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Heavy-duty profile hinges are engineered for large, heavy aluminum doors and high-traffic installations. Their reinforced construction allows them to withstand frequent operation and higher loads, making them ideal for commercial entrances, industrial partitions, and aluminum framing systems requiring long service life."
+        },
+        {
+          "name": "Friction Hinges (Section Based)",
+          "type": "Hinges",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Friction hinges provide controlled opening and holding positions without the need for additional stays. Designed for aluminum windows and vents, they allow smooth movement while holding the sash securely at the desired angle. Commonly used in casement and top-hung aluminum windows for safety and ventilation control."
+        },
+        {
+          "name": "Butt Hinges",
+          "type": "Hinges",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Butt hinges for aluminum sections are traditional hinge solutions adapted for aluminum doors and frames. They offer reliable pivoting action and are commonly used in lightweight aluminum doors and partitions where a simple, proven hinge design is preferred."
+        },
+        {
+          "name": "Bridge Hinges",
+          "type": "Hinges",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Bridge hinges are specialty aluminum hinges designed to accommodate offset or stepped aluminum profiles. They provide smooth movement where standard hinges cannot align properly, making them suitable for custom aluminum doors, windows, and architectural sections."
+        },
+        {
+          "name": "Door Handle",
+          "type": "Handle",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Aluminum door handles are designed for use with aluminum doors and frames, offering durability, corrosion resistance, and ergonomic operation. Commonly used in residential, commercial, and industrial aluminum doors, they are available in multiple styles to match modern architectural systems."
+        },
+        {
+          "name": "Curtian Wall Handle",
+          "type": "Handle",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Curtain wall handles are specifically designed for aluminum curtain wall and façade systems. They provide easy operation of operable panels while maintaining the sleek, minimal appearance of curtain wall assemblies. Commonly used in commercial buildings and high-rise façades."
+        },
+        {
+          "name": "Window Left/ Right Handle",
+          "type": "Handle",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Left-hand and right-hand window handles are designed for aluminum casement and sliding windows. They ensure proper ergonomics and smooth locking action depending on window orientation. Widely used in residential and commercial aluminum window systems."
+        },
+        {
+          "name": "Window Handle Single Pin",
+          "type": "Handle",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Single-pin window handles provide basic locking and operation for aluminum windows. They are easy to operate and commonly used in standard window installations where simple functionality is required."
+        },
+        {
+          "name": "Window Handle Double Pin",
+          "type": "Handle",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Double-pin window handles offer enhanced locking strength and improved security compared to single-pin handles. Used in larger aluminum windows and commercial installations, they provide better resistance against forced opening."
+        },
+        {
+          "name": "Sliding Handle",
+          "type": "Handle",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Sliding handles are designed for aluminum sliding doors and windows. Their slim profile allows smooth movement without obstructing sliding panels. Commonly used in balconies, wardrobes, partitions, and commercial aluminum sliding systems."
+        },
+        {
+          "name": "Push Lock",
+          "type": "Locks",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Push locks are simple locking mechanisms activated by pressing the lock body. Commonly used in aluminum cabinets, windows, and lightweight doors, they provide quick and convenient locking without complex hardware."
+        },
+        {
+          "name": "Klick Lock",
+          "type": "Locks",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Klick locks operate with a click-in locking mechanism, providing tactile feedback during operation. Used in aluminum doors and window systems, they offer ease of use and reliable locking for everyday applications."
+        },
+        {
+          "name": "Latch Lock",
+          "type": "Locks",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Latch locks are mechanical locking devices used in aluminum doors and panels. They secure the door by engaging a latch into a strike plate, offering dependable locking for residential and commercial aluminum installations."
+        },
+        {
+          "name": "Roller Lock",
+          "type": "Locks",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Roller locks use a spring-loaded roller mechanism to hold aluminum doors closed. Commonly used in cabinets, partitions, and lightweight aluminum doors, they allow smooth closing while maintaining adequate holding force."
+        },
+        {
+          "name": "Dead Lock",
+          "type": "Locks",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Dead locks provide enhanced security by using a solid bolt that extends into the frame. Used in aluminum doors where higher security is required, they are commonly installed in commercial and external door applications."
+        },
+        {
+          "name": "Fly Screen Wheel",
+          "type": "Wheel",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Fly screen wheels are designed for smooth movement of aluminum fly screen panels. They ensure easy sliding action and durability under frequent use, commonly used in windows and balcony screens."
+        },
+        {
+          "name": "Box Wheel",
+          "type": "Wheel",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Box wheels are compact roller assemblies used in aluminum sliding doors and windows. Enclosed within a housing, they provide stability, smooth rolling, and long service life."
+        },
+        {
+          "name": "Jumbo Wheel",
+          "type": "Wheel",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Jumbo wheels are heavy-duty rollers designed for large and heavy aluminum sliding doors. Their larger diameter improves load handling and ensures smooth operation even under high weight conditions."
+        },
+        {
+          "name": "Double Box Wheel",
+          "type": "Wheel",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Double box wheels feature dual rollers for increased load capacity and smoother movement. Used in wide or heavy aluminum sliding shutters, they improve stability and reduce wear on tracks."
+        },
+        {
+          "name": "Finger Catch",
+          "type": "Accessories",
+          "rootCategory": "Aluminum Sections & Profiles",
+          "commonUse": "",
+          "description": "Finger catches are safety accessories installed in aluminum doors to prevent finger trapping during closing. Commonly used in residential buildings, schools, and commercial spaces, they enhance user safety while maintaining door functionality."
+        },
+        {
+          "name": "U-Shape Glass Rubber",
+          "type": "Glass Rubber",
+          "rootCategory": "Door Rubbers & Seals",
+          "commonUse": "For 6 mm – 12 mm glass",
+          "description": "U-shape glass rubbers are used to cushion and seal glass panels within aluminum frames. Designed for glass thicknesses from 6mm to 12mm, they protect glass edges, absorb vibration, and improve sealing in shower doors and glass partitions."
+        },
+        {
+          "name": "H-Shape Glass Rubber",
+          "type": "Glass Rubber",
+          "rootCategory": "Door Rubbers & Seals",
+          "commonUse": "For 6 mm – 12 mm glass",
+          "description": "H-shape glass rubbers are used to connect glass-to-glass panels while providing sealing and cushioning. Commonly used in partitions and shower enclosures, they ensure alignment and reduce direct glass contact."
+        },
+        {
+          "name": "Round Rubber",
+          "type": "Glass Rubber",
+          "rootCategory": "Door Rubbers & Seals",
+          "commonUse": "For 6 mm – 12 mm glass",
+          "description": ""
+        },
+        {
+          "name": "Gasket Rubber",
+          "type": "Glass Rubber",
+          "rootCategory": "Door Rubbers & Seals",
+          "commonUse": "For 6 mm – 12 mm glass",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

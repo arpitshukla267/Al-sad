@@ -1,0 +1,535 @@
+{
+  "category": "Retail & Home Solutions",
+  "subcategories": [
+    {
+      "name": "EURO STYLE",
+      "products": [
+        {
+          "name": "Upright Channel (Single / Double)",
+          "type": "EURO STYLE",
+          "commonUse": "Retail shops, showrooms, libraries – for adjustable shelving",
+          "remarks": "Available in 1.5, 2.0, 2.5 MTR lengths; White powder-coated",
+          "description": ""
+        },
+        {
+          "name": "Upright Single Bracket",
+          "type": "EURO STYLE",
+          "commonUse": "Supports adjustable shelves for retail & home use",
+          "remarks": "Size range 4\" to 24\"; White PC finish",
+          "description": ""
+        },
+        {
+          "name": "Upright Angle Bracket",
+          "type": "EURO STYLE",
+          "commonUse": "Wall-mounted shelving, display racks",
+          "remarks": "Size range 18 cm to 48 cm; White PC finish",
+          "description": ""
+        },
+        {
+          "name": "Upright U Bracket",
+          "type": "EURO STYLE",
+          "commonUse": "For shelves, panels, and heavy display support",
+          "remarks": "Size range 17 cm to 47 cm; White PC finish",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SLIM MODEL",
+      "products": [
+        {
+          "name": "Upright Channel (Single / Double)",
+          "type": "SLIM MODEL",
+          "commonUse": "Slim profile shelving for boutiques, homes",
+          "remarks": "Available in 1.5, 2.0, 2.5 MTR lengths; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Upright Single Bracket",
+          "type": "SLIM MODEL",
+          "commonUse": "Shelf support for slim model uprights",
+          "remarks": "4\" to 18\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Upright Angle Bracket",
+          "type": "SLIM MODEL",
+          "commonUse": "Adjustable shelf support for slim uprights",
+          "remarks": "4\" to 18\"; Chrome finish",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SLATWALL",
+      "products": [
+        {
+          "name": "Slatwall Insert Channel",
+          "type": "SLATWALL",
+          "commonUse": "Reinforces slatwall panels for display walls",
+          "remarks": "Standard 122 cm length; Aluminium",
+          "description": ""
+        },
+        {
+          "name": "Slatwall Hook",
+          "type": "SLATWALL",
+          "commonUse": "For hanging merchandise (clothes, bags, tools)",
+          "remarks": "Sizes 1\" to 16\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Slatwall Tag Hook",
+          "type": "SLATWALL",
+          "commonUse": "For hanging tagged items in retail",
+          "remarks": "6\" to 10\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Slatwall Glass Bracket",
+          "type": "SLATWALL",
+          "commonUse": "For supporting glass shelves on slatwall",
+          "remarks": "4\" to 18\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Slatwall Wall Angle Bracket",
+          "type": "SLATWALL",
+          "commonUse": "Strengthens corner shelf on slatwall system",
+          "remarks": "4\" to 16\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Slatwall Round Ball Hook",
+          "type": "SLATWALL",
+          "commonUse": "Displays handbags, garments, accessories",
+          "remarks": "1, 4 to 12 balls; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Slatwall Square Ball Hook",
+          "type": "SLATWALL",
+          "commonUse": "Displays clothing, accessories, retail hangers",
+          "remarks": "1, 4 to 12 balls; Chrome finish",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PEGWALL",
+      "products": [
+        {
+          "name": "Pegwall Panels",
+          "type": "PEGWALL",
+          "commonUse": "Display boards for accessories, tools, stationery",
+          "remarks": "Sizes 100×30 cm & 120×30 cm; Multi-color",
+          "description": ""
+        },
+        {
+          "name": "Pegwall Hook",
+          "type": "PEGWALL",
+          "commonUse": "For hanging products in retail & DIY stores",
+          "remarks": "2\" to 12\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Pegwall Tag Hook",
+          "type": "PEGWALL",
+          "commonUse": "Displays tagged items (bags, belts, etc.)",
+          "remarks": "6\" to 10\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Pegwall U Hook",
+          "type": "PEGWALL",
+          "commonUse": "For double hanging, tools & accessories",
+          "remarks": "6\" to 10\"; Chrome finish",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GRIDWALL",
+      "products": [
+        {
+          "name": "Gridwall Panels",
+          "type": "GRIDWALL",
+          "commonUse": "Modular display panels for shops & exhibitions",
+          "remarks": "2×6 ft & 3×6 ft; White PC or Chrome",
+          "description": ""
+        },
+        {
+          "name": "Gridwall Box / Pipe Supports",
+          "type": "GRIDWALL",
+          "commonUse": "Attachments for connecting gridwalls & boxes",
+          "remarks": "Standard size; White/Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Gridwall Hook",
+          "type": "GRIDWALL",
+          "commonUse": "For hanging retail items & accessories",
+          "remarks": "2\" to 12\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Gridwall Round Ball Hook",
+          "type": "GRIDWALL",
+          "commonUse": "Displays apparel & accessories in series",
+          "remarks": "1, 4 to 12 balls; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Gridwall Square Ball Hook",
+          "type": "GRIDWALL",
+          "commonUse": "Displays clothes, belts, handbags",
+          "remarks": "1, 4 to 12 balls; Chrome finish",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WALL MOUNT SYSTEM",
+      "products": [
+        {
+          "name": "Wallmount Hook",
+          "type": "WALL MOUNT SYSTEM",
+          "commonUse": "For retail hanging display",
+          "remarks": "2\" to 12\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Wallmount Glass Bracket",
+          "type": "WALL MOUNT SYSTEM",
+          "commonUse": "Supports glass shelves on wall mounts",
+          "remarks": "4\" to 14\"; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Wallmount Round Ball Hook",
+          "type": "WALL MOUNT SYSTEM",
+          "commonUse": "For retail garment & accessory display",
+          "remarks": "1, 4 to 12 balls; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "Wallmount Square Ball Hook",
+          "type": "WALL MOUNT SYSTEM",
+          "commonUse": "Used for apparel & accessories",
+          "remarks": "1, 4 to 12 balls; Chrome finish",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "UNO SYSTEM",
+      "products": [
+        {
+          "name": "UNO System – CP Ball",
+          "type": "UNO SYSTEM",
+          "commonUse": "Modular pipe fitting for displays",
+          "remarks": "Standard size; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "UNO System – Pipe to Pipe",
+          "type": "UNO SYSTEM",
+          "commonUse": "Connector for modular display systems",
+          "remarks": "Standard size; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "UNO System – Joker",
+          "type": "UNO SYSTEM",
+          "commonUse": "Joint fitting for multiple directions",
+          "remarks": "Standard size; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "UNO System – UNO 01 (One Way)",
+          "type": "UNO SYSTEM",
+          "commonUse": "Pipe connector for straight line system",
+          "remarks": "Standard size; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "UNO System – UNO 04 (Two Way)",
+          "type": "UNO SYSTEM",
+          "commonUse": "Connector for L-shape displays",
+          "remarks": "Standard size; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "UNO System – UNO 07 (Three Way)",
+          "type": "UNO SYSTEM",
+          "commonUse": "Connector for T-shape displays",
+          "remarks": "Standard size; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "UNO System – UNO 10 (Four Way)",
+          "type": "UNO SYSTEM",
+          "commonUse": "Connector for cross-shape displays",
+          "remarks": "Standard size; Chrome finish",
+          "description": ""
+        },
+        {
+          "name": "UNO System – UNO 15 (Straight)",
+          "type": "UNO SYSTEM",
+          "commonUse": "Pipe connector for linear display extension",
+          "remarks": "Standard size; Chrome finish",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Adjustable Storage",
+      "products": [
+        {
+          "name": "Slotted Angle (40×40×1.5mm, 8ft/10ft)",
+          "type": "Adjustable Storage",
+          "commonUse": "",
+          "remarks": "Grey finish, durable steel",
+          "description": ""
+        },
+        {
+          "name": "Slotted Angle (40×60×1.5mm, 8ft/10ft)",
+          "type": "Adjustable Storage",
+          "commonUse": "",
+          "remarks": "Grey finish, stronger load capacity",
+          "description": ""
+        },
+        {
+          "name": "Slotted Tray (30×90cm)",
+          "type": "Adjustable Storage",
+          "commonUse": "",
+          "remarks": "Grey finish, standard load",
+          "description": ""
+        },
+        {
+          "name": "Slotted Tray (40×90cm)",
+          "type": "Adjustable Storage",
+          "commonUse": "",
+          "remarks": "Grey finish, medium load",
+          "description": ""
+        },
+        {
+          "name": "Slotted Tray (45×90cm)",
+          "type": "Adjustable Storage",
+          "commonUse": "",
+          "remarks": "Grey finish, reinforced size",
+          "description": ""
+        },
+        {
+          "name": "Slotted Tray (60×90cm)",
+          "type": "Adjustable Storage",
+          "commonUse": "",
+          "remarks": "Grey finish, high capacity",
+          "description": ""
+        },
+        {
+          "name": "Slotted Corners",
+          "type": "Adjustable Storage",
+          "commonUse": "",
+          "remarks": "Grey finish, essential fitting",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Root Category",
+      "products": [
+        {
+          "name": "Category",
+          "type": "Root Category",
+          "commonUse": "Product Variants",
+          "remarks": "Size (Range)",
+          "description": "Material"
+        }
+      ]
+    },
+    {
+      "name": "Brackets & Plates",
+      "products": [
+        {
+          "name": "Shelf Brackets",
+          "type": "Brackets & Plates",
+          "commonUse": "L-Type Shelf Bracket",
+          "remarks": "75×100 mm to 400×500 mm",
+          "description": "Steel, SS, Aluminum"
+        },
+        {
+          "name": "Corner Plates",
+          "type": "Brackets & Plates",
+          "commonUse": "Flat Corner Plate",
+          "remarks": "50×50 mm to 200×200 mm",
+          "description": "Steel, SS"
+        },
+        {
+          "name": "Angle Brackets",
+          "type": "Brackets & Plates",
+          "commonUse": "Heavy Duty Angle Bracket",
+          "remarks": "50×50 mm to 300×300 mm",
+          "description": "Steel, SS"
+        },
+        {
+          "name": "Support Brackets",
+          "type": "Brackets & Plates",
+          "commonUse": "Countertop/Worktop Support Bracket",
+          "remarks": "300–600 mm",
+          "description": "Steel, SS"
+        },
+        {
+          "name": "Corner Braces",
+          "type": "Brackets & Plates",
+          "commonUse": "Light Duty Corner Brace",
+          "remarks": "25×25 mm to 75×75 mm",
+          "description": "Steel, SS"
+        }
+      ]
+    },
+    {
+      "name": "Hooks",
+      "products": [
+        {
+          "name": "Wall Hooks",
+          "type": "Hooks",
+          "commonUse": "Single Wall Hook",
+          "remarks": "50–100 mm",
+          "description": "SS, Brass, Zinc Alloy"
+        },
+        {
+          "name": "Door Hooks",
+          "type": "Hooks",
+          "commonUse": "Over-the-Door Hook",
+          "remarks": "100–200 mm (fits 25–40 mm door thickness)",
+          "description": "SS, Steel, Aluminum"
+        },
+        {
+          "name": "Utility Hooks",
+          "type": "Hooks",
+          "commonUse": "Adhesive Hook",
+          "remarks": "25–75 mm (load 1–10 kg)",
+          "description": "ABS Plastic, SS"
+        },
+        {
+          "name": "Specialty Hooks",
+          "type": "Hooks",
+          "commonUse": "Folding Hook",
+          "remarks": "50–100 mm",
+          "description": "SS, Zinc Alloy"
+        },
+        {
+          "name": "Heavy-Duty Hooks",
+          "type": "Hooks",
+          "commonUse": "Fan Hook",
+          "remarks": "100–200 mm (load 20–50 kg)",
+          "description": "Steel, SS"
+        }
+      ]
+    },
+    {
+      "name": "Shelf Supports",
+      "products": [
+        {
+          "name": "Pin Supports",
+          "type": "Shelf Supports",
+          "commonUse": "Straight Shelf Pin",
+          "remarks": "Ø 3mm – 5mm, Length 20–30 mm",
+          "description": "Steel, Brass, SS"
+        }
+      ]
+    },
+    {
+      "name": "Wardrobe Fixtures",
+      "products": [
+        {
+          "name": "Hanging Rods",
+          "type": "Wardrobe Fixtures",
+          "commonUse": "Round Wardrobe Rod",
+          "remarks": "Ø 25–30 mm • Length: 600–1200 mm",
+          "description": "SS, Aluminum, Steel"
+        },
+        {
+          "name": "Rod Supports",
+          "type": "Wardrobe Fixtures",
+          "commonUse": "End Supports (Round/Oval)",
+          "remarks": "To fit Ø 25–30 mm / 15×30 mm tubes",
+          "description": "Zinc Alloy, SS, Brass"
+        }
+      ]
+    },
+    {
+      "name": "Jewelry Box Fittings",
+      "products": [
+        {
+          "name": "Hinges",
+          "type": "Jewelry Box Fittings",
+          "commonUse": "Mini Butt Hinges/ Butterfly Hinges",
+          "remarks": "15–40 mm",
+          "description": "Brass, SS, Steel"
+        },
+        {
+          "name": "Corners",
+          "type": "Jewelry Box Fittings",
+          "commonUse": "Decorative Box Corners",
+          "remarks": "15×15 mm – 40×40 mm",
+          "description": "Brass, Zinc Alloy"
+        },
+        {
+          "name": "Locks",
+          "type": "Jewelry Box Fittings",
+          "commonUse": "Mini Cam Lock",
+          "remarks": "15–25 mm barrel length",
+          "description": "Brass, Zinc Alloy"
+        }
+      ]
+    },
+    {
+      "name": "Brackets & Supports",
+      "products": [
+        {
+          "name": "Shelf Bracket",
+          "type": "Brackets & Supports",
+          "commonUse": "General-purpose wall shelving in homes, offices, shops",
+          "remarks": "Available in steel/iron, powder-coated, various sizes (6\"–24\"); standard L-shaped",
+          "description": ""
+        },
+        {
+          "name": "Concealed Shelf Bracket",
+          "type": "Brackets & Supports",
+          "commonUse": "Floating shelves in living rooms, kitchens, retail",
+          "remarks": "Hidden inside shelf; clean modern look; weight depends on wall type",
+          "description": ""
+        },
+        {
+          "name": "Folding Shelf Bracket",
+          "type": "Brackets & Supports",
+          "commonUse": "Wall-mounted foldable tables, kitchen counters, laundry folding shelves",
+          "remarks": "Locking hinge allows folding; space-saving",
+          "description": ""
+        },
+        {
+          "name": "Glass Shelf Bracket",
+          "type": "Brackets & Supports",
+          "commonUse": "Supporting glass shelves in bathrooms, showrooms, retail stores",
+          "remarks": "Chrome, stainless steel, or zinc alloy; usually adjustable grips; elegant design",
+          "description": ""
+        },
+        {
+          "name": "Heavy-Duty Shelf Bracket",
+          "type": "Brackets & Supports",
+          "commonUse": "Industrial shelving, warehouses, garages",
+          "remarks": "Reinforced steel; supports higher weight loads",
+          "description": ""
+        },
+        {
+          "name": "Decorative Shelf Bracket",
+          "type": "Brackets & Supports",
+          "commonUse": "Interior shelving, cafés, boutiques",
+          "remarks": "Ornamental cast iron, wood, or designed metal for aesthetic use",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

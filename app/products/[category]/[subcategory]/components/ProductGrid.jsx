@@ -41,7 +41,7 @@ const ProductGrid = ({ products = [], filters = [], categorySlug, subcategorySlu
 		<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 md:gap-6 lg:gap-[22px]">
 			{filteredProducts.map((product, index) => {
 				// Handle different product structures
-				const productName = product.name || product.type || product.section || 'Product';
+				const productName = product.name || product.type || product.productType || product.section || 'Product';
 				const productImage = product.image || productImg;
 				const productSlug = slugify(productName);
 

@@ -4,9 +4,12 @@ const XLSX = require('xlsx');
 const fs = require('fs');
 const path = require('path');
 
+// Excel files are in informations/ folder
+const EXCEL_DIR = path.join(process.cwd(), 'informations');
+
 // Configuration: Map Excel files to their processing functions
 const EXCEL_CONFIG = {
-  'Professional Tools & Gear.xlsx': {
+  'Professional Tools & Gear (1).xlsx': {
     category: 'Professional Tools & Gear',
     processor: 'processProfessionalTools',
     outputFile: 'data/professional-tools-gear.json'
@@ -15,6 +18,16 @@ const EXCEL_CONFIG = {
     category: 'Structural Materials',
     processor: 'processStructuralMaterials',
     outputFile: 'data/structural-materials.json'
+  },
+  'Architectural Components.xlsx': {
+    category: 'Architectural Components',
+    processor: 'processArchitecturalComponents',
+    outputFile: 'data/architectural-components.json'
+  },
+  'Retail and Home Solution.xlsx': {
+    category: 'Retail & Home Solutions',
+    processor: 'processRetailAndHomeSolution',
+    outputFile: 'data/retail-home-solutions.json'
   }
 };
 
@@ -225,6 +238,159 @@ function processStructuralMaterials(workbook) {
   };
 }
 
+// Process Architectural Components Excel
+function processArchitecturalComponents(workbook) {
+  const subcategories = [];
+  const sheetNames = workbook.SheetNames;
+
+  sheetNames.forEach((sheetName) => {
+    const worksheet = workbook.Sheets[sheetName];
+    const data = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: '' });
+    const products = [];
+    let currentRoot = '';
+    let currentType = '';
+
+    // Architectural Hardware: 0=Root, 1=Type, 2=Variants, 3=Remarks, 4=Series/Model, 5=Brand(s), 7=Description
+    const isArchHardware = sheetName === 'Architectural Hardware';
+    // Furniture Hardware: 0=Root, 1=Category, 2=Variants, 3=Cup Diameter, 4=Opening Angle, 5=Mounting, 6=Overlay, 7=Closing Action, 8=Common Use, 9=Description
+    const isFurniture = sheetName === 'Furniture Hardware';
+    const furnitureHeaders = isFurniture && data[0] ? data[0].map((c) => String(c || '').trim()).filter(Boolean) : [];
+
+    for (let i = 1; i < data.length; i++) {
+      const row = data[i];
+      if (!row || row.length === 0) continue;
+
+      const root = String(row[0] || '').trim();
+      const col1 = String(row[1] || '').trim();
+      const col2 = String(row[2] || '').trim();
+      const remarks = String(row[3] || '').trim();
+      const description = String(row[row.length - 1] || '').trim();
+
+      if (root) currentRoot = root;
+      if (col1 && !col1.match(/^(Type|Category|Products|Product Variants)$/)) currentType = col1;
+
+      const productName = col2 || col1 || root;
+      if (!productName || productName.length < 2) continue;
+      if (productName.match(/^(Root Category|Type|Product Variants|Cup Diameter|Opening Angle)/)) continue;
+
+      const product = {
+        name: productName,
+        type: currentType || currentRoot,
+        rootCategory: currentRoot,
+        commonUse: remarks,
+        description: description
+      };
+
+      if (isArchHardware) {
+        const brandsStr = String(row[5] || '').trim();
+        const seriesModel = String(row[4] || '').trim();
+        if (brandsStr) {
+          product.brands = brandsStr.split(/[,;]/).map((b) => b.trim()).filter(Boolean);
+        }
+        if (seriesModel) product.seriesModelExamples = seriesModel;
+      }
+
+      if (isFurniture && furnitureHeaders.length >= 9) {
+        const cupD = String(row[3] || '').trim();
+        const openAngle = String(row[4] || '').trim();
+        const mounting = String(row[5] || '').trim();
+        const overlay = String(row[6] || '').trim();
+        const closing = String(row[7] || '').trim();
+        const commonUse = String(row[8] || '').trim();
+        const specRow = {};
+        if (cupD) specRow['Cup Diameter'] = cupD;
+        if (openAngle) specRow['Opening Angle'] = openAngle;
+        if (mounting) specRow['Mounting Type'] = mounting;
+        if (overlay) specRow['Overlay Type'] = overlay;
+        if (closing) specRow['Closing Action'] = closing;
+        if (commonUse) specRow['Common Use'] = commonUse;
+        if (Object.keys(specRow).length > 0) {
+          product.specifications = [specRow];
+        }
+      }
+
+      products.push(product);
+    }
+
+    const seen = new Set();
+    const uniqueProducts = products.filter((p) => {
+      const key = p.name;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+
+    if (uniqueProducts.length > 0) {
+      subcategories.push({
+        name: sheetName,
+        products: uniqueProducts
+      });
+    }
+  });
+
+  return {
+    category: 'Architectural Components',
+    subcategories: subcategories
+  };
+}
+
+// Process Retail and Home Solution Excel
+function processRetailAndHomeSolution(workbook) {
+  const subcategories = [];
+  const sheet = workbook.Sheets[workbook.SheetNames[0]];
+  const data = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' });
+
+  const categoryProducts = {};
+  let lastCategory = '';
+
+  for (let i = 1; i < data.length; i++) {
+    const row = data[i];
+    if (!row || row.length === 0) continue;
+
+    const category = String(row[0] || '').trim();
+    const productType = String(row[1] || '').trim();
+    const applications = String(row[2] || '').trim();
+    const remarks = String(row[3] || '').trim();
+    const description = String((row[5] ?? row[4] ?? row[6] ?? '') || '').trim();
+
+    if (!productType) continue;
+    if (productType === 'Product Type') continue;
+
+    if (category) lastCategory = category;
+    const catKey = lastCategory || 'Retail & Home Solutions';
+    if (!categoryProducts[catKey]) {
+      categoryProducts[catKey] = [];
+    }
+    categoryProducts[catKey].push({
+      name: productType,
+      type: catKey,
+      commonUse: applications,
+      remarks: remarks,
+      description: description
+    });
+  }
+
+  Object.entries(categoryProducts).forEach(([catName, products]) => {
+    const seen = new Set();
+    const uniqueProducts = products.filter((p) => {
+      if (seen.has(p.name)) return false;
+      seen.add(p.name);
+      return true;
+    });
+    if (uniqueProducts.length > 0) {
+      subcategories.push({
+        name: catName,
+        products: uniqueProducts
+      });
+    }
+  });
+
+  return {
+    category: 'Retail & Home Solutions',
+    subcategories: subcategories
+  };
+}
+
 // Main processing function
 function processExcelFile(filePath) {
   const fileName = path.basename(filePath);
@@ -249,6 +415,12 @@ function processExcelFile(filePath) {
         break;
       case 'processStructuralMaterials':
         result = processStructuralMaterials(workbook);
+        break;
+      case 'processArchitecturalComponents':
+        result = processArchitecturalComponents(workbook);
+        break;
+      case 'processRetailAndHomeSolution':
+        result = processRetailAndHomeSolution(workbook);
         break;
       default:
         console.error(`❌ Unknown processor: ${config.processor}`);
@@ -278,28 +450,38 @@ function processExcelFile(filePath) {
   }
 }
 
-// Process all Excel files in the root directory
+// Process all Excel files from informations/ folder
 function processAllExcelFiles() {
   console.log('🚀 Starting Excel file processing...\n');
-  
-  const rootDir = process.cwd();
-  const files = fs.readdirSync(rootDir);
-  const excelFiles = files.filter(file => 
-    file.endsWith('.xlsx') || file.endsWith('.xls')
-  );
 
-  if (excelFiles.length === 0) {
-    console.log('⚠️  No Excel files found in the root directory.');
+  if (!fs.existsSync(EXCEL_DIR)) {
+    console.log('⚠️  informations/ folder not found.');
     return;
   }
 
-  console.log(`Found ${excelFiles.length} Excel file(s):`);
-  excelFiles.forEach(file => console.log(`   - ${file}`));
+  const files = fs.readdirSync(EXCEL_DIR);
+  const excelFiles = files.filter(file =>
+    file.endsWith('.xlsx') || file.endsWith('.xls')
+  );
+
+  // Process in consistent order
+  const order = Object.keys(EXCEL_CONFIG);
+  const sortedFiles = excelFiles.filter((f) => order.includes(f)).sort(
+    (a, b) => order.indexOf(a) - order.indexOf(b)
+  );
+
+  if (sortedFiles.length === 0) {
+    console.log('⚠️  No configured Excel files found in informations/.');
+    return;
+  }
+
+  console.log(`Found ${sortedFiles.length} Excel file(s):`);
+  sortedFiles.forEach((file) => console.log(`   - ${file}`));
   console.log('');
 
   const results = [];
-  excelFiles.forEach(file => {
-    const result = processExcelFile(path.join(rootDir, file));
+  sortedFiles.forEach((file) => {
+    const result = processExcelFile(path.join(EXCEL_DIR, file));
     if (result) {
       results.push(result);
     }

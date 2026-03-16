@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { use, useState, useEffect } from "react";
 import Header from "../../../Header";
 import Footer from "../../../Footer";
 import Breadcrumb from "./components/Breadcrumb";
@@ -19,6 +19,9 @@ import {
 import { flattenProducts } from "@/lib/filter-config";
 
 const Layer2Page = ({ params }) => {
+  const { category: categorySlug, subcategory: subcategorySlug } = use(
+    params || Promise.resolve({ category: "", subcategory: "" })
+  );
   const [activeFilters, setActiveFilters] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
   const [subcategoryData, setSubcategoryData] = useState({
@@ -31,15 +34,15 @@ const Layer2Page = ({ params }) => {
   useEffect(() => {
     const loadSubcategoryData = async () => {
       try {
-        const category = await getCategoryBySlug(params.category);
+        const category = await getCategoryBySlug(categorySlug);
         const categoryName = category
           ? category.category
-          : getCategoryNameFromSlug(params.category);
+          : getCategoryNameFromSlug(categorySlug);
 
         if (category) {
           const subcategory = await getSubcategoryBySlugs(
-            params.category,
-            params.subcategory
+            categorySlug,
+            subcategorySlug
           );
 
           if (subcategory) {
@@ -50,10 +53,10 @@ const Layer2Page = ({ params }) => {
               title: subcategoryName,
               breadcrumb: [
                 { name: "Home", path: "/" },
-                { name: categoryName, path: `/products/${params.category}` },
+                { name: categoryName, path: `/products/${categorySlug}` },
                 {
                   name: subcategoryName,
-                  path: `/products/${params.category}/${params.subcategory}`,
+                  path: `/products/${categorySlug}/${subcategorySlug}`,
                 },
               ],
               products,
@@ -63,13 +66,13 @@ const Layer2Page = ({ params }) => {
           } else {
             // Fallback if subcategory not found
             setSubcategoryData({
-              title: params.subcategory,
+              title: subcategorySlug,
               breadcrumb: [
                 { name: "Home", path: "/" },
-                { name: categoryName, path: `/products/${params.category}` },
+                { name: categoryName, path: `/products/${categorySlug}` },
                 {
-                  name: params.subcategory,
-                  path: `/products/${params.category}/${params.subcategory}`,
+                  name: subcategorySlug,
+                  path: `/products/${categorySlug}/${subcategorySlug}`,
                 },
               ],
               products: [],
@@ -80,21 +83,21 @@ const Layer2Page = ({ params }) => {
         } else {
           // Fallback if category not found
           setSubcategoryData({
-            title: params.subcategory,
+            title: subcategorySlug,
             breadcrumb: [
               { name: "Home", path: "/" },
               {
-                name: getCategoryNameFromSlug(params.category),
-                path: `/products/${params.category}`,
+                name: getCategoryNameFromSlug(categorySlug),
+                path: `/products/${categorySlug}`,
               },
               {
-                name: params.subcategory,
-                path: `/products/${params.category}/${params.subcategory}`,
+                name: subcategorySlug,
+                path: `/products/${categorySlug}/${subcategorySlug}`,
               },
             ],
             products: [],
             subcategory: null,
-            categoryName: getCategoryNameFromSlug(params.category),
+            categoryName: getCategoryNameFromSlug(categorySlug),
           });
         }
       } catch (error) {
@@ -105,7 +108,7 @@ const Layer2Page = ({ params }) => {
     };
 
     loadSubcategoryData();
-  }, [params.category, params.subcategory]);
+  }, [categorySlug, subcategorySlug]);
 
   const handleFilterChange = (filters) => {
     setActiveFilters(filters);
@@ -164,8 +167,8 @@ const Layer2Page = ({ params }) => {
                   <ProductGrid
                     products={subcategoryData.products}
                     filters={activeFilters}
-                    categorySlug={params.category}
-                    subcategorySlug={params.subcategory}
+                    categorySlug={categorySlug}
+                    subcategorySlug={subcategorySlug}
                   />
                 </div>
               </div>

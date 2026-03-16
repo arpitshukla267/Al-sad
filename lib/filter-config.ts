@@ -16,6 +16,11 @@ export function flattenProducts(subcategory: any): any[] {
     products.push(...subcategory.products);
   }
 
+  // Structure 1b: Rivets (Screws & Nails sheet)
+  if (subcategory.rivets && Array.isArray(subcategory.rivets)) {
+    products.push(...subcategory.rivets);
+  }
+
   // Structure 2: productTypes with tools/products
   if (subcategory.productTypes && Array.isArray(subcategory.productTypes)) {
     subcategory.productTypes.forEach((productType: any) => {
@@ -114,6 +119,21 @@ export function getFilterConfig(
     if (subcategorySlug.includes("abrasive")) {
       return [{ id: "toolType", title: "Tool Type", extractFrom: "toolType" }];
     }
+  }
+
+  // Architectural Components filters
+  if (categorySlug.includes("architectural")) {
+    return [
+      { id: "type", title: "Type", extractFrom: "type" },
+      { id: "rootCategory", title: "Category", extractFrom: "rootCategory" },
+    ];
+  }
+
+  // Retail & Home Solutions filters
+  if (categorySlug.includes("retail") || categorySlug.includes("home")) {
+    return [
+      { id: "type", title: "Style", extractFrom: "type" },
+    ];
   }
 
   // Default filters for unknown categories

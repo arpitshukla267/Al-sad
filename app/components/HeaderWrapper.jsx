@@ -53,8 +53,16 @@ export default function HeaderWrapper() {
   const useGradient = isHomePage && !isScrolled;
   const isDarkBackground = pathname === "/blogs" || pathname === "/contact-us";
 
+  const headerBg = isDarkBackground
+    ? "bg-[#0e2143]"
+    : useGradient
+    ? "bg-white"
+    : "bg-white";
+
   return (
-    <div className="h-max sm:h-[85px] w-full flex items-center fixed top-0 z-[100]">
+    <div
+      className={`h-[65px] sm:h-[85px] w-full flex items-center fixed top-0 left-0 right-0 z-[100] pt-[env(safe-area-inset-top,0px)] sm:pt-0 ${headerBg}`}
+    >
       <Header isDarkBackground={isDarkBackground} useGradient={useGradient} />
     </div>
   );

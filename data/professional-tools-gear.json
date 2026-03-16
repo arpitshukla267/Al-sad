@@ -372,6 +372,72 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Abrasive Tools & Materials",
+      "productTypes": [
+        {
+          "name": "Cut-Off Wheels",
+          "tools": [
+            {
+              "name": "Grinding Wheels",
+              "commonUse": "Surface grinding, edge grinding, metal shaping"
+            },
+            {
+              "name": "Mounted Points",
+              "commonUse": "Small-scale grinding in hard-to-reach places"
+            },
+            {
+              "name": "Sharpening Stones",
+              "commonUse": "Sharpening knives, chisels, and blades"
+            },
+            {
+              "name": "Bench Grinder Wheels",
+              "commonUse": "Tool sharpening, deburring, shaping metal"
+            },
+            {
+              "name": "Sanding Belts,Sheets / Rolls",
+              "commonUse": "Surface smoothing in belt sanders (metal & wood)"
+            },
+            {
+              "name": "Sanding Discs",
+              "commonUse": "Used on orbital or angle sanders for polishing & sanding"
+            },
+            {
+              "name": "Flap Discs",
+              "commonUse": "Blending, grinding, and finishing metal surfaces"
+            },
+            {
+              "name": "Scouring Pads",
+              "commonUse": "Surface cleaning, rust removal, finishing"
+            },
+            {
+              "name": "Abrasive Wheels (non-woven)",
+              "commonUse": "Deburring, cleaning, polishing without gouging"
+            },
+            {
+              "name": "Diamond Blades / Discs",
+              "commonUse": "Cutting hard materials like stone, tiles, glass"
+            },
+            {
+              "name": "Diamond Files",
+              "commonUse": "Fine grinding and shaping of ceramics, carbide, etc."
+            },
+            {
+              "name": "Backing Pads",
+              "commonUse": "Support for sanding discs and polishing pads"
+            },
+            {
+              "name": "Velcro / Hook-and-Loop Discs",
+              "commonUse": "Blending, cleaning, prepping metal surfaces"
+            },
+            {
+              "name": "Abrasive Brushes",
+              "commonUse": "Rust, paint, or burr removal from surfaces"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

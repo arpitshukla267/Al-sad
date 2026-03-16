@@ -65,6 +65,16 @@
           "applications": ""
         },
         {
+          "section": "Copper Sheet",
+          "type": "Standard sizes and finishes are available. Custom sizes, lengths, and finishes can be provided upon request.",
+          "thickness": "",
+          "width": "",
+          "length": "",
+          "material": "",
+          "finish": "",
+          "applications": ""
+        },
+        {
           "section": "Architectural Profiles",
           "type": "Profile Type",
           "thickness": "Material",
@@ -93,6 +103,16 @@
           "material": "3000 / 6000",
           "finish": "Mill / Anodized / Wood Finish",
           "applications": "Glass Joinery, Partitions"
+        },
+        {
+          "section": "Round Tube / Pipe",
+          "type": "Standard sizes and finishes are available. Custom sizes, lengths, and finishes can be provided upon request.",
+          "thickness": "",
+          "width": "",
+          "length": "",
+          "material": "",
+          "finish": "",
+          "applications": ""
         }
       ]
     },
@@ -125,31 +145,46 @@
         },
         {
           "productType": "Through Bolts",
-          "subTypes": ["Standard Through Bolt", "Heavy Duty Through Bolt"],
+          "subTypes": [
+            "Standard Through Bolt",
+            "Heavy Duty Through Bolt"
+          ],
           "material": "Steel / SS",
           "applications": "Structural, Fixing Beams and Columns"
         },
         {
           "productType": "Toggle Bolts",
-          "subTypes": ["Spring Toggle Bolt", "Wing Toggle Anchor"],
+          "subTypes": [
+            "Spring Toggle Bolt",
+            "Wing Toggle Anchor"
+          ],
           "material": "Steel / SS",
           "applications": "Hollow Wall Mounting, Ceilings"
         },
         {
           "productType": "Threaded Rods",
-          "subTypes": ["Full Thread Rod", "Stud Bolt"],
+          "subTypes": [
+            "Full Thread Rod",
+            "Stud Bolt"
+          ],
           "material": "Mild Steel, SS",
           "applications": "Custom Length Fixing, Pipe Support"
         },
         {
           "productType": "Anchor Nuts & Washers",
-          "subTypes": ["Hex Nuts", "Dome Nuts", "Spring / Flat Washers"],
+          "subTypes": [
+            "Hex Nuts",
+            "Dome Nuts",
+            "Spring / Flat Washers"
+          ],
           "material": "Mild Steel, SS, Brass",
           "applications": "Structural and Machine Fixing"
         },
         {
           "productType": "Nail Anchors",
-          "subTypes": ["Ceiling Anchor"],
+          "subTypes": [
+            "Ceiling Anchor"
+          ],
           "material": "Steel with Nylon / PE",
           "applications": "Fast & Light-duty Fixing"
         }
@@ -161,7 +196,10 @@
         {
           "type": "Screws & Nails",
           "productType": "Drywall Screw",
-          "subTypes": ["Fine Thread", "Coarse Thread"],
+          "subTypes": [
+            "Fine Thread",
+            "Coarse Thread"
+          ],
           "material": "Carbon Steel",
           "finish": "Black Phosphate",
           "applications": "Fixing drywall to metal/wood studs"
@@ -169,7 +207,10 @@
         {
           "type": "Screws & Nails",
           "productType": "Self Tapping Screw",
-          "subTypes": ["Pan Head", "Countersunk Head"],
+          "subTypes": [
+            "Pan Head",
+            "Countersunk Head"
+          ],
           "material": "SS / Carbon Steel",
           "finish": "Zinc Plated / SS",
           "applications": "Sheet metal, plastic, light fabrication"
@@ -177,7 +218,11 @@
         {
           "type": "Screws & Nails",
           "productType": "Self Drilling Screw",
-          "subTypes": ["Hex Head", "Wafer Head", "Pan Head"],
+          "subTypes": [
+            "Hex Head",
+            "Wafer Head",
+            "Pan Head"
+          ],
           "material": "Carbon Steel / SS",
           "finish": "Zinc / SS / Ruspert",
           "applications": "Metal-to-metal, roofing, light steelwork"
@@ -185,7 +230,11 @@
         {
           "type": "Screws & Nails",
           "productType": "Machine Screw",
-          "subTypes": ["Pan Head", "Countersunk Head", "Allen Head"],
+          "subTypes": [
+            "Pan Head",
+            "Countersunk Head",
+            "Allen Head"
+          ],
           "material": "Mild Steel / SS",
           "finish": "Zinc / Black / SS",
           "applications": "Mechanical assembly, electrical enclosures"
@@ -193,7 +242,10 @@
         {
           "type": "Screws & Nails",
           "productType": "Chipboard Screw",
-          "subTypes": ["Countersunk", "Pozi Drive"],
+          "subTypes": [
+            "Countersunk",
+            "Pozi Drive"
+          ],
           "material": "Hardened Steel",
           "finish": "Yellow Zinc / Bronze",
           "applications": "Furniture, particle board, cabinetry"
@@ -201,7 +253,9 @@
         {
           "type": "Screws & Nails",
           "productType": "Wood Screw ",
-          "subTypes": ["Countersunk"],
+          "subTypes": [
+            "Countersunk"
+          ],
           "material": "Hardened Steel",
           "finish": "Yellow Zinc / Bronze",
           "applications": "Furniture, particle board, cabinetry"
@@ -209,7 +263,10 @@
         {
           "type": "Screws & Nails",
           "productType": "Steel Nails",
-          "subTypes": ["Common Nail", "Bright Steel Nail"],
+          "subTypes": [
+            "Common Nail",
+            "Bright Steel Nail"
+          ],
           "material": "Mild Steel",
           "finish": "Bright / Galvanized",
           "applications": "General construction, woodwork"
@@ -217,7 +274,10 @@
         {
           "type": "Screws & Nails",
           "productType": "Concrete Nail",
-          "subTypes": ["Smooth Shank", "Twisted Shank"],
+          "subTypes": [
+            "Smooth Shank",
+            "Twisted Shank"
+          ],
           "material": "Hardened Steel",
           "finish": "Galvanized / Black",
           "applications": "Fixing into concrete, blockwork"
@@ -225,7 +285,10 @@
         {
           "type": "Screws & Nails",
           "productType": "Wood Nails",
-          "subTypes": ["Head", "Headless"],
+          "subTypes": [
+            "Head",
+            "Headless"
+          ],
           "material": "Mild Steel",
           "finish": "Bright / Painted",
           "applications": "Timber joinery, carpentry"
@@ -233,7 +296,10 @@
         {
           "type": "Screws & Nails",
           "productType": "Shoe Nails",
-          "subTypes": ["Round Head", "Horseshoe Nails"],
+          "subTypes": [
+            "Round Head",
+            "Horseshoe Nails"
+          ],
           "material": "Low Carbon Steel",
           "finish": "Uncoated / Polished",
           "applications": "Footwear, leather industry"
@@ -241,7 +307,10 @@
         {
           "type": "Screws & Nails",
           "productType": "Brad / Stapler Nails",
-          "subTypes": ["F Series", "J Series"],
+          "subTypes": [
+            "F Series",
+            "J Series"
+          ],
           "material": "",
           "finish": "",
           "applications": ""
@@ -251,7 +320,9 @@
         {
           "type": "Rivets",
           "productType": "Blind Rivet (Pop Rivet)",
-          "subTypes": ["- Dome Head- Countersunk Head- Large Flange"],
+          "subTypes": [
+            "- Dome Head- Countersunk Head- Large Flange"
+          ],
           "material": "Aluminum, Steel, SS, Copper",
           "finish": "Plain / Zinc / Painted",
           "applications": "Sheet metal, HVAC, signage, enclosures"
@@ -259,7 +330,9 @@
         {
           "type": "Rivets",
           "productType": "Solid Rivet",
-          "subTypes": ["- Round Head- Flat Head"],
+          "subTypes": [
+            "- Round Head- Flat Head"
+          ],
           "material": "Steel, Aluminum, Brass",
           "finish": "Plain / Polished",
           "applications": "Aerospace, bridges, heavy equipment"
@@ -267,7 +340,9 @@
         {
           "type": "Rivets",
           "productType": "Semi-Tubular Rivet",
-          "subTypes": ["- Oval Head- Truss Head"],
+          "subTypes": [
+            "- Oval Head- Truss Head"
+          ],
           "material": "Steel, Brass, Aluminum",
           "finish": "Zinc / Nickel Plated",
           "applications": "Leather, luggage, hardware fittings"

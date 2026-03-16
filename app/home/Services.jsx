@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 
@@ -21,14 +20,14 @@ const SERVICES = [
     heading: "Trading, Import/Export Capabilities",
     image: serOne,
     description:
-      "Al Sad Building Material L.L.C offers extensive trading and import/export services, sourcing quality materials from trusted global partners. Our experience ensures timely procurement, competitive pricing, and full compliance with international standards. Whether it’s a specific product or bulk order, we deliver with precision and reliability. With decades of industry knowledge and a strong global network, we help businesses access the materials they need — efficiently and affordably — across the Middle East and beyond.",
+      "Al Sad Building Material L.L.C offers extensive trading and import/export services, sourcing quality materials from trusted global partners. Our experience ensures timely procurement, competitive pricing, and full compliance with international standards. Whether it's a specific product or bulk order, we deliver with precision and reliability. With decades of industry knowledge and a strong global network, we help businesses access the materials they need — efficiently and affordably — across the Middle East and beyond.",
   },
   {
     id: 2,
     heading: "Warehousing & Logistics Support",
     image: serTwo,
     description:
-      "Our central warehouse in Al Quoz, Dubai, provides organized, secure storage and fast dispatch of materials. Backed by an efficient logistics network, we ensure timely deliveries across the UAE and surrounding regions. From inventory management to last-mile delivery, our team handles every detail with care. Whether you're sourcing materials for a project or managing stock for your store, Al Sad’s warehousing and logistics services keep your operations running smoothly and without delays.",
+      "Our central warehouse in Al Quoz, Dubai, provides organized, secure storage and fast dispatch of materials. Backed by an efficient logistics network, we ensure timely deliveries across the UAE and surrounding regions. From inventory management to last-mile delivery, our team handles every detail with care. Whether you're sourcing materials for a project or managing stock for your store, Al Sad's warehousing and logistics services keep your operations running smoothly and without delays.",
   },
   {
     id: 3,
@@ -39,10 +38,12 @@ const SERVICES = [
   },
 ];
 
+const HEADER_HEIGHT_MOBILE = 64;
+
 const Service = ({ heading, image, description, index }) => {
   return (
     <div
-      className="bg-white px-4 py-5 md:py-28 md:px-16 h-full slide sticky top-0 snap-top"
+      className="bg-white px-4 pt-16 pb-5 sm:py-5 md:py-28 md:px-16 h-full slide sticky top-0 snap-top"
       id={`slide-${index}`}
     >
       <div className="mx-auto max-w-[1260px] flex flex-col sm:flex-row gap-5 md:gap-12 w-full text-black items-center h-[619px] justify-center">
@@ -85,14 +86,8 @@ const Services = () => {
     let mm = gsap.matchMedia();
     ScrollTrigger.refresh();
 
-    // ScrollSmoother.create({
-    // 	smooth: 1,
-    // 	normalizeScroll: true,
-    // 	effects: true,
-    // });
     slides.forEach((card, idx) => {
       if (idx < 2) {
-        // sm - mobile
         mm.add(
           { isMobile: "(max-width: 640px)", isDesktop: "(min-width: 768px)" },
           (context) => {
@@ -102,7 +97,9 @@ const Services = () => {
               ease: "power1.inOut",
               scrollTrigger: {
                 trigger: card,
-                start: isDesktop ? `100vh-=185px top` : "100vh-=100px top",
+                start: isDesktop
+                  ? "100vh-=185px top"
+                  : `top top+=${HEADER_HEIGHT_MOBILE - 20}px`,
                 end: isDesktop ? "bottom 15%" : "bottom top",
                 scrub: true,
                 pin: true,
@@ -121,7 +118,7 @@ const Services = () => {
   });
 
   return (
-    <section className="bg-white relative overflow-hidden scrollbar-hide flex flex-col md:gap-4 scroll-smooth items-center snap-y snap-mandatory">
+    <section className="bg-white relative overflow-hidden scrollbar-hide flex flex-col md:gap-0 scroll-smooth items-center snap-y snap-mandatory">
       {SERVICES.map((service, idx) => (
         <Service
           key={service.id}

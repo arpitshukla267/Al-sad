@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { use, useState, useEffect } from "react";
 import Header from "../../../../Header";
 import Footer from "../../../../Footer";
 import Breadcrumb from "../components/Breadcrumb";
@@ -14,6 +14,8 @@ import {
 } from "@/lib/get-product-data";
 
 const ProductDetailPage = ({ params }) => {
+  const { category: categorySlug, subcategory: subcategorySlug, product: productSlug } =
+    use(params || Promise.resolve({ category: "", subcategory: "", product: "" }));
   const [productData, setProductData] = useState({
     product: null,
     categoryName: "",
@@ -25,19 +27,19 @@ const ProductDetailPage = ({ params }) => {
   useEffect(() => {
     const loadProductData = async () => {
       try {
-        const category = await getCategoryBySlug(params.category);
+        const category = await getCategoryBySlug(categorySlug);
         const categoryName = category
           ? category.category
-          : getCategoryNameFromSlug(params.category);
+          : getCategoryNameFromSlug(categorySlug);
 
         if (category) {
           const subcategory = await getSubcategoryBySlugs(
-            params.category,
-            params.subcategory
+            categorySlug,
+            subcategorySlug
           );
 
           if (subcategory) {
-            const product = getProductBySlug(subcategory, params.product);
+            const product = getProductBySlug(subcategory, productSlug);
             const subcategoryName = subcategory.name.trim();
 
             if (product) {
@@ -47,14 +49,14 @@ const ProductDetailPage = ({ params }) => {
                 subcategoryName,
                 breadcrumb: [
                   { name: "Home", path: "/" },
-                  { name: categoryName, path: `/products/${params.category}` },
+                  { name: categoryName, path: `/products/${categorySlug}` },
                   {
                     name: subcategoryName,
-                    path: `/products/${params.category}/${params.subcategory}`,
+                    path: `/products/${categorySlug}/${subcategorySlug}`,
                   },
                   {
-                    name: product.name || product.type || "Product",
-                    path: `/products/${params.category}/${params.subcategory}/${params.product}`,
+                    name: product.name || product.type || product.productType || "Product",
+                    path: `/products/${categorySlug}/${subcategorySlug}/${productSlug}`,
                   },
                 ],
               });
@@ -66,10 +68,10 @@ const ProductDetailPage = ({ params }) => {
                 subcategoryName,
                 breadcrumb: [
                   { name: "Home", path: "/" },
-                  { name: categoryName, path: `/products/${params.category}` },
+                  { name: categoryName, path: `/products/${categorySlug}` },
                   {
                     name: subcategoryName,
-                    path: `/products/${params.category}/${params.subcategory}`,
+                    path: `/products/${categorySlug}/${subcategorySlug}`,
                   },
                 ],
               });
@@ -82,7 +84,7 @@ const ProductDetailPage = ({ params }) => {
               subcategoryName: "",
               breadcrumb: [
                 { name: "Home", path: "/" },
-                { name: categoryName, path: `/products/${params.category}` },
+                { name: categoryName, path: `/products/${categorySlug}` },
               ],
             });
           }
@@ -90,7 +92,7 @@ const ProductDetailPage = ({ params }) => {
           // Category not found
           setProductData({
             product: null,
-            categoryName: getCategoryNameFromSlug(params.category),
+            categoryName: getCategoryNameFromSlug(categorySlug),
             subcategoryName: "",
             breadcrumb: [{ name: "Home", path: "/" }],
           });
@@ -103,7 +105,7 @@ const ProductDetailPage = ({ params }) => {
     };
 
     loadProductData();
-  }, [params.category, params.subcategory, params.product]);
+  }, [categorySlug, subcategorySlug, productSlug]);
 
   if (loading) {
     return (
@@ -155,6 +157,8 @@ const ProductDetailPage = ({ params }) => {
                 product={productData.product}
                 categoryName={productData.categoryName}
                 subcategoryName={productData.subcategoryName}
+                backUrl={productData.breadcrumb?.length >= 2 ? productData.breadcrumb[productData.breadcrumb.length - 2].path : undefined}
+                backLabel={productData.breadcrumb?.length >= 2 ? productData.breadcrumb[productData.breadcrumb.length - 2].name : undefined}
               />
             </div>
           </div>

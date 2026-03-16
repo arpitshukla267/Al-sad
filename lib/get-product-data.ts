@@ -62,10 +62,14 @@ export function getProductBySlug(
   if (!subcategory) return null;
 
   // Handle different product structures
-  // Structure 1: Direct products array
-  if (subcategory.products && Array.isArray(subcategory.products)) {
-    const product = subcategory.products.find((p: any) => {
-      const productName = p.name || p.type || p.section || "";
+  // Structure 1: Direct products array (and rivets)
+  const directProducts = [
+    ...(subcategory.products || []),
+    ...(subcategory.rivets || []),
+  ];
+  if (directProducts.length > 0) {
+    const product = directProducts.find((p: any) => {
+      const productName = p.name || p.type || p.productType || p.section || "";
       return getSubcategorySlug(productName) === productSlug;
     });
     return product || null;
