@@ -57,7 +57,8 @@ const ProductDetailContent = ({
 							src={productImage}
 							alt={productName}
 							fill
-							className="object-contain p-4"
+							unoptimized={typeof productImage === 'string' && productImage.startsWith('/api/product-image')}
+							className="object-contain object-center p-4 sm:p-6"
 						/>
 					</div>
 					{shortDescription && (

@@ -27,7 +27,8 @@ const ProductCard = ({ product, categorySlug, subcategorySlug }) => {
 						src={product.image || productImg}
 						alt={product.title || productName}
 						fill
-						className="object-contain p-2"
+						unoptimized={typeof product.image === 'string' && product.image.startsWith('/api/product-image')}
+						className="object-contain object-center p-3 sm:p-4"
 					/>
 				</div>
 			</div>

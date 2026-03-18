@@ -9,43 +9,53 @@
           "tools": [
             {
               "name": "Hammer",
-              "commonUse": "Driving nails, breaking objects"
+              "commonUse": "Driving nails, breaking objects",
+              "image": ""
             },
             {
               "name": "Screwdriver",
-              "commonUse": "Driving or removing screws"
+              "commonUse": "Driving or removing screws",
+              "image": ""
             },
             {
               "name": "Wrench / Spanner",
-              "commonUse": "Tightening/loosening nuts and bolts"
+              "commonUse": "Tightening/loosening nuts and bolts",
+              "image": ""
             },
             {
               "name": "Pliers",
-              "commonUse": "Gripping, twisting, or cutting wires"
+              "commonUse": "Gripping, twisting, or cutting wires",
+              "image": ""
             },
             {
               "name": "Utility Knife / Cutter",
-              "commonUse": "Cutting materials like cardboard or plastic"
+              "commonUse": "Cutting materials like cardboard or plastic",
+              "image": ""
             },
             {
               "name": "HandSaw/Hacksaw",
-              "commonUse": "Cutting wood manually"
+              "commonUse": "Cutting wood manually",
+              "image": ""
             },
             {
               "name": "Allen Key (Hex Key)",
-              "commonUse": "Driving bolts and screws with hexagonal sockets"
+              "commonUse": "Driving bolts and screws with hexagonal sockets",
+              "image": ""
             },
             {
               "name": "Chisel",
-              "commonUse": "Shaping wood, metal, or stone"
+              "commonUse": "Shaping wood, metal, or stone",
+              "image": ""
             },
             {
               "name": "File / Rasp",
-              "commonUse": "Smoothing or shaping metal, wood, or plastic"
+              "commonUse": "Smoothing or shaping metal, wood, or plastic",
+              "image": ""
             },
             {
               "name": "Riveters",
-              "commonUse": "fasteners that join two or more materials by forming a permanent bond"
+              "commonUse": "fasteners that join two or more materials by forming a permanent bond",
+              "image": ""
             }
           ]
         },
@@ -54,15 +64,18 @@
           "tools": [
             {
               "name": "Sledgehammer",
-              "commonUse": "Breaking concrete or heavy demolition"
+              "commonUse": "Breaking concrete or heavy demolition",
+              "image": ""
             },
             {
               "name": "Mattock",
-              "commonUse": "Digging and chopping soil"
+              "commonUse": "Digging and chopping soil",
+              "image": ""
             },
             {
               "name": "Crowbar / Pry Bar",
-              "commonUse": "Prying, lifting, or demolition"
+              "commonUse": "Prying, lifting, or demolition",
+              "image": ""
             }
           ]
         },
@@ -71,23 +84,28 @@
           "tools": [
             {
               "name": "Precision Screwdrivers",
-              "commonUse": "Electronics or watch repair"
+              "commonUse": "Electronics or watch repair",
+              "image": ""
             },
             {
               "name": "Awl",
-              "commonUse": "Making holes in leather or wood"
+              "commonUse": "Making holes in leather or wood",
+              "image": ""
             },
             {
               "name": "Punch Tool",
-              "commonUse": "Marking or shaping material with a pointed tip"
+              "commonUse": "Marking or shaping material with a pointed tip",
+              "image": ""
             },
             {
               "name": "Hand Crank Drill",
-              "commonUse": "Manual drilling of small holes"
+              "commonUse": "Manual drilling of small holes",
+              "image": ""
             },
             {
               "name": "Tapping & Threading",
-              "commonUse": "Making threads in hollow surface"
+              "commonUse": "Making threads in hollow surface",
+              "image": ""
             }
           ]
         },
@@ -96,27 +114,33 @@
           "tools": [
             {
               "name": "Shovel",
-              "commonUse": "Digging and lifting soil"
+              "commonUse": "Digging and lifting soil",
+              "image": ""
             },
             {
               "name": "Spade",
-              "commonUse": "Edging and cutting soil"
+              "commonUse": "Edging and cutting soil",
+              "image": ""
             },
             {
               "name": "Hoe",
-              "commonUse": "Weeding or cultivating soil"
+              "commonUse": "Weeding or cultivating soil",
+              "image": ""
             },
             {
               "name": "Trowel",
-              "commonUse": "Small digging tool for gardening"
+              "commonUse": "Small digging tool for gardening",
+              "image": ""
             },
             {
               "name": "Rake",
-              "commonUse": "Collecting leaves or leveling soil"
+              "commonUse": "Collecting leaves or leveling soil",
+              "image": ""
             },
             {
               "name": "Lopper / Pruner",
-              "commonUse": "Cutting branches or shrubs"
+              "commonUse": "Cutting branches or shrubs",
+              "image": ""
             }
           ]
         },
@@ -125,15 +149,18 @@
           "tools": [
             {
               "name": "Wooden Mallet",
-              "commonUse": "Driving chisels without damaging them"
+              "commonUse": "Driving chisels without damaging them",
+              "image": ""
             },
             {
               "name": "Block Plane",
-              "commonUse": "Smoothing wooden surfaces"
+              "commonUse": "Smoothing wooden surfaces",
+              "image": ""
             },
             {
               "name": "Drawknife",
-              "commonUse": "Shaving wood manually"
+              "commonUse": "Shaving wood manually",
+              "image": ""
             }
           ]
         },
@@ -142,23 +169,28 @@
           "tools": [
             {
               "name": "Measuring Tape ",
-              "commonUse": "Measuring room and wall lengths manually"
+              "commonUse": "Measuring room and wall lengths manually",
+              "image": ""
             },
             {
               "name": "Spirit Level",
-              "commonUse": "Aligning and leveling surfaces accurately"
+              "commonUse": "Aligning and leveling surfaces accurately",
+              "image": ""
             },
             {
               "name": "Stud Finder",
-              "commonUse": "Locating studs and wiring inside walls"
+              "commonUse": "Locating studs and wiring inside walls",
+              "image": ""
             },
             {
               "name": "Digital Caliper",
-              "commonUse": "Precise dimensional measurements"
+              "commonUse": "Precise dimensional measurements",
+              "image": ""
             },
             {
               "name": "Laser Distance Meter",
-              "commonUse": "Measuring room and wall lengths quickly"
+              "commonUse": "Measuring room and wall lengths quickly",
+              "image": ""
             }
           ]
         }
@@ -172,23 +204,28 @@
           "tools": [
             {
               "name": "Electric Drill",
-              "commonUse": "Drilling holes in wood, metal, plastic"
+              "commonUse": "Drilling holes in wood, metal, plastic",
+              "image": ""
             },
             {
               "name": "Impact Driver",
-              "commonUse": "Driving screws and fasteners with high torque"
+              "commonUse": "Driving screws and fasteners with high torque",
+              "image": ""
             },
             {
               "name": "Hammer Drill",
-              "commonUse": "Drilling into masonry and concrete"
+              "commonUse": "Drilling into masonry and concrete",
+              "image": ""
             },
             {
               "name": "Cordless Screwdriver",
-              "commonUse": "Driving screws, light tasks"
+              "commonUse": "Driving screws, light tasks",
+              "image": ""
             },
             {
               "name": "Nail Gun (Nailer)",
-              "commonUse": "Driving nails quickly for framing or trim work"
+              "commonUse": "Driving nails quickly for framing or trim work",
+              "image": ""
             }
           ]
         },
@@ -197,27 +234,33 @@
           "tools": [
             {
               "name": "Circular Saw",
-              "commonUse": "Straight cuts in wood, plywood, MDF"
+              "commonUse": "Straight cuts in wood, plywood, MDF",
+              "image": ""
             },
             {
               "name": "Jigsaw",
-              "commonUse": "Curved and irregular cuts in various materials"
+              "commonUse": "Curved and irregular cuts in various materials",
+              "image": ""
             },
             {
               "name": "Miter Saw",
-              "commonUse": "Angled crosscuts for framing, trim, etc."
+              "commonUse": "Angled crosscuts for framing, trim, etc.",
+              "image": ""
             },
             {
               "name": "Angle Grinder",
-              "commonUse": "Cutting metal, tiles, grinding and polishing"
+              "commonUse": "Cutting metal, tiles, grinding and polishing",
+              "image": ""
             },
             {
               "name": "Cut-Off Saw",
-              "commonUse": "Heavy-duty metal and masonry cutting"
+              "commonUse": "Heavy-duty metal and masonry cutting",
+              "image": ""
             },
             {
               "name": "Oscillating Multi-Tool",
-              "commonUse": "Versatile tool for cutting, sanding, scraping"
+              "commonUse": "Versatile tool for cutting, sanding, scraping",
+              "image": ""
             }
           ]
         },
@@ -226,15 +269,18 @@
           "tools": [
             {
               "name": "Orbital Sander",
-              "commonUse": "Smoothing wood and removing finishes"
+              "commonUse": "Smoothing wood and removing finishes",
+              "image": ""
             },
             {
               "name": "Belt Sander",
-              "commonUse": "Rapid material removal on wood surfaces"
+              "commonUse": "Rapid material removal on wood surfaces",
+              "image": ""
             },
             {
               "name": "Polisher / Buffer",
-              "commonUse": "Polishing paint, metal, or stone"
+              "commonUse": "Polishing paint, metal, or stone",
+              "image": ""
             }
           ]
         },
@@ -243,15 +289,18 @@
           "tools": [
             {
               "name": "Bench Grinder",
-              "commonUse": "Sharpening tools, shaping metal"
+              "commonUse": "Sharpening tools, shaping metal",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FBench%20Grinder%20Wheels.webp"
             },
             {
               "name": "Die Grinder",
-              "commonUse": "Grinding in small or hard-to-reach areas"
+              "commonUse": "Grinding in small or hard-to-reach areas",
+              "image": ""
             },
             {
               "name": "Angle Grinder",
-              "commonUse": "Cutting, grinding, polishing metal or concrete"
+              "commonUse": "Cutting, grinding, polishing metal or concrete",
+              "image": ""
             }
           ]
         },
@@ -260,19 +309,23 @@
           "tools": [
             {
               "name": "Welding Machine (MIG/TIG/Arc)",
-              "commonUse": "Metal joining and fabrication"
+              "commonUse": "Metal joining and fabrication",
+              "image": ""
             },
             {
               "name": "Heat Gun",
-              "commonUse": "Paint removal, shrinking plastic, softening glue"
+              "commonUse": "Paint removal, shrinking plastic, softening glue",
+              "image": ""
             },
             {
               "name": "Soldering Iron",
-              "commonUse": "Electronic circuit soldering"
+              "commonUse": "Electronic circuit soldering",
+              "image": ""
             },
             {
               "name": "Hot Glue Gun",
-              "commonUse": "Quick bonding of materials"
+              "commonUse": "Quick bonding of materials",
+              "image": ""
             }
           ]
         },
@@ -281,11 +334,13 @@
           "tools": [
             {
               "name": "Router",
-              "commonUse": "Shaping edges, hollowing, joinery"
+              "commonUse": "Shaping edges, hollowing, joinery",
+              "image": ""
             },
             {
               "name": "Electric Hand Planer",
-              "commonUse": "Smoothing wood surfaces"
+              "commonUse": "Smoothing wood surfaces",
+              "image": ""
             }
           ]
         }
@@ -299,27 +354,33 @@
           "tools": [
             {
               "name": "Safety Helmet ",
-              "commonUse": "Protects against falling objects and head impact"
+              "commonUse": "Protects against falling objects and head impact",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FSafety%20Helmet.webp"
             },
             {
               "name": "Face Shield",
-              "commonUse": "Full-face protection from splashes, debris, or sparks"
+              "commonUse": "Full-face protection from splashes, debris, or sparks",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FFace%20Shield.webp"
             },
             {
               "name": "Welding Helme / Shield",
-              "commonUse": "Shields face and eyes from welding arc and UV rays"
+              "commonUse": "Shields face and eyes from welding arc and UV rays",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FWelding%20Shield.webp"
             },
             {
               "name": "Safety Goggles",
-              "commonUse": "Protects eyes from dust, chemicals, or sparks"
+              "commonUse": "Protects eyes from dust, chemicals, or sparks",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FSafety%20Goggles.webp"
             },
             {
               "name": "Dust Mask",
-              "commonUse": "Protection from non-toxic dust and particles"
+              "commonUse": "Protection from non-toxic dust and particles",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FDust%20Mask.webp"
             },
             {
               "name": "Half_Full Face Respirator",
-              "commonUse": "Used with filters for gases, vapors, or particulates"
+              "commonUse": "Used with filters for gases, vapors, or particulates",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FFull_Half%20Respiratory%20Mask.webp"
             }
           ]
         },
@@ -328,11 +389,13 @@
           "tools": [
             {
               "name": "Nitrile Gloves",
-              "commonUse": "Chemical and puncture resistance in light tasks"
+              "commonUse": "Chemical and puncture resistance in light tasks",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FNitrile%20Gloves.webp"
             },
             {
               "name": "Cut-Resistant Gloves",
-              "commonUse": "Protection against sharp edges and blades"
+              "commonUse": "Protection against sharp edges and blades",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FCut-Resistant%20Gloves.webp"
             }
           ]
         },
@@ -341,11 +404,13 @@
           "tools": [
             {
               "name": "Safety Shoes",
-              "commonUse": "Protection from heavy objects or crushing forces"
+              "commonUse": "Protection from heavy objects or crushing forces",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FSafety%20Shoes.webp"
             },
             {
               "name": "Gum Boots",
-              "commonUse": "Enhances grip on oily or wet surfaces"
+              "commonUse": "Enhances grip on oily or wet surfaces",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FGum%20Boots.webp"
             }
           ]
         },
@@ -354,7 +419,8 @@
           "tools": [
             {
               "name": "Safety Harness",
-              "commonUse": "Arrests fall during elevated work (scaffolding, roofs)"
+              "commonUse": "Arrests fall during elevated work (scaffolding, roofs)",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FSafety%20Harness.webp"
             }
           ]
         },
@@ -363,11 +429,13 @@
           "tools": [
             {
               "name": "Tool Belt",
-              "commonUse": "Carrying tools with added visibility"
+              "commonUse": "Carrying tools with added visibility",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FTool%20Belt.webp"
             },
             {
               "name": "First Aid Kit",
-              "commonUse": "Quick treatment of cuts, burns, and injuries"
+              "commonUse": "Quick treatment of cuts, burns, and injuries",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FSafety%20%26%20Protective%20Gear%2FFirst%20Aid%20Kit.webp"
             }
           ]
         }
@@ -381,59 +449,73 @@
           "tools": [
             {
               "name": "Grinding Wheels",
-              "commonUse": "Surface grinding, edge grinding, metal shaping"
+              "commonUse": "Surface grinding, edge grinding, metal shaping",
+              "image": ""
             },
             {
               "name": "Mounted Points",
-              "commonUse": "Small-scale grinding in hard-to-reach places"
+              "commonUse": "Small-scale grinding in hard-to-reach places",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FMounted%20Points.webp"
             },
             {
               "name": "Sharpening Stones",
-              "commonUse": "Sharpening knives, chisels, and blades"
+              "commonUse": "Sharpening knives, chisels, and blades",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FSharpening%20Stones.webp"
             },
             {
               "name": "Bench Grinder Wheels",
-              "commonUse": "Tool sharpening, deburring, shaping metal"
+              "commonUse": "Tool sharpening, deburring, shaping metal",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FBench%20Grinder%20Wheels.webp"
             },
             {
               "name": "Sanding Belts,Sheets / Rolls",
-              "commonUse": "Surface smoothing in belt sanders (metal & wood)"
+              "commonUse": "Surface smoothing in belt sanders (metal & wood)",
+              "image": ""
             },
             {
               "name": "Sanding Discs",
-              "commonUse": "Used on orbital or angle sanders for polishing & sanding"
+              "commonUse": "Used on orbital or angle sanders for polishing & sanding",
+              "image": ""
             },
             {
               "name": "Flap Discs",
-              "commonUse": "Blending, grinding, and finishing metal surfaces"
+              "commonUse": "Blending, grinding, and finishing metal surfaces",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FFlap%20Discs.webp"
             },
             {
               "name": "Scouring Pads",
-              "commonUse": "Surface cleaning, rust removal, finishing"
+              "commonUse": "Surface cleaning, rust removal, finishing",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FScouring%20Pads.webp"
             },
             {
               "name": "Abrasive Wheels (non-woven)",
-              "commonUse": "Deburring, cleaning, polishing without gouging"
+              "commonUse": "Deburring, cleaning, polishing without gouging",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FAbrasive%20Wheels%20(non-woven).webp"
             },
             {
               "name": "Diamond Blades / Discs",
-              "commonUse": "Cutting hard materials like stone, tiles, glass"
+              "commonUse": "Cutting hard materials like stone, tiles, glass",
+              "image": ""
             },
             {
               "name": "Diamond Files",
-              "commonUse": "Fine grinding and shaping of ceramics, carbide, etc."
+              "commonUse": "Fine grinding and shaping of ceramics, carbide, etc.",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FDiamond%20Files.webp"
             },
             {
               "name": "Backing Pads",
-              "commonUse": "Support for sanding discs and polishing pads"
+              "commonUse": "Support for sanding discs and polishing pads",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FBacking%20Pads.webp"
             },
             {
               "name": "Velcro / Hook-and-Loop Discs",
-              "commonUse": "Blending, cleaning, prepping metal surfaces"
+              "commonUse": "Blending, cleaning, prepping metal surfaces",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FVelcro_Hook-and-Loop%20Discs.webp"
             },
             {
               "name": "Abrasive Brushes",
-              "commonUse": "Rust, paint, or burr removal from surfaces"
+              "commonUse": "Rust, paint, or burr removal from surfaces",
+              "image": "/api/product-image?path=Professional%20Tools%20%26%20Gear%2FAbravise%2FAbrasive%20Brushes.webp"
             }
           ]
         }

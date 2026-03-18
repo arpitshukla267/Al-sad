@@ -31,6 +31,238 @@ const EXCEL_CONFIG = {
   }
 };
 
+const CATEGORY_DIRECTORY_MAP = {
+  'Professional Tools & Gear': 'Professional Tools & Gear',
+  'Structural Materials': 'Structural Materials',
+  'Architectural Components': 'Architectural Components',
+  'Retail & Home Solutions': 'Retail and Home Solution'
+};
+
+let cachedImageIndex = null;
+const cachedSubcategoryDirectories = new Map();
+
+function normalizeText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/aluminum/g, 'aluminium')
+    .replace(/[_/(),.-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function buildKeywords(values) {
+  const keywords = new Set();
+
+  values.filter(Boolean).forEach((value) => {
+    const normalized = normalizeText(value);
+    if (!normalized) return;
+
+    keywords.add(normalized.replace(/\s+/g, ''));
+
+    normalized.split(' ').forEach((part, index, parts) => {
+      if (!part || part.length < 2) return;
+      keywords.add(part);
+
+      if (index < parts.length - 1) {
+        keywords.add(`${part}${parts[index + 1]}`);
+      }
+    });
+  });
+
+  return Array.from(keywords);
+}
+
+function getImageIndex() {
+  if (cachedImageIndex) {
+    return cachedImageIndex;
+  }
+
+  const imageExtensions = new Set(['.webp', '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.tiff', '.tif']);
+  const imageIndex = [];
+
+  function walk(dir) {
+    if (!fs.existsSync(dir)) return;
+
+    fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(fullPath);
+        return;
+      }
+
+      const ext = path.extname(entry.name).toLowerCase();
+      if (!imageExtensions.has(ext)) return;
+
+      const relativePath = path.relative(EXCEL_DIR, fullPath).replace(/\\/g, '/');
+      imageIndex.push({
+        relativePath,
+        normalizedRelativePath: normalizeText(relativePath),
+        normalizedBasename: normalizeText(path.basename(entry.name, ext))
+      });
+    });
+  }
+
+  walk(EXCEL_DIR);
+  cachedImageIndex = imageIndex;
+  return imageIndex;
+}
+
+function getResolvedSubcategoryPrefix(categoryName, subcategoryName) {
+  const categoryDirectory = CATEGORY_DIRECTORY_MAP[categoryName];
+  if (!categoryDirectory) return null;
+
+  const categoryPath = path.join(EXCEL_DIR, categoryDirectory);
+  if (!fs.existsSync(categoryPath)) return `${categoryDirectory}/`;
+
+  if (!cachedSubcategoryDirectories.has(categoryDirectory)) {
+    const entries = fs
+      .readdirSync(categoryPath, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name);
+
+    cachedSubcategoryDirectories.set(categoryDirectory, entries);
+  }
+
+  const normalizedTarget = normalizeText(subcategoryName);
+  const subdirectories = cachedSubcategoryDirectories.get(categoryDirectory) || [];
+
+  let bestMatch = null;
+  let bestScore = -1;
+
+  subdirectories.forEach((directoryName) => {
+    const normalizedDirectory = normalizeText(directoryName);
+    let score = 0;
+
+    if (normalizedDirectory === normalizedTarget) score += 10;
+    if (normalizedDirectory.includes(normalizedTarget)) score += 6;
+    if (normalizedTarget.includes(normalizedDirectory)) score += 4;
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = directoryName;
+    }
+  });
+
+  return bestMatch ? `${categoryDirectory}/${bestMatch}/` : `${categoryDirectory}/`;
+}
+
+function findBestImageForProduct(categoryName, subcategoryName, product) {
+  const imageIndex = getImageIndex();
+  const preferredPrefix = getResolvedSubcategoryPrefix(categoryName, subcategoryName);
+  const categoryPrefix = `${CATEGORY_DIRECTORY_MAP[categoryName] || ''}/`;
+
+  let candidates = imageIndex.filter((image) => preferredPrefix && image.relativePath.startsWith(preferredPrefix));
+  if (candidates.length === 0 && categoryPrefix !== '/') {
+    candidates = imageIndex.filter((image) => image.relativePath.startsWith(categoryPrefix));
+  }
+  if (candidates.length === 0) return null;
+
+  const sourceValues = [
+    product.name,
+    product.productType,
+    product.type,
+    product.section,
+    product.rootCategory
+  ].filter(Boolean);
+  const primaryWords = normalizeText(sourceValues[0] || '')
+    .split(' ')
+    .filter((word) => word.length >= 3);
+  const anchorWord = primaryWords.length > 0 ? primaryWords[primaryWords.length - 1] : '';
+
+  const keywords = buildKeywords(sourceValues);
+  const exactKeywords = sourceValues
+    .map((value) => normalizeText(value).replace(/\s+/g, ''))
+    .filter(Boolean);
+  const tokenKeywords = keywords.filter((keyword) => !exactKeywords.includes(keyword) && keyword.length >= 3);
+  const minimumTokenMatches = tokenKeywords.length >= 2 ? 2 : 1;
+
+  let bestMatch = null;
+  let bestScore = 0;
+
+  candidates.forEach((candidate) => {
+    let score = 0;
+    let exactMatchFound = false;
+    const matchedTokens = new Set();
+
+    exactKeywords.forEach((keyword) => {
+      if (candidate.normalizedBasename.includes(keyword)) {
+        score += 20;
+        exactMatchFound = true;
+      } else if (candidate.normalizedRelativePath.includes(keyword)) {
+        score += 12;
+        exactMatchFound = true;
+      }
+    });
+
+    tokenKeywords.forEach((keyword) => {
+      if (candidate.normalizedBasename.includes(keyword)) {
+        score += Math.max(5, keyword.length);
+        matchedTokens.add(keyword);
+      } else if (candidate.normalizedRelativePath.includes(keyword)) {
+        score += Math.max(2, Math.floor(keyword.length / 2));
+        matchedTokens.add(keyword);
+      }
+    });
+
+    if (!exactMatchFound && matchedTokens.size < minimumTokenMatches) {
+      return;
+    }
+
+    if (
+      !exactMatchFound &&
+      anchorWord &&
+      !candidate.normalizedBasename.includes(anchorWord) &&
+      !candidate.normalizedRelativePath.includes(anchorWord)
+    ) {
+      return;
+    }
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestMatch = candidate;
+    }
+  });
+
+  if (!bestMatch || bestScore < 8) {
+    return null;
+  }
+
+  return `/api/product-image?path=${encodeURIComponent(bestMatch.relativePath)}`;
+}
+
+function attachImagesToCategory(result) {
+  if (!result?.category || !Array.isArray(result.subcategories)) {
+    return result;
+  }
+
+  result.subcategories.forEach((subcategory) => {
+    if (Array.isArray(subcategory.products)) {
+      subcategory.products.forEach((product) => {
+        product.image = findBestImageForProduct(result.category, subcategory.name, product) || product.image || '';
+      });
+    }
+
+    if (Array.isArray(subcategory.rivets)) {
+      subcategory.rivets.forEach((product) => {
+        product.image = findBestImageForProduct(result.category, subcategory.name, product) || product.image || '';
+      });
+    }
+
+    if (Array.isArray(subcategory.productTypes)) {
+      subcategory.productTypes.forEach((productType) => {
+        if (Array.isArray(productType.tools)) {
+          productType.tools.forEach((tool) => {
+            tool.image = findBestImageForProduct(result.category, subcategory.name, tool) || tool.image || '';
+          });
+        }
+      });
+    }
+  });
+
+  return result;
+}
+
 // Process Professional Tools & Gear Excel
 function processProfessionalTools(workbook) {
   const subcategories = [];
@@ -426,6 +658,8 @@ function processExcelFile(filePath) {
         console.error(`❌ Unknown processor: ${config.processor}`);
         return null;
     }
+
+    result = attachImagesToCategory(result);
 
     // Ensure data directory exists
     const dataDir = path.dirname(config.outputFile);
