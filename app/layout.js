@@ -32,7 +32,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${getInstrumentSans.variable} ${getNunitoSans.variable} antialiased`}
       >
-        <div className="flex flex-col w-full min-h-screen overflow-x-clip">
+        <div className="flex flex-col w-full min-h-screen overflow-x-clip"
+          suppressHydrationWarning
+        >
           <HeaderWrapper />
           {children}
           <Footer />

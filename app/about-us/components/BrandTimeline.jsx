@@ -102,31 +102,37 @@ const BrandTimeline = () => {
     const mm = gsap.matchMedia();
 
     mm.add("(max-width: 767px)", () => {
-      // Calculate total width needed for horizontal scroll
       const itemWidth = window.innerWidth;
       const totalWidth = itemWidth * TIMELINE.length;
 
-      // Set container width
       gsap.set(container, { width: totalWidth });
 
-      // Create horizontal scroll animation
+      // Use a shorter scroll distance so the user isn't trapped forever
+      const scrollDistance = itemWidth * (TIMELINE.length - 1);
+
       const horizontalScroll = gsap.to(container, {
         x: () => -(totalWidth - itemWidth),
         ease: "none",
         scrollTrigger: {
           trigger: section,
           start: "top top",
-          end: () => `+=${totalWidth}`,
+          end: () => `+=${scrollDistance}`,
           pin: true,
-          scrub: 0.5,
+          scrub: 0.3,
           anticipatePin: 1,
+          invalidateOnRefresh: true,
           onUpdate: (self) => {
-            // Calculate which item should be active based on scroll progress
             const progress = self.progress;
-            const activeIndex = Math.min(
-              Math.floor(progress * TIMELINE.length),
-              TIMELINE.length - 1
-            );
+            // Use centered thresholds so each item activates in the middle of its segment
+            const segmentSize = 1 / TIMELINE.length;
+            let activeIndex = 0;
+            for (let i = TIMELINE.length - 1; i >= 0; i--) {
+              if (progress >= i * segmentSize) {
+                activeIndex = i;
+                break;
+              }
+            }
+            activeIndex = Math.min(activeIndex, TIMELINE.length - 1);
             if (activeIndex !== active) {
               setActive(activeIndex);
               setActiveEventId(TIMELINE[activeIndex].id);
@@ -160,24 +166,32 @@ const BrandTimeline = () => {
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 768px)", () => {
-      // Create a master timeline
+      // Shorter scroll distance — just enough to cycle through all 5 entries
+      const scrollDistance = window.innerHeight * 0.8 * TIMELINE.length;
+
       const masterTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 100px", // Start when section top reaches 100px from viewport top
-          end: () => `+=${window.innerHeight * 1.2}`,
+          start: "top 85px", // Account for fixed header height
+          end: () => `+=${scrollDistance}`,
           pin: true,
           pinSpacing: true,
-          scrub: 0.5, // Snappy scrubbing
+          scrub: 0.3,
           anticipatePin: 1,
+          invalidateOnRefresh: true,
           onUpdate: (self) => {
-            // Calculate which timeline entry should be active based on progress
             const progress = self.progress;
             const totalEntries = TIMELINE.length;
-            const activeIndex = Math.min(
-              Math.floor(progress * totalEntries),
-              totalEntries - 1
-            );
+            // Use proper segment thresholds so items only activate when truly current
+            const segmentSize = 1 / totalEntries;
+            let activeIndex = 0;
+            for (let i = totalEntries - 1; i >= 0; i--) {
+              if (progress >= i * segmentSize) {
+                activeIndex = i;
+                break;
+              }
+            }
+            activeIndex = Math.min(activeIndex, totalEntries - 1);
             const newActiveId = TIMELINE[activeIndex].id;
 
             if (newActiveId !== activeEventId) {
@@ -195,7 +209,6 @@ const BrandTimeline = () => {
         const title = item.querySelector("h4");
         const description = item.querySelector("p");
 
-        // Calculate when this entry should be active
         const startProgress = index / TIMELINE.length;
         const endProgress = (index + 1) / TIMELINE.length;
         const duration = 1 / TIMELINE.length;
@@ -212,7 +225,7 @@ const BrandTimeline = () => {
           item,
           {
             opacity: 1,
-            duration: duration * 0.2,
+            duration: duration * 0.3,
             ease: "power1.out",
           },
           startProgress
@@ -223,7 +236,7 @@ const BrandTimeline = () => {
           {
             fontSize: "28px",
             fontWeight: 700,
-            duration: duration * 0.2,
+            duration: duration * 0.3,
             ease: "power1.out",
           },
           startProgress
@@ -233,7 +246,7 @@ const BrandTimeline = () => {
           description,
           {
             opacity: 1,
-            duration: duration * 0.2,
+            duration: duration * 0.3,
             ease: "power1.out",
           },
           startProgress
@@ -283,23 +296,20 @@ const BrandTimeline = () => {
         const imageContainer = imageRefs.current[index];
         if (!imageContainer) return;
 
-        // Set initial state for container
         if (index !== 0) {
           gsap.set(imageContainer, { opacity: 0 });
         }
 
-        // Fade in container
         masterTimeline.to(
           imageContainer,
           {
             opacity: 1,
-            duration: duration * 0.25,
+            duration: duration * 0.3,
             ease: "power1.out",
           },
           startProgress
         );
 
-        // Fade out container
         if (index < TIMELINE.length - 1) {
           masterTimeline.to(
             imageContainer,
@@ -318,25 +328,22 @@ const BrandTimeline = () => {
             imageContainer.querySelectorAll(".image-wrapper")[imgIndex];
           if (!imageWrapper) return;
 
-          // Set initial state
           if (index !== 0) {
             gsap.set(imageWrapper, { opacity: 0, scale: 0.8, y: 20 });
           }
 
-          // Fade in
           masterTimeline.to(
             imageWrapper,
             {
               opacity: 1,
               scale: 1,
               y: 0,
-              duration: duration * 0.25,
+              duration: duration * 0.3,
               ease: "power1.out",
             },
             startProgress
           );
 
-          // Fade out
           if (index < TIMELINE.length - 1) {
             masterTimeline.to(
               imageWrapper,
@@ -365,7 +372,7 @@ const BrandTimeline = () => {
               {
                 opacity: 1,
                 y: 0,
-                duration: duration * 0.25,
+                duration: duration * 0.3,
                 ease: "power1.out",
               },
               startProgress
@@ -414,7 +421,7 @@ const BrandTimeline = () => {
             className="list-disc! marker:text-2xl space-y-12! relative"
             ref={containerRef}
           >
-            <div className="w-px bg-white h-full absolute -left-[16px]" />
+            <div className="w-px bg-white h-full absolute -left-[18px]" />
             {TIMELINE.map((timeline, idx) => (
               <li
                 key={timeline.id}

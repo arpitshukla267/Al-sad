@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import logoDark from "../../public/assets/logo-dark.svg";
 import logoLight from "../../public/assets/logo-light.svg";
-import { SearchIcon } from "lucide-react";
+import { SearchIcon, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Popover,
@@ -15,6 +15,8 @@ import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { getCategorySlug, getSubcategorySlug } from "@/lib/product-data";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export const NAV_ITEMS = [
   { name: "Home", path: "/" },
@@ -98,6 +100,10 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
   const [productCategories, setProductCategories] = useState(STATIC_CATEGORIES);
   const productsTriggerRef = useRef(null);
   const [alignOffset, setAlignOffset] = useState(0);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const searchInputRef = useRef(null);
+  const searchBarContainerRef = useRef(null);
 
   // Load dynamic product data
   useEffect(() => {
@@ -192,7 +198,6 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
 
   const toggleMenu = () => setExpand((prev) => !prev);
 
-  // Calculate offset to position dropdown from left edge of viewport
   useEffect(() => {
     if (productsDropdownOpen && productsTriggerRef.current) {
       const triggerRect = productsTriggerRef.current.getBoundingClientRect();
@@ -200,6 +205,53 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
       setAlignOffset(-offset);
     }
   }, [productsDropdownOpen]);
+
+  // Multi-phase GSAP animation for search bar toggle
+  useGSAP(
+    () => {
+      if (!searchBarContainerRef.current) return;
+
+      if (isSearchOpen) {
+        // Opening animation
+        gsap.fromTo(
+          searchBarContainerRef.current,
+          { height: 0, opacity: 0, visibility: "hidden" },
+          {
+            height: "auto",
+            opacity: 1,
+            visibility: "visible",
+            duration: 0.4,
+            ease: "power2.out",
+            onComplete: () => {
+              if (searchInputRef.current) searchInputRef.current.focus();
+            },
+          }
+        );
+      } else {
+        // Closing animation
+        gsap.to(searchBarContainerRef.current, {
+          height: 0,
+          opacity: 0,
+          duration: 0.3,
+          ease: "power2.in",
+          onComplete: () => {
+            gsap.set(searchBarContainerRef.current, { visibility: "hidden" });
+          },
+        });
+      }
+    },
+    { dependencies: [isSearchOpen] }
+  );
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Navigate to a search results page or filter products
+      console.log("Searching for:", searchQuery);
+      // window.location.href = `/products?search=${encodeURIComponent(searchQuery)}`;
+      setIsSearchOpen(false);
+    }
+  };
 
   return (
     <header
@@ -351,16 +403,59 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
           <Button
             variant="ghost"
             size="icon"
+            onClick={() => setIsSearchOpen(!isSearchOpen)}
             className={`${
               useGradient
                 ? "text-[#0e2143]"
                 : useLightLogo
                 ? "text-white"
                 : "text-[#0e2143]"
-            } w-6 h-6 md:w-[24px] md:h-[24px]`}
+            } w-6 h-6 md:w-[24px] md:h-[24px] z-10`}
           >
-            <SearchIcon className="w-6 h-6 md:w-[24px] md:h-[24px]" />
+            {isSearchOpen ? (
+              <X className="w-6 h-6 md:w-[24px] md:h-[24px]" />
+            ) : (
+              <SearchIcon className="w-6 h-6 md:w-[24px] md:h-[24px]" />
+            )}
           </Button>
+
+          {/* Search Bar Overlay - Slides down below nav */}
+          <div
+            ref={searchBarContainerRef}
+            className={`absolute top-full left-0 right-0 z-40 overflow-hidden shadow-lg border-t ${
+              useGradient || !isDarkBackground
+                ? "bg-white border-black/5"
+                : "bg-[#0e2143] border-white/10"
+            }`}
+            style={{ visibility: "hidden", height: 0 }}
+          >
+            <div className="px-4 py-4 md:px-[50px] lg:px-[90px] xl:px-[170px]">
+              <form
+                onSubmit={handleSearchSubmit}
+                className="flex items-center gap-4 max-w-[1260px] mx-auto"
+              >
+                <SearchIcon
+                  className={`w-5 h-5 ${
+                    useGradient || !isDarkBackground
+                      ? "text-[#0e2143]"
+                      : "text-white"
+                  }`}
+                />
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  placeholder="Search for products, materials..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className={`flex-1 bg-transparent border-none outline-none font-primary text-base md:text-lg ${
+                    useGradient || !isDarkBackground
+                      ? "text-[#0e2143]"
+                      : "text-white"
+                  }`}
+                />
+              </form>
+            </div>
+          </div>
 
           {/* Mobile Menu Icon - Only on mobile */}
           <GiHamburgerMenu

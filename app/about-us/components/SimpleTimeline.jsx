@@ -9,7 +9,7 @@ import teamwork from "../../../public/assets/icons/teamwork.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -58,118 +58,78 @@ const TIMELINE_DATA = [
   },
 ];
 
-const SimpleVerticalTimeline = ({ masterTimeline, isMobile = false }) => {
+const SimpleVerticalTimeline = () => {
   const container = useRef();
   const middleLineRef = useRef();
   const itemRefs = useRef([]);
-  const setupTimelineRef = useRef(null);
 
-  useEffect(() => {
-    if (typeof window === "undefined" || !masterTimeline) {
-      setupTimelineRef.current = null;
-      return;
-    }
+  useGSAP(
+    () => {
+      if (typeof window === "undefined") return;
 
-    const middleLine = middleLineRef.current;
-    if (!middleLine) return;
+      const middleLine = middleLineRef.current;
+      if (!middleLine) return;
 
-    // Only set up animations once per timeline instance
-    if (setupTimelineRef.current === masterTimeline) return;
-
-    setupTimelineRef.current = masterTimeline;
-
-    const totalItems = TIMELINE_DATA.length;
-
-    if (isMobile) {
-      // Set initial states for mobile
+      // Animate the middle line growing when container enters view
       gsap.set(middleLine, { scaleY: 0, transformOrigin: "top" });
-      itemRefs.current.forEach((item) => {
-        if (item) {
-          gsap.set(item, { opacity: 0, y: 30 });
-        }
-      });
-
-      // Step 1: Animate middle line first
-      masterTimeline.to(middleLine, {
+      gsap.to(middleLine, {
         scaleY: 1,
-        duration: 0.1,
-        ease: "power1.out",
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
       });
 
-      // Step 2: Animate items one by one (vertical on mobile)
-      TIMELINE_DATA.forEach((data, idx) => {
-        const item = itemRefs.current[idx];
-        if (!item) return;
+      const isMobile = window.innerWidth < 768;
 
-        const startProgress = 0.1 + (idx / totalItems) * 0.85;
-        const itemDuration = 0.1;
-
-        // Animate item coming in from bottom
-        masterTimeline.to(
-          item,
-          {
-            opacity: 1,
-            y: 0,
-            duration: itemDuration,
-            ease: "power1.out",
-          },
-          startProgress
-        );
-      });
-    } else {
-      // Desktop animation
-      // Step 1: Animate middle line first (from top to bottom)
-      gsap.set(middleLine, { scaleY: 0, transformOrigin: "top" });
-      masterTimeline.to(middleLine, {
-        scaleY: 1,
-        duration: 0.1,
-        ease: "power1.out",
-      });
-
-      // Step 2: Animate items one by one, alternating left and right
+      // Each item animates independently when it enters the viewport
       TIMELINE_DATA.forEach((data, idx) => {
         const item = itemRefs.current[idx];
         if (!item) return;
 
         const isLeft = idx % 2 === 0;
-        // Distribute items evenly across the timeline
-        const startProgress = 0.1 + (idx / totalItems) * 0.85;
-        const itemDuration = 0.1;
 
-        // Set initial state - items start from their side
-        if (isLeft) {
-          gsap.set(item, {
-            opacity: 0,
-            x: -100,
-            scale: 0.8,
+        if (isMobile) {
+          gsap.set(item, { opacity: 0, y: 30 });
+          gsap.to(item, {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            delay: idx * 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 95%",
+              toggleActions: "play none none reverse",
+            },
           });
         } else {
           gsap.set(item, {
             opacity: 0,
-            x: 100,
-            scale: 0.8,
+            x: isLeft ? -80 : 80,
+            scale: 0.9,
           });
-        }
-
-        // Animate item coming in
-        masterTimeline.to(
-          item,
-          {
+          gsap.to(item, {
             opacity: 1,
             x: 0,
             scale: 1,
-            duration: itemDuration,
-            ease: "power1.out",
-          },
-          startProgress
-        );
+            duration: 0.5,
+            delay: idx * 0.08,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 95%",
+              toggleActions: "play none none reverse",
+            },
+          });
+        }
       });
-    }
-
-    return () => {
-      setupTimelineRef.current = null;
-    };
-  }, [masterTimeline, isMobile]);
+    },
+    { scope: container }
+  );
 
   return (
     <div className="relative max-w-3xl mx-auto p-8 overflow-visible pb-[150px]">

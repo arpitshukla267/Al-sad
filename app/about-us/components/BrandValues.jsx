@@ -1,112 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React from "react";
 import logo from "../../../public/assets/logo-light.svg";
 import SimpleVerticalTimeline from "./SimpleTimeline";
 import people from "../../../public/assets/images/people.webp";
 
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
 const BrandValues = () => {
-  const sectionRef = useRef(null);
-  const logoRef = useRef(null);
-  const [masterTimeline, setMasterTimeline] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useGSAP(
-    () => {
-      if (typeof window === "undefined") return;
-
-      const section = sectionRef.current;
-      const logo = logoRef.current;
-      if (!section || !logo) return;
-
-      const mm = gsap.matchMedia();
-
-      // Desktop animation
-      mm.add("(min-width: 768px)", () => {
-        setIsMobile(false);
-        const scrollDistance = window.innerHeight * 2.5;
-
-        // Create master timeline with pinning
-        const timeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: "top 100px",
-            end: () => `+=${scrollDistance}`,
-            pin: true,
-            pinSpacing: true,
-            scrub: 0.5,
-            anticipatePin: 1,
-          },
-        });
-
-        setMasterTimeline(timeline);
-
-        // Keep logo visible throughout
-        gsap.set(logo, { opacity: 1, y: 0 });
-
-        return () => {
-          setMasterTimeline(null);
-          ScrollTrigger.getAll().forEach((trigger) => {
-            if (trigger.vars?.trigger === section) {
-              trigger.kill();
-            }
-          });
-        };
-      });
-
-      // Mobile animation
-      mm.add("(max-width: 767px)", () => {
-        setIsMobile(true);
-        const scrollDistance = window.innerHeight * 2.5;
-
-        // Create master timeline with pinning
-        const timeline = gsap.timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: "top 100px",
-            end: () => `+=${scrollDistance}`,
-            pin: true,
-            pinSpacing: true,
-            scrub: 0.5,
-            anticipatePin: 1,
-          },
-        });
-
-        setMasterTimeline(timeline);
-
-        // Keep logo visible throughout
-        gsap.set(logo, { opacity: 1, y: 0 });
-
-        return () => {
-          setMasterTimeline(null);
-          ScrollTrigger.getAll().forEach((trigger) => {
-            if (trigger.vars?.trigger === section) {
-              trigger.kill();
-            }
-          });
-        };
-      });
-
-      return () => {
-        mm.revert();
-      };
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <div
-      ref={sectionRef}
       className="flex flex-col items-center p-10 bg-gradient-to-b from-primary via-light-blue to-light-blue"
     >
-      <div ref={logoRef} id="brand-value">
+      <div id="brand-value">
         <Image
           src={logo}
           alt="Logo White"
@@ -114,10 +19,7 @@ const BrandValues = () => {
         />
       </div>
       <div className="space-y-10">
-        <SimpleVerticalTimeline
-          masterTimeline={masterTimeline}
-          isMobile={isMobile}
-        />
+        <SimpleVerticalTimeline />
         <div className="flex flex-col items-center space-y-8 pb-[60px]">
           <Image
             src={people}

@@ -24,13 +24,13 @@ import Link from "next/link";
 
 const List = ({ items, onClick, category }) => {
   return (
-    <ul className="space-y-10">
+    <ul className="space-y-2">
       {items.map((item, idx) => (
         <li
           key={idx}
-          className={`text-xl ${
+          className={`text-lg ${
             category === item?.title ? "font-semibold" : "font-normal"
-          } font-secondary text-wrap`}
+          } font-secondary text-wrap cursor-pointer`}
           onClick={() => onClick(item.title)}
         >
           {item?.title}
@@ -620,27 +620,34 @@ const Categories = ({ onAnimationComplete }) => {
               idx + 1
             } ${
               expandedSection === category.id
-                ? "flex-[2]"
+                ? "flex-[3]"
                 : expandedSection
-                ? "flex-[0.3]"
+                ? "flex-[0.5]"
                 : "flex-1"
-            } opacity-0 transition-all duration-500 ease-out hover:brightness-110`}
+            } transition-all duration-500 ease-out hover:brightness-110`}
           >
             {expandedSection === category.id ? (
-              <div className="grid grid-flow-col-dense h-full w-full bg-[#19417c]">
-                {/* Column 1 */}
+              <div
+                className="grid h-full w-full bg-[#19417c] overflow-hidden"
+                style={{
+                  gridTemplateColumns: items.length !== 0
+                    ? "77px 1fr 1fr"
+                    : "77px 1fr",
+                }}
+              >
+                {/* Column 1 - Title */}
                 <div
-                  className="relative h-full max-w-[77px]"
+                  className="relative h-full w-[77px] min-w-[77px]"
                   onClick={() => handleSectionClick(category.id)}
                 >
-                  <h3 className="absolute top-1/2 left-1/2 font-bold leading-tight origin-center transform -rotate-90 -translate-x-1/2 -translate-y-1/2 text-4xl whitespace-nowrap text-white">
+                  <h3 className="absolute top-1/2 left-1/2 ml-4 font-bold leading-tight origin-center transform -rotate-90 -translate-x-1/2 -translate-y-1/2 text-4xl whitespace-nowrap text-white">
                     {category.title}
                   </h3>
                   <div className="absolute -right-10 bottom-[25px] h-[80%] w-[1px] bg-white" />
                 </div>
 
-                {/* Column 2 */}
-                <div className="flex-1 flex items-end justify-center pr-4 pl-5 pb-10">
+                {/* Column 2 - Subcategories */}
+                <div className="flex items-end justify-center pr-4 pl-5 pb-10 min-w-0 overflow-hidden">
                   <List
                     items={category?.dropdown}
                     onClick={(title) => setActiveCategory(title)}
@@ -648,8 +655,9 @@ const Categories = ({ onAnimationComplete }) => {
                   />
                 </div>
 
+                {/* Column 3 - Items */}
                 {items.length !== 0 && (
-                  <div className="flex items-end justify-center px-4 pb-10 relative">
+                  <div className="flex items-end justify-center px-4 pb-10 relative min-w-0 overflow-hidden">
                     <div className="absolute left-0 bottom-[25px] h-[80%] w-[1px] bg-white" />
                     <TruncatedList
                       items={items}
@@ -794,7 +802,7 @@ const Categories = ({ onAnimationComplete }) => {
                 key={cat.id}
                 ref={(el) => (mobileCategoryRefs.current[idx] = el)}
                 href={`/products/${cat.id}`}
-                className="relative aspect-[4/3] overflow-hidden group rounded-lg opacity-0"
+                className="relative aspect-[4/3] overflow-hidden group rounded-lg"
               >
                 <Image
                   src={cat.backgroundImage}
