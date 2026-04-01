@@ -4,22 +4,26 @@ import products from "../../../public/assets/images/products.webp";
 import services from "../../../public/assets/images/services.webp";
 import blog from "../../../public/assets/images/blog.webp";
 import Image from "next/image";
+import Link from "next/link";
 
 const FEATURES = [
   {
     id: 1,
     title: "Products",
     image: products,
+    route: "/products",
   },
   {
     id: 2,
     title: "Services",
     image: services,
+    route: "/services",
   },
   {
     id: 3,
     title: "Blog",
     image: blog,
+    route: "/blogs",
   },
 ];
 
@@ -32,6 +36,7 @@ const Explore = () => {
       <div className="flex gap-6 md:gap-15 overflow-x-auto w-full scrollbar-hide scroll-smooth snap-x snap-mandatory">
         {FEATURES.map((p) => (
           <div className="space-y-3 flex-shrink-0 snap-center" key={p.id}>
+            <Link href={p.route}>
             <Image
               src={p.image}
               alt="People"
@@ -40,6 +45,7 @@ const Explore = () => {
             />
 
             <p className="text-md md:text-2xl font-semibold">{p.title}</p>
+            </Link>
           </div>
         ))}
       </div>

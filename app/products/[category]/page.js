@@ -96,9 +96,7 @@ const Layer1Page = ({ params }) => {
           <HelpSection />
         </div>
       </main>
-      <div className="py-10 px-4">
-        <Footer />
-      </div>
+
     </div>
   );
 };
