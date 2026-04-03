@@ -222,35 +222,9 @@ const Categories = ({ onAnimationComplete }) => {
       backgroundImage: catFive,
       isStatic: true,
       dropdown: [
-        {
-          title: "Architecture Hardware",
-          items: [
-            { title: "Door Control", to: "" },
-            { title: "Door Hinges", to: "" },
-            { title: "Door Handle", to: "" },
-            { title: "Door Bolts", to: "" },
-            { title: "Door Security", to: "" },
-            { title: "Door Stoppers", to: "" },
-            { title: "Door Accessories", to: "" },
-            { title: "Door Locks", to: "" },
-            { title: "Door Holes", to: "" },
-          ],
-        },
-        {
-          title: "Furniture Hardware",
-          items: [
-            { title: "Door Hinges", to: "" },
-            { title: "Door Handle", to: "" },
-          ],
-        },
-        {
-          title: "Glass Hardware",
-          items: [{ title: "Door Hinges", to: "" }],
-        },
-        {
-          title: "Aluminium Hardware",
-          items: [],
-        },
+       {
+        title: "Coming Soon", to: ""
+       }
       ],
     },
     {
@@ -259,35 +233,9 @@ const Categories = ({ onAnimationComplete }) => {
       backgroundImage: catSix,
       isStatic: true,
       dropdown: [
-        {
-          title: "Architecture Hardware",
-          items: [
-            { title: "Door Control", to: "" },
-            { title: "Door Hinges", to: "" },
-            { title: "Door Handle", to: "" },
-            { title: "Door Bolts", to: "" },
-            { title: "Door Security", to: "" },
-            { title: "Door Stoppers", to: "" },
-            { title: "Door Accessories", to: "" },
-            { title: "Door Locks", to: "" },
-            { title: "Door Holes", to: "" },
-          ],
-        },
-        {
-          title: "Furniture Hardware",
-          items: [
-            { title: "Door Hinges", to: "" },
-            { title: "Door Handle", to: "" },
-          ],
-        },
-        {
-          title: "Glass Hardware",
-          items: [{ title: "Door Hinges", to: "" }],
-        },
-        {
-          title: "Aluminium Hardware",
-          items: [],
-        },
+       {
+        title: "Coming Soon", to: ""
+       }
       ],
     },
   ]);
@@ -637,10 +585,16 @@ const Categories = ({ onAnimationComplete }) => {
               >
                 {/* Column 1 - Title */}
                 <div
-                  className="relative h-full w-[77px] min-w-[77px]"
+                  className="relative h-full w-[77px] min-w-[77px] flex items-end pb-10 ml-4 justify-center"
                   onClick={() => handleSectionClick(category.id)}
                 >
-                  <h3 className="absolute top-1/2 left-1/2 ml-4 font-bold leading-tight origin-center transform -rotate-90 -translate-x-1/2 -translate-y-1/2 text-4xl whitespace-nowrap text-white">
+                  <h3
+                    className="font-bold leading-tight text-4xl whitespace-nowrap text-white"
+                    style={{
+                      writingMode: "vertical-rl",
+                      transform: "rotate(180deg)",
+                    }}
+                  >
                     {category.title}
                   </h3>
                   <div className="absolute -right-10 bottom-[25px] h-[80%] w-[1px] bg-white" />
@@ -683,14 +637,16 @@ const Categories = ({ onAnimationComplete }) => {
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-[rgba(14,33,67,0.4)] transition-opacity duration-500 group-hover:opacity-30" />
 
-                {/* Title - Rotated 270deg, positioned at center */}
+                {/* Title - Rotated 270deg, bottom-aligned */}
                 <div
-                  className="relative h-full w-full"
+                  className="relative h-full w-full flex items-end pb-10 justify-center"
                   onClick={() => handleSectionClick(category.id)}
                 >
                   <h3
-                    className="absolute top-1/2 left-1/2 font-primary  font-bold text-[36px] leading-[normal] text-white whitespace-nowrap origin-center transform -rotate-90 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 "
+                    className="font-primary font-bold text-[36px] leading-[normal] text-white whitespace-nowrap transition-all duration-500 pb-10"
                     style={{
+                      writingMode: "vertical-rl",
+                      transform: "rotate(180deg)",
                       textShadow: "rgba(25,65,124,0.2) 0px 2px 4px",
                     }}
                   >
@@ -812,7 +768,7 @@ const Categories = ({ onAnimationComplete }) => {
                   sizes="50vw"
                 />
                 <div className="absolute inset-0 bg-primary/50" />
-                <h3 className="absolute inset-0 flex items-end p-3 text-white font-primary font-semibold text-sm sm:text-base">
+                <h3 className="absolute inset-0 flex items-end p-3 text-white font-primary font-bold text-[18px] sm:text-base">
                   {cat.title}
                 </h3>
               </Link>

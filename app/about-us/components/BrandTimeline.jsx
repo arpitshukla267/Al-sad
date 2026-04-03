@@ -484,7 +484,7 @@ const BrandTimeline = () => {
       >
         {/* Section Title - Fixed at top */}
         <div className="absolute top-16 left-0 right-0 z-20 text-center">
-          <h2 className="font-primary font-bold text-2xl text-white uppercase tracking-wide">
+          <h2 className="font-primary mt-4 font-bold text-2xl text-white uppercase tracking-wide">
             AL SAD THROUGH THE YEARS
           </h2>
           <div className="w-24 h-px bg-gray-400 mx-auto mt-2" />

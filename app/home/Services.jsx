@@ -20,21 +20,21 @@ const SERVICES = [
     heading: "Trading, Import/Export Capabilities",
     image: serOne,
     description:
-      "Al Sad Building Material L.L.C offers extensive trading and import/export services, sourcing quality materials from trusted global partners. Our experience ensures timely procurement, competitive pricing, and full compliance with international standards. Whether it's a specific product or bulk order, we deliver with precision and reliability. With decades of industry knowledge and a strong global network, we help businesses access the materials they need — efficiently and affordably — across the Middle East and beyond.",
+      "At Al Sad Building Material LLC, we are engaged in the trading, import, and export of high-quality building materials and fittings. With strong global partnerships across the Middle East, Asia, and Africa, we deliver quality, reliability, and competitive pricing, ensuring our partners’ projects are completed without compromise.",
   },
   {
     id: 2,
     heading: "Warehousing & Logistics Support",
     image: serTwo,
     description:
-      "Our central warehouse in Al Quoz, Dubai, provides organized, secure storage and fast dispatch of materials. Backed by an efficient logistics network, we ensure timely deliveries across the UAE and surrounding regions. From inventory management to last-mile delivery, our team handles every detail with care. Whether you're sourcing materials for a project or managing stock for your store, Al Sad's warehousing and logistics services keep your operations running smoothly and without delays.",
+      "Backed by reliable warehousing and logistics capabilities, and with over 10,000 sq. ft. of dedicated warehouse space, Al Sad Building Material LLC ensures seamless stock management and quick dispatch. We minimize delays, maximize reliability, and our logistics team ensures products reach clients on schedule — helping them save time and maintain smooth project operations.",
   },
   {
     id: 3,
     heading: "Bulk Supply & Retail Support",
     image: serThree,
     description:
-      "Al Sad supports both large construction projects and retail outlets with tailored supply solutions. Our bulk services ensure consistent stock for contractors and developers, while retail partners benefit from curated selections, merchandising support, and timely restocking. We understand the pace and pressure of the industry, and our responsive service helps you stay ahead. Whether supplying a job site or storefront, Al Sad delivers reliability, flexibility, and the personal touch that defines our legacy.",
+      "At Al Sad Building Material LLC, we understand that every customer has unique needs. We cater to both bulk supply and retail clients. Whether it’s large project requirements or individual fittings, we maintain excellent stock levels and competitive pricing. Our one-stop solution ensures contractors, wholesalers, and walk-in buyers receive the same commitment to quality and timely service.",
   },
 ];
 
@@ -43,7 +43,7 @@ const HEADER_HEIGHT_MOBILE = 64;
 const Service = ({ heading, image, description, index }) => {
   return (
     <div
-      className="bg-white px-4 pt-16 pb-5 sm:py-5 md:py-28 md:px-16 h-full slide sticky top-0 snap-top"
+      className="bg-white px-4 pt-16 pb-5 sm:py-5 md:py-28 md:px-16 h-full slide sticky md:-top-10 snap-top"
       id={`slide-${index}`}
     >
       <div className="mx-auto max-w-[1260px] flex flex-col sm:flex-row gap-5 md:gap-12 w-full text-black items-center h-[619px] justify-center">
@@ -54,7 +54,7 @@ const Service = ({ heading, image, description, index }) => {
             className="object-cover h-full rounded-sm"
           />
         </div>
-        <div className="w-full sm:w-1/2 flex flex-col md:justify-between items-start gap-3 sm:gap-10 h-full sm:h-full">
+        <div className="w-full sm:w-1/2 flex flex-col items-start gap-3 sm:gap-10 sm:h-full">
           <div className="min-w-full space-y-3">
             <p className="uppercase text-xs sm:text-[18px] font-normal">
               Services we offer
@@ -69,11 +69,7 @@ const Service = ({ heading, image, description, index }) => {
             <p className="text-sm sm:text-xl font-normal">{description}</p>
           </div>
 
-          <PrimaryBtn
-            title="View more"
-            styles="bg-light-blue hover:bg-blue-800"
-            onClick={() => {}}
-          />
+          
         </div>
       </div>
     </div>

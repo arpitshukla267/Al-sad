@@ -44,8 +44,8 @@ const FOOTER_NAV_ITEMS = [
 
 const Footer = () => {
   return (
-    <footer className="w-full max-w-[1260px] mx-auto  h-[535px] sm:pt-[64px] sm:pb-[80px] sm:px-20">
-      <div className="flex justify-between gap-8 sm:gap-24 h-full w-full flex-wrap sm:flex-nowrap">
+    <footer className="w-full bg-primary sm:pt-[64px] sm:pb-[80px]">
+      <div className="flex justify-between gap-8 sm:gap-24 h-full w-full flex-wrap md:flex-nowrap px-6 md:px-16 lg:px-24">
         <div className="flex flex-col justify-between w-full items-start gap-5 sm:gap-0">
           <Image src={logoLight} alt="Logo" className="h-[115px] w-[155px]" />
           <div className="flex items-center gap-3 sm:gap-10">
@@ -58,7 +58,7 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col justify-between gap-4 w-screen">
+        <div className="flex flex-col justify-between gap-4 w-full">
           <div className="grid grid-flow-col auto-cols-auto gap-10 sm:gap-24">
             {FOOTER_NAV_ITEMS.map((nav, idx) => (
               <div className={`${nav.isHidden && "hidden sm:block"}`} key={idx}>

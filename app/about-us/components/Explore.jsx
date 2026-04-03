@@ -13,14 +13,14 @@ const FEATURES = [
     image: products,
     route: "/products",
   },
+  // {
+  //   id: 2,
+  //   title: "Services",
+  //   image: services,
+  //   route: "/services",
+  // },
   {
     id: 2,
-    title: "Services",
-    image: services,
-    route: "/services",
-  },
-  {
-    id: 3,
     title: "Blog",
     image: blog,
     route: "/blogs",

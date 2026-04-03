@@ -70,7 +70,9 @@ const SimpleVerticalTimeline = () => {
       const middleLine = middleLineRef.current;
       if (!middleLine) return;
 
-      // Animate the middle line growing when container enters view
+      const mm = gsap.matchMedia();
+
+      // Animate the middle line
       gsap.set(middleLine, { scaleY: 0, transformOrigin: "top" });
       gsap.to(middleLine, {
         scaleY: 1,
@@ -83,30 +85,34 @@ const SimpleVerticalTimeline = () => {
         },
       });
 
-      const isMobile = window.innerWidth < 768;
+      mm.add("(max-width: 767px)", () => {
+        TIMELINE_DATA.forEach((data, idx) => {
+          const item = itemRefs.current[idx];
+          if (!item) return;
 
-      // Each item animates independently when it enters the viewport
-      TIMELINE_DATA.forEach((data, idx) => {
-        const item = itemRefs.current[idx];
-        if (!item) return;
-
-        const isLeft = idx % 2 === 0;
-
-        if (isMobile) {
-          gsap.set(item, { opacity: 0, y: 30 });
+          gsap.set(item, { opacity: 0, y: 40 });
           gsap.to(item, {
             opacity: 1,
             y: 0,
-            duration: 0.5,
+            duration: 0.6,
             delay: idx * 0.1,
             ease: "power2.out",
             scrollTrigger: {
               trigger: item,
-              start: "top 95%",
+              start: "top 92%",
               toggleActions: "play none none reverse",
             },
           });
-        } else {
+        });
+      });
+
+      mm.add("(min-width: 768px)", () => {
+        TIMELINE_DATA.forEach((data, idx) => {
+          const item = itemRefs.current[idx];
+          if (!item) return;
+
+          const isLeft = idx % 2 === 0;
+
           gsap.set(item, {
             opacity: 0,
             x: isLeft ? -80 : 80,
@@ -125,17 +131,19 @@ const SimpleVerticalTimeline = () => {
               toggleActions: "play none none reverse",
             },
           });
-        }
+        });
       });
+
+      return () => mm.revert();
     },
     { scope: container }
   );
 
   return (
-    <div className="relative max-w-3xl mx-auto p-8 overflow-visible pb-[150px]">
+    <div className="relative max-w-3xl mx-auto px-8 pt-8 overflow-visible">
       <div
         ref={container}
-        className="relative max-w-3xl mx-auto overflow-visible"
+        className="relative max-w-3xl mx-auto overflow-visible pb-10 md:pb-32"
       >
         {/* Middle vertical line */}
         <div
@@ -148,41 +156,42 @@ const SimpleVerticalTimeline = () => {
           <div
             key={data.id}
             id={`value-${idx}`}
+            className="w-full flex md:block" // Restore block-based flow for desktop
             ref={(el) => (itemRefs.current[idx] = el)}
           >
             {idx % 2 === 0 ? (
-              <div className="h-fit md:h-[130px] max-w-[153px] md:max-w-[450px] w-full relative -left-15 md:-left-70">
+              <div className="h-fit md:min-h-[160px] w-1/2 md:w-full max-w-[450px] relative text-right pr-10 md:pr-0 md:-left-70 flex flex-col items-end md:block">
                 <div className="flex items-center gap-[6px] md:gap-4 justify-end">
                   <Image
                     src={data.icon}
                     alt={data.title}
                     className="h-7 w-7 md:h-13 md:w-13"
                   />
-                  <h5 className="font-secondary font-semibold text-md md:text-[32px] text-white">
+                  <h5 className="font-secondary font-semibold text-sm md:text-[32px] text-white">
                     {data.title}
                   </h5>
                 </div>
-                <p className="text-right text-xs md:text-2xl text-white">
+                <p className="text-right text-[10px] md:text-2xl text-white">
                   {data.description}
                 </p>
-                <div className="bg-white w-5 md:w-[106px] h-px absolute top-1/2 -right-[30px] md:-right-[40%]" />
+                <div className="bg-white w-7 md:w-[106px] h-px absolute top-8 md:top-1/2 right-0 md:-right-[40%]" />
               </div>
             ) : (
-              <div className="h-fit md:h-[130px] max-w-[153px] md:max-w-[450px] relative -right-38 md:-right-133 space-x-3">
-                <div className="flex items-center gap-4 justify-start">
+              <div className="h-fit md:min-h-[160px] w-1/2 md:w-auto max-w-[450px] relative text-left pl-10 md:pl-0 ml-auto md:ml-0 md:-right-133 flex flex-col items-start md:block">
+                <div className="flex items-center gap-[6px] md:gap-4 justify-start">
                   <Image
                     src={data.icon}
                     alt={data.title}
                     className="h-7 w-7 md:h-13 md:w-13"
                   />
-                  <h5 className="font-secondary font-semibold text-md md:text-[32px] text-white">
+                  <h5 className="font-secondary font-semibold text-sm md:text-[32px] text-white">
                     {data.title}
                   </h5>
                 </div>
-                <p className="text-left text-xs md:text-2xl text-white">
+                <p className="text-left text-[10px] md:text-2xl text-white">
                   {data.description}
                 </p>
-                <div className="bg-white w-5 md:w-[106px] h-px absolute top-1/2 -left-[30px] md:-left-[40%]" />
+                <div className="bg-white w-7 md:w-[106px] h-px absolute top-8 md:top-1/2 left-0 md:-left-[40%]" />
               </div>
             )}
           </div>

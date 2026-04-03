@@ -15,10 +15,10 @@ const BrandValues = () => {
         <Image
           src={logo}
           alt="Logo White"
-          className="object-cover h-[120px] w-[133px] md:h-[287px] md:w-[343px]"
+          className="object-cover h-[120px] w-full md:h-[287px] md:w-full"
         />
       </div>
-      <div className="space-y-10">
+      <div className="">
         <SimpleVerticalTimeline />
         <div className="flex flex-col items-center space-y-8 pb-[60px]">
           <Image

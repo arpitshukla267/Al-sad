@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -13,11 +13,11 @@ const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 const locations = [
   {
-    name: "Saudi Arabia",
+    name: "Gulf (Saudi Arabia, Oman, Bahrain & Qatar)",
     coordinates: [45.0792, 23.8859],
     projects: 45,
     description:
-      "We have completed over 45 successful projects across the country and are currently working on many more",
+      "Partnered with leading contractors and developers to supply architectural hardware, aluminum profiles, and fittings, supporting major hospitality, commercial, and infrastructure projects across the Gulf region.",
     isHighlighted: true,
   },
   {
@@ -39,19 +39,29 @@ const locations = [
     coordinates: [53.688, 32.4279],
     projects: 15,
     description:
-      "Industrial and commercial construction projects in key economic zones",
+      "Exported a wide range of hardware, locks, and fittings for residential and commercial projects, ensuring reliable quality and strong supply chain support for regional partners.",
   },
   {
-    name: "India",
+    name: "India, China & Taiwan",
     coordinates: [78.9629, 20.5937],
     projects: 22,
     description:
-      "Large-scale infrastructure projects including highways and commercial developments",
+      "As huge importers from India, China, and Taiwan, we leverage strong supplier networks to source premium building materials and fittings, ensuring competitive pricing and reliable supply for regional and international markets.",
   },
 ];
 
 const Locations = () => {
   const [selectedLocation, setSelectedLocation] = useState(locations[0]);
+  const [mapHeight, setMapHeight] = useState(400);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMapHeight(window.innerWidth < 640 ? 600 : 400);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleMarkerClick = (location) => {
     setSelectedLocation(location);
@@ -92,7 +102,7 @@ const Locations = () => {
       `}</style>
       <div className="max-w-[1260px] mx-auto px-4 sm:px-6 lg:px-18 bg-white">
         <div className="flex justify-between items-start ">
-          <h2 className="text-2xl sm:text-4xl md:text-[48px] font-bold text-gray-900 leading-tight sm:max-w-[380px] md:max-w-[480px]">
+          <h2 className="text-[32px] sm:text-4xl md:text-[48px] font-bold text-gray-900 leading-tight sm:max-w-[380px] md:max-w-[480px] font-primary">
             Growing Steadily With Finesse
           </h2>
           <p className="text-gray-900 font-medium hidden sm:inline-flex">
@@ -108,7 +118,7 @@ const Locations = () => {
               center: [55, 28],
             }}
             width={800}
-            height={400}
+            height={mapHeight}
           >
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
@@ -213,10 +223,14 @@ const Locations = () => {
 
           {/* Dynamic Info Box */}
           <div className="relative sm:absolute bottom-0 sm:bottom-8 sm:left-4 sm:translate-x-0 bg-primary-green text-white p-4 rounded-lg w-full sm:max-w-xs transition-all duration-500 ease-in-out z-10">
-            <h3 className="text-xl font-bold mb-2 animate-fade-in">
+            <h3 className="text-xl lg:text-[36px] font-bold mb-2 animate-fade-in"
+                style={{
+                    lineHeight: "100%",
+                }}
+            >
               {selectedLocation.name}
             </h3>
-            <p className="text-green-100 text-sm sm:text-xs animate-fade-in-delay">
+            <p className="text-green-100 text-sm lg:text-[18px] animate-fade-in-delay">
               {selectedLocation.description ||
                 `We have completed over ${selectedLocation.projects} successful projects across the country and are currently working on many more`}
             </p>

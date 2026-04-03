@@ -6,23 +6,23 @@ const ARTICLES = [
   {
     id: 1,
     image: articleImg,
-    heading: "Article Heading",
+    heading: "Why Quality Building Materials Matter for Every Project",
     description:
-      "A value that the company has. A value that the company has. A value that the company has. A value that the company has",
+      "Contractors, developers, and homeowners alike are increasingly recognising the importance of sourcing reliable construction supplies from trusted partners.",
   },
   {
     id: 2,
     image: articleImg,
-    heading: "Article Heading",
+    heading: "How Logistics and Warehousing Drive Construction Success",
     description:
-      "A value that the company has. A value that the company has. A value that the company has. A value that the company has",
+      "Logistics and warehousing play a critical role in ensuring that contractors and developers can complete projects within schedule and budget.",
   },
   {
     id: 3,
     image: articleImg,
-    heading: "Article Heading",
+    heading: "Furniture Fit-Out Trends in Dubai and Beyond",
     description:
-      "A value that the company has. A value that the company has. A value that the company has. A value that the company has",
+      "The UAE’s booming real estate and interior design markets have created a huge demand for premium furniture fit-out solutions.",
   },
 ];
 
@@ -54,7 +54,7 @@ const NewsAndArticles = () => {
             {ARTICLES.map((article) => (
               <div
                 key={article.id}
-                className="max-w-full shrink-0 snap-start sm:min-w-0 scrollbar-hide"
+                className="max-w-[80%] md:max-w-full shrink-0 snap-start sm:min-w-0 scrollbar-hide"
               >
                 <Article
                   image={article.image}
