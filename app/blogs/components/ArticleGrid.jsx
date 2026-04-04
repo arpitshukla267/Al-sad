@@ -54,7 +54,7 @@ const ArticleCard = ({ article }) => {
 	return (
 		<Link href={`/blogs/${article.id}`} className="flex flex-col">
 			{/* Image - Mobile: 156px, Tablet/Desktop: 232px */}
-			<div className="relative w-full h-[156px] sm:h-[232px] rounded-[4px] overflow-hidden">
+			<div className="relative md:w-full h-[165px] sm:h-[232px] rounded-[4px] overflow-hidden">
 				<Image
 					src={article.image}
 					alt={article.title}

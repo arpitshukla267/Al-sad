@@ -1,9 +1,15 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { LuPhone } from "react-icons/lu";
-import { LuMail } from "react-icons/lu";
+import { LuPhone, LuMail, LuClock, LuMapPin } from "react-icons/lu";
 import "leaflet/dist/leaflet.css";
+import Image from "next/image";
+
+import branch1 from "../../public/assets/images/timeline-1.webp";
+import branch2 from "../../public/assets/images/timeline-3.webp";
+import branch3 from "../../public/assets/images/timeline-4.webp";
+import branch4 from "../../public/assets/images/timeline-5.webp";
+import branch5 from "../../public/assets/images/timeline-6.webp";
 
 const locations = [
   {
@@ -72,43 +78,58 @@ const locations = [
 const branches = [
   {
     id: 1,
-    address:
-      "3rd Floor, Elphinstone Chambers Horniman Circle, Fort Mumbai 400001, India",
-    workingHours: "10:30am-5:30pm / Monday - Friday",
+    name: "Branch 1",
+    company: "Al Sad Building Material LLC",
+    address: "Al Sabkha St, Deira Dubai - UAE",
+    workingHours: "8:00am - 1:00pm / 4:00pm - 8:00pm",
+    days: "Monday - Saturday",
     phone: "1800 - 83785 82733",
     email: "support@clarity.com",
+    image: branch1,
   },
   {
     id: 2,
-    address:
-      "3rd Floor, Elphinstone Chambers Horniman Circle, Fort Mumbai 400001, India",
-    workingHours: "10:30am-5:30pm / Monday - Friday",
+    name: "Branch - 2",
+    company: "Al Sad Building Material LLC,Br",
+    address: "Nakheel St, Naif Road Deira Dubai - UAE",
+    workingHours: "8:00am - 1:00pm / 4:00pm - 8:00pm",
+    days: "Monday - Saturday",
     phone: "1800 - 83785 82733",
     email: "support@clarity.com",
+    image: branch2,
   },
   {
     id: 3,
-    address:
-      "3rd Floor, Elphinstone Chambers Horniman Circle, Fort Mumbai 400001, India",
-    workingHours: "10:30am-5:30pm / Monday - Friday",
-    phone: "1800 - 83785 82733",
+    name: "Branch - 3",
+    company: "Al Sad Building Material LLC,Br",
+    address: "Al Quoz Industrial Area 3",
+    workingHours: "8:00am - 1:00pm / 4:00pm - 8:00pm",
+    days: "Monday - Saturday",
+    phone: "800 - 83785 82733",
     email: "support@clarity.com",
+    image: branch3,
   },
   {
     id: 4,
-    address:
-      "3rd Floor, Elphinstone Chambers Horniman Circle, Fort Mumbai 400001, India",
-    workingHours: "10:30am-5:30pm / Monday - Friday",
+    name: "Branch - 4",
+    company: "Al Sad Al Jadid Building Material LLC",
+    address: "Al Quoz Industrial Area 4",
+    workingHours: "8:00am - 1:00pm / 4:00pm - 8:00pm",
+    days: "Monday - Saturday",
     phone: "1800 - 83785 82733",
     email: "support@clarity.com",
+    image: branch4,
   },
   {
     id: 5,
-    address:
-      "3rd Floor, Elphinstone Chambers Horniman Circle, Fort Mumbai 400001, India",
-    workingHours: "10:30am-5:30pm / Monday - Friday",
+    name: "Branch - 5",
+    company: "Al Sad Al Arabi Building Material LLC",
+    address: "Dubai Investment Park 2",
+    workingHours: "8:00am - 1:00pm / 4:00pm - 8:00pm",
+    days: "Monday - Saturday",
     phone: "1800 - 83785 82733",
     email: "support@clarity.com",
+    image: branch5,
   },
 ];
 
@@ -296,7 +317,7 @@ const ContactUs = () => {
   }, [selectedLocation]);
 
   return (
-    <div className="min-h-screen bg-white pt-[75px] sm:pt-[85px]">
+    <div className="min-h-screen bg-white pt-[63px] md:pt-[83px]">
       {/* Header Section */}
       <div className="bg-[#0E2143] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,24 +366,74 @@ const ContactUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {branches.map((branch) => (
-              <div key={branch.id} className="space-y-3">
-                <h3 className="text-2xl text-black">BRANCH - {branch.id}</h3>
-                <div className="text-black text-sm space-y-1">
-                  <p>3rd Floor, Elphinstone Chambers</p>
-                  <p>Horniman Circle, Fort</p>
-                  <p>Mumbai 400001, India</p>
-                </div>
-                <p className="text-black text-sm">{branch.workingHours}</p>
+              <div
+                key={branch.id}
+                className="flex flex-col bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-[#e5e5e5]"
+              >
+                <div className="p-6 flex-1 flex flex-col space-y-4">
+                  <h3 className="text-[20px] font-primary font-bold text-black uppercase tracking-tight">
+                    {branch.name}
+                  </h3>
 
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <LuPhone size={16} className="text-[#04724D]" />
-                    <span className="text-black text-sm">{branch.phone}</span>
-                  </div>
+                  <div className="space-y-4 flex-1">
+                    {/* Address Section */}
+                    <div className="flex items-start space-x-3 group/item">
+                      <LuMapPin
+                        className="mt-1 text-[#04724D] flex-shrink-0"
+                        size={18}
+                      />
+                      <div className="text-black text-sm leading-relaxed">
+                        <p className="font-semibold">{branch.company}</p>
+                        <p className="text-gray-600">{branch.address}</p>
+                      </div>
+                    </div>
 
-                  <div className="flex items-center space-x-2">
-                    <LuMail size={16} className="text-[#04724D]" />
-                    <span className="text-black text-sm">{branch.email}</span>
+                    {/* Working Hours Section */}
+                    <div className="flex items-start space-x-3 group/item">
+                      <LuClock
+                        className="mt-1 text-[#04724D] flex-shrink-0"
+                        size={18}
+                      />
+                      <div className="text-black text-sm">
+                        <p className="font-semibold">{branch.days}</p>
+                        <p className="text-gray-600 font-medium">
+                          {branch.workingHours}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Communication Info */}
+                    <div className="pt-4 border-t border-gray-100 flex flex-col space-y-3">
+                      <a
+                        href={`tel:${branch.phone.replace(/\s+/g, "")}`}
+                        className="flex items-center space-x-3 group/contact hover:text-[#04724D] transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-[#04724D]/10 flex items-center justify-center group-hover/contact:bg-[#04724D] transition-colors">
+                          <LuPhone
+                            size={16}
+                            className="text-[#04724D] group-hover/contact:text-white"
+                          />
+                        </div>
+                        <span className="text-black text-sm font-semibold">
+                          {branch.phone}
+                        </span>
+                      </a>
+
+                      <a
+                        href={`mailto:${branch.email}`}
+                        className="flex items-center space-x-3 group/contact hover:text-[#04724D] transition-colors"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-[#04724D]/10 flex items-center justify-center group-hover/contact:bg-[#04724D] transition-colors">
+                          <LuMail
+                            size={16}
+                            className="text-[#04724D] group-hover/contact:text-white"
+                          />
+                        </div>
+                        <span className="text-black text-sm italic">
+                          {branch.email}
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

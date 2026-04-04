@@ -81,10 +81,10 @@ const Layer1Page = ({ params }) => {
 
   return (
     <div className="flex flex-col overflow-x-hidden min-h-screen">
-      <div className="h-max sm:h-[85px] w-full flex items-center fixed top-0 z-[100]">
+      <div className="h-max w-full flex items-center fixed top-0 z-[100]">
         <Header isDarkBackground={true} />
       </div>
-      <main className="flex flex-col flex-1 justify-start items-center relative min-h-screen mt-[75px] sm:mt-[85px] overflow-x-hidden">
+      <main className="flex flex-col flex-1 justify-start items-center relative min-h-screen mt-[63px] md:mt-[83px] overflow-x-hidden">
         <div className="w-full max-w-full mx-auto h-full">
           <div className="bg-white w-full py-8 sm:py-10 md:py-12 lg:py-16">
             <div className="max-w-[1260px] mx-auto px-4 ">

@@ -61,7 +61,7 @@ export default function HeaderWrapper() {
 
   return (
     <div
-      className={`h-[65px] sm:h-[85px] w-full flex items-center fixed top-0 left-0 right-0 z-[100] pt-[env(safe-area-inset-top,0px)] sm:pt-0 ${headerBg}`}
+      className="h-max w-full flex items-center fixed top-0 left-0 right-0 z-[100] pt-[env(safe-area-inset-top,0px)] sm:pt-0 border-b border-transparent"
     >
       <Header isDarkBackground={isDarkBackground} useGradient={useGradient} />
     </div>

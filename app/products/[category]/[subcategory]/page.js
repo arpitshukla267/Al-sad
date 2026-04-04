@@ -3,6 +3,7 @@
 import React, { use, useState, useEffect } from "react";
 import Header from "../../../Header";
 import Footer from "../../../Footer";
+import { LuSettings2, LuX } from "react-icons/lu";
 import Breadcrumb from "./components/Breadcrumb";
 import PageTitle from "./components/PageTitle";
 import ProductCount from "./components/ProductCount";
@@ -11,6 +12,7 @@ import SearchBar from "./components/SearchBar";
 import ProductGrid from "./components/ProductGrid";
 import FilterPills from "./components/FilterPills";
 import HelpSection from "./components/HelpSection";
+import Link from "next/link";
 import {
   getCategoryBySlug,
   getSubcategoryBySlugs,
@@ -130,10 +132,10 @@ const Layer2Page = ({ params }) => {
 
   return (
     <div className="flex flex-col overflow-x-hidden min-h-screen">
-      <div className="h-max sm:h-[85px] w-full flex items-center fixed top-0 z-[100]">
+      <div className="h-max w-full flex items-center fixed top-0 z-[100]">
         <Header isDarkBackground={true} />
       </div>
-      <main className="flex flex-col flex-1 justify-start items-center relative min-h-screen mt-[75px] sm:mt-[85px] overflow-x-hidden">
+      <main className="flex flex-col flex-1 justify-start items-center relative min-h-screen mt-[63px] md:mt-[83px] overflow-x-hidden pb-[60px] md:pb-0">
         <div className="w-full max-w-full mx-auto h-full">
           <div className="bg-white w-full py-8 sm:py-10 md:py-12 lg:py-16">
             <div className="max-w-[1260px] mx-auto px-4 ">
@@ -177,7 +179,69 @@ const Layer2Page = ({ params }) => {
           <HelpSection />
         </div>
       </main>
-      
+
+      {/* Mobile Filter & Enquire Bar */}
+      <div className="md:hidden fixed bottom-0 left-0 w-full h-[60px] flex z-[1000] border-t border-gray-200">
+        <button
+          onClick={() => setShowFilters(true)}
+          className="flex-1 bg-[#0E2143] text-white flex items-center justify-center gap-3 font-primary font-semibold"
+        >
+          <LuSettings2 size={24} />
+          <span className="text-[18px] uppercase tracking-wide">Filters</span>
+        </button>
+        <Link
+          href="/contact-us"
+          className="flex-1 bg-[#04724D] text-white flex items-center justify-center font-primary font-semibold"
+        >
+          <span className="text-[18px] uppercase tracking-wide">Enquire Now</span>
+        </Link>
+      </div>
+
+      {/* Mobile Filter Drawer Overlay */}
+      <div 
+        className={`md:hidden fixed inset-0 z-[1001] transition-opacity duration-300 ${
+          showFilters ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {/* Backdrop click to close */}
+        <div
+          className="absolute inset-0 backdrop-blur-xs bg-opacity-50"
+          onClick={() => setShowFilters(false)}
+        />
+        
+        <div 
+          className={`absolute left-0 top-0 h-full w-[85%] max-w-[320px] bg-white shadow-xl flex flex-col transform transition-transform duration-300 ease-in-out ${
+            showFilters ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <div className="p-5 border-b flex items-center justify-between bg-[#0E2143] text-white">
+            <h3 className="font-primary font-bold text-xl uppercase tracking-wide">Filters</h3>
+            <button onClick={() => setShowFilters(false)} className="p-1 hover:rotate-90 transition-transform duration-200">
+              <LuX size={28} />
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto p-5 bg-[#f8fafc]">
+            <FilterSidebar
+              onFilterChange={handleFilterChange}
+              activeFilters={activeFilters}
+              category={subcategoryData.categoryName}
+              subcategory={
+                subcategoryData.subcategory?.name || subcategoryData.title
+              }
+              products={subcategoryData.products}
+              subcategoryData={subcategoryData.subcategory}
+            />
+          </div>
+          <div className="p-5 border-t bg-white">
+            <button
+              onClick={() => setShowFilters(false)}
+              className="w-full bg-[#04724D] text-white py-4 rounded-lg font-primary font-bold uppercase tracking-[1px] text-[15px] shadow-lg active:scale-[0.98] transition-transform"
+            >
+              Apply Filters
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

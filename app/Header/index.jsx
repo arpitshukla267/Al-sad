@@ -360,15 +360,15 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
       </div>
 
       <header
-        className={`${bgStyle} ${
+        className={`w-full ${bgStyle} ${
           useGradient
             ? "bg-white md:bg-gradient-to-b md:from-white md:via-white md:to-transparent"
             : ""
-        } px-4 py-[14px] md:px-[50px] lg:px-[90px] xl:px-[170px] md:py-[17px] flex flex-col flex-1 h-full relative`}
+        } px-4 py-[14px] md:px-[50px] lg:px-[90px] xl:px-[170px] md:py-[12px] relative z-[100]`}
       >
         <div className="flex justify-between max-w-full items-center w-full">
           {/* Logo and Navigation Container */}
-          <div className="flex items-center gap-[44px] md:gap-[44px] lg:gap-[44px] flex-shrink-0">
+          <div className="flex items-center gap-[44px] md:gap-[44px] lg:gap-[44px]">
             <Image
               src={useGradient ? logoDark : useLightLogo ? logoLight : logoDark}
               alt="Logo"
