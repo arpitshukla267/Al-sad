@@ -56,7 +56,7 @@ const Locations = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setMapHeight(window.innerWidth < 640 ? 600 : 400);
+      setMapHeight(window.innerWidth < 640 ? 700 : 500);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -68,7 +68,7 @@ const Locations = () => {
   };
 
   return (
-    <section className="py-10 sm:py-16 max-h-screen bg-white">
+    <section className="py-10 sm:py-16 bg-white">
       <style jsx>{`
         @keyframes fadeIn {
           from {
@@ -193,7 +193,7 @@ const Locations = () => {
             {locations.map((location, index) => (
               <Marker key={index} coordinates={location.coordinates}>
                 <circle
-                  r={8}
+                  r={14}
                   fill="#1f2937"
                   stroke={
                     selectedLocation.name === location.name

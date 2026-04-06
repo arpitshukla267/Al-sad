@@ -13,7 +13,7 @@ const BlogContent = ({ content, author }) => {
 						return (
 							<p
 								key={index}
-								className="text-[16px] sm:text-[18px] font-primary font-normal text-[#1e1e1e] leading-[100%]"
+								className="text-[16px] sm:text-[18px] font-primary font-normal text-[#1e1e1e] leading-[140%]"
 							>
 								{item.text}
 							</p>

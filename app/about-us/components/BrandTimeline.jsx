@@ -166,8 +166,12 @@ const BrandTimeline = () => {
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 768px)", () => {
-      // Shorter scroll distance — just enough to cycle through all 5 entries
-      const scrollDistance = window.innerHeight * 0.8 * TIMELINE.length;
+      // Control how much scroll advances one point (px per step).
+      const perStepPx = 100;
+      const scrollDistance = Math.max(
+        perStepPx,
+        perStepPx * Math.max(1, TIMELINE.length - 1)
+      );
 
       const masterTimeline = gsap.timeline({
         scrollTrigger: {
@@ -176,8 +180,14 @@ const BrandTimeline = () => {
           end: () => `+=${scrollDistance}`,
           pin: true,
           pinSpacing: true,
-          scrub: 0.3,
+          scrub: 1.5,
           anticipatePin: 1,
+          snap: {
+            snapTo: 1 / Math.max(1, TIMELINE.length - 1),
+            duration: 3,
+            delay: 1,
+            ease: "power2.out",
+          },
           invalidateOnRefresh: true,
           onUpdate: (self) => {
             const progress = self.progress;
@@ -201,6 +211,11 @@ const BrandTimeline = () => {
         },
       });
 
+      // Compute responsive font sizes based on viewport
+      const vw = window.innerWidth;
+      const activeFontSize = vw >= 1280 ? "28px" : vw >= 1024 ? "20px" : "16px";
+      const inactiveFontSize = vw >= 1280 ? "20px" : vw >= 1024 ? "16px" : "14px";
+
       // Animate each timeline entry
       TIMELINE.forEach((timeline, index) => {
         const item = timelineItemsRef.current[index];
@@ -216,7 +231,7 @@ const BrandTimeline = () => {
         // Set initial state for inactive items
         if (index !== 0) {
           gsap.set(item, { opacity: 0.25 });
-          gsap.set(title, { fontSize: "20px", fontWeight: 400 });
+          gsap.set(title, { fontSize: inactiveFontSize, fontWeight: 400 });
           gsap.set(description, { opacity: 0.5 });
         }
 
@@ -234,7 +249,7 @@ const BrandTimeline = () => {
         masterTimeline.to(
           title,
           {
-            fontSize: "28px",
+            fontSize: activeFontSize,
             fontWeight: 700,
             duration: duration * 0.3,
             ease: "power1.out",
@@ -267,7 +282,7 @@ const BrandTimeline = () => {
           masterTimeline.to(
             title,
             {
-              fontSize: "20px",
+              fontSize: inactiveFontSize,
               fontWeight: 400,
               duration: duration * 0.2,
               ease: "power1.in",
@@ -410,15 +425,15 @@ const BrandTimeline = () => {
 
   return (
     <>
-      {/* Desktop Timeline */}
+      {/* Desktop & Tablet Timeline */}
       <div
-        className="hidden md:flex py-5 pl-[77px] p-10 pr-0 w-full flex-nowrap h-screen max-w-[1260px] mx-auto"
+        className="hidden md:flex py-5 md:pl-6 lg:pl-10 xl:pl-[77px] p-10 pr-0 w-full flex-nowrap h-screen max-w-[1260px] mx-auto"
         ref={sectionRef}
       >
         {/* Vertical Timeline */}
-        <div className="flex flex-col items-start p-8 pr-0 w-fit">
+        <div className="flex flex-col items-start md:p-4 lg:p-8 pr-0 w-fit shrink-0">
           <ul
-            className="list-disc! marker:text-2xl space-y-12! relative"
+            className="list-disc! marker:text-2xl md:space-y-8! lg:space-y-12! relative"
             ref={containerRef}
           >
             <div className="w-px bg-white h-full absolute -left-[18px]" />
@@ -426,19 +441,19 @@ const BrandTimeline = () => {
               <li
                 key={timeline.id}
                 ref={(el) => (timelineItemsRef.current[idx] = el)}
-                className="cursor-pointer w-[329px]"
+                className="cursor-pointer md:w-[200px] lg:w-[260px] xl:w-[329px]"
               >
-                <h4 className="font-secondary text-[28px] font-bold">
+                <h4 className="font-secondary md:text-base lg:text-xl xl:text-[28px] font-bold">
                   {timeline.title}
                 </h4>
-                <p className="text-xl mt-3">{timeline.description}</p>
+                <p className="md:text-sm lg:text-base xl:text-xl mt-2 lg:mt-3">{timeline.description}</p>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Image Container */}
-        <div className="relative! w-1/2 h-[630px] flex-1">
+        <div className="relative! w-1/2 h-[630px] flex-1 min-w-0">
           <Image
             src={map}
             alt="Timeline map"
@@ -454,8 +469,8 @@ const BrandTimeline = () => {
               className="timeline-image-container w-full h-full absolute"
             >
               {timeline.imageDes && (
-                <div className="description-box bg-[#19417C] rounded-tl-sm rounded-bl-sm p-6 w-[569px] absolute right-0 top-10">
-                  <p className="font-secondary font-semibold text-2xl text-right">
+                <div className="description-box bg-[#19417C] rounded-tl-sm rounded-bl-sm md:p-3 lg:p-4 xl:p-6 md:max-w-[280px] lg:max-w-[400px] xl:max-w-[569px] absolute right-0 top-10">
+                  <p className="font-secondary font-semibold md:text-sm lg:text-lg xl:text-2xl text-right">
                     {timeline.imageDes}
                   </p>
                 </div>
@@ -463,12 +478,12 @@ const BrandTimeline = () => {
               {timeline.image.map((img, imgIdx) => (
                 <div
                   key={imgIdx}
-                  className={`image-wrapper bg-white w-[300px] h-[200px] p-2 rounded-sm absolute ${img?.position}`}
+                  className={`image-wrapper bg-white md:w-[160px] lg:w-[220px] xl:w-[300px] md:h-[120px] lg:h-[160px] xl:h-[200px] p-2 rounded-sm absolute ${img?.position}`}
                 >
                   <Image
                     src={img.src}
                     alt="Timeline Photo"
-                    className="h-[150px] w-full object-cover"
+                    className="md:h-[85px] lg:h-[120px] xl:h-[150px] w-full object-cover"
                   />
                 </div>
               ))}
@@ -483,8 +498,8 @@ const BrandTimeline = () => {
         className="md:hidden w-screen h-screen relative overflow-hidden bg-[#0e2143]"
       >
         {/* Section Title - Fixed at top */}
-        <div className="absolute top-16 left-0 right-0 z-20 text-center">
-          <h2 className="font-primary mt-4 font-bold text-2xl text-white uppercase tracking-wide">
+        <div className="absolute top-20 left-0 right-0 z-20 text-center">
+          <h2 className="font-primary mt-6 font-bold text-2xl text-white uppercase tracking-wide px-6 md:px-0">
             AL SAD THROUGH THE YEARS
           </h2>
           <div className="w-24 h-px bg-gray-400 mx-auto mt-2" />
@@ -497,10 +512,10 @@ const BrandTimeline = () => {
           {TIMELINE.map((tl, idx) => (
             <div
               key={tl.id}
-              className="timeline-item shrink-0 w-screen h-[80vh] flex flex-col px-6 gap-6 relative"
+              className="timeline-item shrink-0 w-screen h-full flex flex-col px-6 pb-20 justify-between relative"
             >
-              {/* Main Content Card */}
-              <div className="flex-1 flex flex-col justify-center items-center space-y-6 ">
+              {/* Main Content Card - Takes up available space and centers content */}
+              <div className="flex-1 flex flex-col justify-center items-center space-y-6 pt-10">
                 {/* Image */}
                 {tl.image[0] && (
                   <div className="relative w-full max-w-sm h-64 rounded-lg overflow-hidden">
@@ -525,7 +540,7 @@ const BrandTimeline = () => {
               </div>
 
               {/* Timeline Progress Indicator */}
-              <div className=" flex justify-center items-center gap-2 px-6">
+              <div className="flex justify-center items-center gap-2 px-6 pb-8">
                 <div className="flex-1 h-px border-t-2 border-dashed border-white/30" />
                 {TIMELINE.map((_, dotIdx) => (
                   <div
@@ -542,7 +557,7 @@ const BrandTimeline = () => {
 
               {/* Description Box - Fixed at bottom */}
               {tl.imageDes && (
-                <div className="px-6 ">
+                <div className="px-6">
                   <div className="bg-[#19417C] rounded-lg p-4">
                     <p className="font-secondary font-semibold text-sm text-white italic text-center">
                       {tl.imageDes}

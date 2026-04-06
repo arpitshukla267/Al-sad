@@ -144,6 +144,7 @@ const ContactUs = () => {
   });
   const mapContainer = useRef(null);
   const map = useRef(null);
+  const mapInitializing = useRef(false);
   const markersRef = useRef([]);
   const leafletRef = useRef(null);
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -166,15 +167,21 @@ const ContactUs = () => {
   };
 
   useEffect(() => {
-    if (map.current) return; // initialize map only once
+    if (map.current || mapInitializing.current) return; // initialize map only once
 
     if (!mapContainer.current) return;
+
+    mapInitializing.current = true;
 
     // Dynamically import Leaflet only on client side
     const initMap = async () => {
       try {
         const L = (await import("leaflet")).default;
-        leafletRef.current = L; // Store for later use
+        if (map.current) return;
+        leafletRef.current = L; 
+
+        // Double check container hasn't been initialized by another parallel call
+        if (mapContainer.current._leaflet_id) return;
 
         // Fix for default marker icons in Next.js
         delete L.Icon.Default.prototype._getIconUrl;
@@ -259,6 +266,7 @@ const ContactUs = () => {
         setMapError(
           "Failed to load map. Please check your internet connection and try again."
         );
+        mapInitializing.current = false;
       }
     };
 
@@ -269,8 +277,9 @@ const ContactUs = () => {
       if (map.current) {
         map.current.remove();
         map.current = null;
-        markersRef.current = [];
       }
+      mapInitializing.current = false;
+      markersRef.current = [];
     };
   }, []); // Only run once on mount
 
@@ -319,7 +328,7 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-white pt-[63px] md:pt-[83px]">
       {/* Header Section */}
-      <div className="bg-[#0E2143] py-16">
+      <div className="bg-[#0E2143] py-8 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-white">Contact Us</h1>
         </div>
@@ -449,7 +458,7 @@ const ContactUs = () => {
             Have an enquiry? Reach out!
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6" suppressHydrationWarning>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-white text-sm font-medium mb-2">
@@ -462,6 +471,7 @@ const ContactUs = () => {
                   onChange={handleInputChange}
                   placeholder="Enter your name"
                   className="w-full px-4 py-3 border border-white rounded-lg bg-transparent text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  suppressHydrationWarning
                 />
               </div>
 
@@ -476,6 +486,7 @@ const ContactUs = () => {
                   onChange={handleInputChange}
                   placeholder="Example@email.com"
                   className="w-full px-4 py-3 border border-white rounded-lg bg-transparent text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  suppressHydrationWarning
                 />
               </div>
 
@@ -490,6 +501,7 @@ const ContactUs = () => {
                   onChange={handleInputChange}
                   placeholder="Enter 10 digit phone number"
                   className="w-full px-4 py-3 border border-white rounded-lg bg-transparent text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  suppressHydrationWarning
                 />
               </div>
 
@@ -504,6 +516,7 @@ const ContactUs = () => {
                   onChange={handleInputChange}
                   placeholder="How can we help you?"
                   className="w-full px-4 py-3 border border-white rounded-lg bg-transparent text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  suppressHydrationWarning
                 />
               </div>
             </div>
@@ -519,6 +532,7 @@ const ContactUs = () => {
                 rows={4}
                 placeholder="Describe your query in detail to help us better propose an ideal solution"
                 className="w-full px-4 py-3 border border-white rounded-lg bg-transparent text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                suppressHydrationWarning
               />
             </div>
 
@@ -526,6 +540,7 @@ const ContactUs = () => {
               <button
                 type="submit"
                 className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200"
+                suppressHydrationWarning
               >
                 Submit
               </button>

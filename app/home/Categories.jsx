@@ -16,6 +16,7 @@ import catFive from "../../public/assets/images/cat-5.webp";
 import catSix from "../../public/assets/images/cat-6.webp";
 import heroBackgroundImg from "../../public/assets/images/splash.webp";
 import logoLight from "../../public/assets/logo-light.svg";
+import logoDark from "../../public/assets/logo-dark.svg";
 import { ChevronDown } from "lucide-react";
 import { getCategorySlug, getSubcategorySlug } from "@/lib/product-data";
 import Link from "next/link";
@@ -568,56 +569,62 @@ const Categories = ({ onAnimationComplete }) => {
               idx + 1
             } ${
               expandedSection === category.id
-                ? "flex-[3]"
+                ? "flex-[4] lg:flex-[3]"
                 : expandedSection
-                ? "flex-[0.5]"
+                ? "flex-[0.6] lg:flex-[0.5]"
                 : "flex-1"
             } transition-all duration-500 ease-out hover:brightness-110`}
           >
             {expandedSection === category.id ? (
               <div
-                className="grid h-full w-full bg-[#19417c] overflow-hidden"
+                className="grid h-full w-full bg-[#19417c] overflow-hidden md:!grid-cols-[85px_1fr_1fr] lg:!grid-cols-[100px_1fr_1fr]"
                 style={{
                   gridTemplateColumns: items.length !== 0
-                    ? "77px 1fr 1fr"
-                    : "77px 1fr",
+                    ? "60px 1fr 1fr"
+                    : "60px 1fr",
                 }}
               >
                 {/* Column 1 - Title */}
                 <div
-                  className="relative h-full w-[77px] min-w-[77px] flex items-end pb-10 ml-4 justify-center"
+                  className="relative h-full w-[60px] md:w-[85px] lg:w-[100px] min-w-[60px] md:min-w-[85px] lg:min-w-[100px] flex items-end pb-10 justify-center overflow-hidden opacity-0 animate-[fadeScaleIn_0.4s_ease-out_0.35s_forwards]"
                   onClick={() => handleSectionClick(category.id)}
                 >
-                  <h3
-                    className="font-bold leading-tight text-4xl whitespace-nowrap text-white"
-                    style={{
-                      writingMode: "vertical-rl",
-                      transform: "rotate(180deg)",
-                    }}
-                  >
-                    {category.title}
-                  </h3>
-                  <div className="absolute -right-10 bottom-[25px] h-[80%] w-[1px] bg-white" />
+                  <div className="origin-center h-full w-full flex items-end justify-center pr-2">
+                    <h3
+                      className="font-bold leading-tight text-xl md:text-2xl lg:text-3xl xl:text-4xl whitespace-nowrap text-white"
+                      style={{
+                        writingMode: "vertical-rl",
+                        transform: "rotate(180deg)",
+                      }}
+                    >
+                      {category.title}
+                    </h3>
+                  </div>
+                  <div className="absolute right-0 bottom-[25px] h-[80%] w-[1px] bg-white/50" />
                 </div>
 
                 {/* Column 2 - Subcategories */}
-                <div className="flex items-end justify-center pr-4 pl-5 pb-10 min-w-0 overflow-hidden">
-                  <List
-                    items={category?.dropdown}
-                    onClick={(title) => setActiveCategory(title)}
-                    category={activeCategory}
-                  />
+                <div className="flex items-end justify-center pr-2 md:pr-4 pl-2 md:pl-5 pb-10 min-w-0 overflow-hidden opacity-0 animate-[fadeScaleIn_0.4s_ease-out_0.45s_forwards]">
+                  <div className="scale-75 md:scale-[0.7] lg:scale-100 origin-bottom">
+                    <List
+                      items={category?.dropdown}
+                      onClick={(title) => setActiveCategory(title)}
+                      category={activeCategory}
+                    />
+                  </div>
                 </div>
 
                 {/* Column 3 - Items */}
                 {items.length !== 0 && (
-                  <div className="flex items-end justify-center px-4 pb-10 relative min-w-0 overflow-hidden">
-                    <div className="absolute left-0 bottom-[25px] h-[80%] w-[1px] bg-white" />
-                    <TruncatedList
-                      items={items}
-                      onClick={() => {}}
-                      isStatic={category.isStatic}
-                    />
+                  <div className="flex items-end justify-center px-4 pb-10 relative min-w-0 overflow-hidden opacity-0 animate-[fadeScaleIn_0.4s_ease-out_0.5s_forwards]">
+                    <div className="absolute left-0 bottom-[25px] h-[80%] w-[1px] bg-white/50" />
+                    <div className="scale-[0.7] md:scale-[0.8] lg:scale-100 origin-bottom">
+                      <TruncatedList
+                        items={items}
+                        onClick={() => {}}
+                        isStatic={category.isStatic}
+                      />
+                    </div>
                   </div>
                 )}
               </div>
@@ -643,7 +650,9 @@ const Categories = ({ onAnimationComplete }) => {
                   onClick={() => handleSectionClick(category.id)}
                 >
                   <h3
-                    className="font-primary font-bold text-[36px] leading-[normal] text-white whitespace-nowrap transition-all duration-500 pb-10"
+                    className={`font-primary text-[24px] md:text-[30px] lg:text-[36px] leading-[normal] text-white whitespace-nowrap transition-all duration-500 pb-10 ${
+                      expandedSection ? "md:font-semibold lg:font-bold" : "md:font-bold lg:font-bold"
+                    }`}
                     style={{
                       writingMode: "vertical-rl",
                       transform: "rotate(180deg)",
@@ -689,13 +698,20 @@ const Categories = ({ onAnimationComplete }) => {
             }}
           >
             <Image
+              src={logoDark}
+              alt="Al Sad"
+              width={120}
+              height={120}
+              className="w-[214px] h-[164px] sm:hidden mb-4"
+            />
+            <Image
               src={logoLight}
               alt="Al Sad"
               width={120}
               height={120}
-              className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] mb-4"
+              className="hidden sm:block sm:w-[120px] sm:h-[120px] mb-4"
             />
-            <p className="text-white text-center text-base sm:text-lg font-secondary font-medium tracking-wide">
+            <p className="text-black text-center text-[24px] sm:text-lg font-secondary font-medium tracking-wide">
               Strength You Can Build On
             </p>
           </div>
@@ -708,7 +724,7 @@ const Categories = ({ onAnimationComplete }) => {
                 .getElementById("mobile-category-grid")
                 ?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="absolute bottom-[72px] left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-white/30 flex items-center justify-center"
+            className="absolute bottom-[80px] left-1/2 -translate-x-1/2 z-10 w-9 h-9 rounded-full bg-white/30 flex items-center justify-center"
             aria-label="Scroll to categories"
           >
             <ChevronDown className="w-5 h-5 text-white" />
@@ -743,6 +759,7 @@ const Categories = ({ onAnimationComplete }) => {
           ref={mobileGridRef}
           id="mobile-category-grid"
           className="grid grid-cols-2 gap-3 sm:gap-4 bg-white px-4 py-6 sm:px-6 sm:py-8"
+          style={{ scrollMarginTop: "60px" }}
         >
           {[
             serviceCategories[0],

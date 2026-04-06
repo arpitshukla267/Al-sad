@@ -15,10 +15,10 @@ export default function HeaderWrapper() {
       // On home page, hide header initially
       setShowHeader(false);
 
-      // Show header after splash screen (3 seconds) + a small delay
+      // Show header after splash screen (5 seconds) + a small delay
       const timer = setTimeout(() => {
         setShowHeader(true);
-      }, 3500); // 3s splash + 0.5s delay
+      }, 5500); // 5s splash + 0.5s delay
 
       return () => clearTimeout(timer);
     } else {
@@ -51,17 +51,20 @@ export default function HeaderWrapper() {
   // Use gradient for home page only when at top, white when scrolled
   // For other pages, use dark background where needed
   const useGradient = isHomePage && !isScrolled;
-  const isDarkBackground = pathname === "/blogs" || pathname === "/contact-us";
+  const isDarkBackground =
+    pathname.startsWith("/blogs") ||
+    pathname.startsWith("/contact-us") ||
+    pathname.startsWith("/about-us");
 
   const headerBg = isDarkBackground
     ? "bg-[#0e2143]"
     : useGradient
-    ? "bg-white"
+    ? "bg-white/80 md:bg-gradient-to-b md:from-white/50 md:to-transparent"
     : "bg-white";
 
   return (
     <div
-      className="h-max w-full flex items-center fixed top-0 left-0 right-0 z-[100] pt-[env(safe-area-inset-top,0px)] sm:pt-0 border-b border-transparent"
+      className={`h-max w-full flex items-center fixed top-0 left-0 right-0 z-[100] border-b border-transparent ${headerBg} transition-all duration-300`}
     >
       <Header isDarkBackground={isDarkBackground} useGradient={useGradient} />
     </div>

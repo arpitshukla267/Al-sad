@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${getInstrumentSans.variable} ${getNunitoSans.variable} antialiased`}
+        suppressHydrationWarning
       >
         <div className="flex flex-col w-full min-h-screen overflow-x-clip"
           suppressHydrationWarning

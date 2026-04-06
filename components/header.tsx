@@ -378,6 +378,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
           {/* Logo and Navigation Container */}
 
           <div className="flex items-center gap-[44px] md:gap-[44px] lg:gap-[44px] flex-shrink-0">
+           <Link href="/">
             <Image
               src={useGradient ? logoDark : useLightLogo ? logoLight : logoDark}
               alt="Logo"
@@ -385,6 +386,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
               height={59.522}
               className="h-[35.809px] w-[47px] md:h-[36px] md:w-[48px] lg:h-[59.522px] lg:w-[79.373px] flex-shrink-0"
             />
+           </Link> 
 
             {/* Desktop/Tablet Navigation */}
 

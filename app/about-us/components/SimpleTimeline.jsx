@@ -140,10 +140,10 @@ const SimpleVerticalTimeline = () => {
   );
 
   return (
-    <div className="relative max-w-3xl mx-auto px-8 pt-8 overflow-visible">
+    <div className="relative max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 md:px-8 pt-8 overflow-visible">
       <div
         ref={container}
-        className="relative max-w-3xl mx-auto overflow-visible pb-10 md:pb-32"
+        className="relative max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto overflow-visible pb-10 md:pb-32"
       >
         {/* Middle vertical line */}
         <div
@@ -156,43 +156,53 @@ const SimpleVerticalTimeline = () => {
           <div
             key={data.id}
             id={`value-${idx}`}
-            className="w-full flex md:block" // Restore block-based flow for desktop
+            className="w-full flex"
             ref={(el) => (itemRefs.current[idx] = el)}
           >
             {idx % 2 === 0 ? (
-              <div className="h-fit md:min-h-[160px] w-1/2 md:w-full max-w-[450px] relative text-right pr-10 md:pr-0 md:-left-70 flex flex-col items-end md:block">
-                <div className="flex items-center gap-[6px] md:gap-4 justify-end">
-                  <Image
-                    src={data.icon}
-                    alt={data.title}
-                    className="h-7 w-7 md:h-13 md:w-13"
-                  />
-                  <h5 className="font-secondary font-semibold text-sm md:text-[32px] text-white">
-                    {data.title}
-                  </h5>
+              /* Left-side items: content in left half, right half empty */
+              <>
+                <div className="w-1/2 md:min-h-[140px] lg:min-h-[160px] relative text-right pr-6 md:pr-10 lg:pr-14 xl:pr-20 flex flex-col items-end justify-center">
+                  <div className="flex items-center gap-[6px] md:gap-3 lg:gap-4 justify-end">
+                    <Image
+                      src={data.icon}
+                      alt={data.title}
+                      className="h-7 w-7 md:h-10 md:w-10 lg:h-13 lg:w-13"
+                    />
+                    <h5 className="font-secondary font-semibold text-sm md:text-xl lg:text-[28px] xl:text-[32px] text-white">
+                      {data.title}
+                    </h5>
+                  </div>
+                  <p className="text-right text-[10px] md:text-base lg:text-xl xl:text-2xl text-white mt-1">
+                    {data.description}
+                  </p>
+                  {/* Connector line from content to center */}
+                  <div className="bg-white w-5 md:w-8 lg:w-10 xl:w-14 h-px absolute top-1/2 md:-right-px -right-[0px]" />
                 </div>
-                <p className="text-right text-[10px] md:text-2xl text-white">
-                  {data.description}
-                </p>
-                <div className="bg-white w-7 md:w-[106px] h-px absolute top-8 md:top-1/2 right-0 md:-right-[40%]" />
-              </div>
+                <div className="w-1/2" />
+              </>
             ) : (
-              <div className="h-fit md:min-h-[160px] w-1/2 md:w-auto max-w-[450px] relative text-left pl-10 md:pl-0 ml-auto md:ml-0 md:-right-133 flex flex-col items-start md:block">
-                <div className="flex items-center gap-[6px] md:gap-4 justify-start">
-                  <Image
-                    src={data.icon}
-                    alt={data.title}
-                    className="h-7 w-7 md:h-13 md:w-13"
-                  />
-                  <h5 className="font-secondary font-semibold text-sm md:text-[32px] text-white">
-                    {data.title}
-                  </h5>
+              /* Right-side items: left half empty, content in right half */
+              <>
+                <div className="w-1/2" />
+                <div className="w-1/2 md:min-h-[140px] lg:min-h-[160px] relative text-left pl-6 md:pl-10 lg:pl-14 xl:pl-20 flex flex-col items-start justify-center">
+                  <div className="flex items-center gap-[6px] md:gap-3 lg:gap-4 justify-start">
+                    <Image
+                      src={data.icon}
+                      alt={data.title}
+                      className="h-7 w-7 md:h-10 md:w-10 lg:h-13 lg:w-13"
+                    />
+                    <h5 className="font-secondary font-semibold text-sm md:text-xl lg:text-[28px] xl:text-[32px] text-white">
+                      {data.title}
+                    </h5>
+                  </div>
+                  <p className="text-left text-[10px] md:text-base lg:text-xl xl:text-2xl text-white mt-1">
+                    {data.description}
+                  </p>
+                  {/* Connector line from center to content */}
+                  <div className="bg-white w-5 md:w-8 lg:w-10 xl:w-14 h-px absolute top-1/2 md:-left-px -left-[0px]" />
                 </div>
-                <p className="text-left text-[10px] md:text-2xl text-white">
-                  {data.description}
-                </p>
-                <div className="bg-white w-7 md:w-[106px] h-px absolute top-8 md:top-1/2 left-0 md:-left-[40%]" />
-              </div>
+              </>
             )}
           </div>
         ))}

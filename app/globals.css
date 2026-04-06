@@ -95,6 +95,7 @@
 
   --strips: 6;
   --strip-w: calc(100% / var(--strips));
+  --strip-h: 65%;
 }
 /*
 .dark {
@@ -167,6 +168,17 @@
   }
 }
 
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .masked {
   position: relative;
   width: 100%;
@@ -229,57 +241,67 @@
   }
   16.66% {
     /* First 0.5s: Animate windows 1 and 6 (first and last) */
-    mask-size: calc(100% / 6) 50%, calc(100% / 6) 0%, calc(100% / 6) 0%,
-      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) 50%, 100% 100%;
+    mask-size: calc(100% / 6) var(--strip-h), calc(100% / 6) 0%,
+      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) 0%,
+      calc(100% / 6) var(--strip-h), 100% 100%;
     mask-position: left 0% top 20%, left 20% top 0%, left 40% top 0%,
       left 60% top 100%, left 80% top 100%, left 100% top 45%, center;
-    -webkit-mask-size: calc(100% / 6) 50%, calc(100% / 6) 0%, calc(100% / 6) 0%,
-      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) 50%, 100% 100%;
+    -webkit-mask-size: calc(100% / 6) var(--strip-h), calc(100% / 6) 0%,
+      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) 0%,
+      calc(100% / 6) var(--strip-h), 100% 100%;
     -webkit-mask-position: left 0% top 20%, left 20% top 0%, left 40% top 0%,
       left 60% top 100%, left 80% top 100%, left 100% top 45%, center;
   }
   33.33% {
     /* Second 0.5s: Animate windows 2 and 5 (second and fifth) */
-    mask-size: calc(100% / 6) 50%, calc(100% / 6) 50%, calc(100% / 6) 0%,
-      calc(100% / 6) 0%, calc(100% / 6) 50%, calc(100% / 6) 50%, 100% 100%;
+    mask-size: calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h),
+      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), 100% 100%;
     mask-position: left 0% top 20%, left 20% top 10%, left 40% top 0%,
       left 60% top 100%, left 80% top 25%, left 100% top 45%, center;
-    -webkit-mask-size: calc(100% / 6) 50%, calc(100% / 6) 50%, calc(100% / 6) 0%,
-      calc(100% / 6) 0%, calc(100% / 6) 50%, calc(100% / 6) 50%, 100% 100%;
+    -webkit-mask-size: calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), calc(100% / 6) 0%, calc(100% / 6) 0%,
+      calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h), 100% 100%;
     -webkit-mask-position: left 0% top 20%, left 20% top 10%, left 40% top 0%,
       left 60% top 100%, left 80% top 25%, left 100% top 45%, center;
   }
   50% {
     /* Third 0.5s: Animate windows 3 and 4 (third and fourth) - All visible */
-    mask-size: calc(100% / 6) 50%, calc(100% / 6) 50%, calc(100% / 6) 50%,
-      calc(100% / 6) 50%, calc(100% / 6) 50%, calc(100% / 6) 50%, 100% 100%;
+    mask-size: calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h), 100% 100%;
     mask-position: left 0% top 20%, left 20% top 10%, left 40% top 30%,
       left 60% top 35%, left 80% top 25%, left 100% top 45%, center;
-    -webkit-mask-size: calc(100% / 6) 50%, calc(100% / 6) 50%,
-      calc(100% / 6) 50%, calc(100% / 6) 50%, calc(100% / 6) 50%,
-      calc(100% / 6) 50%, 100% 100%;
+    -webkit-mask-size: calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), 100% 100%;
     -webkit-mask-position: left 0% top 20%, left 20% top 10%, left 40% top 30%,
       left 60% top 35%, left 80% top 25%, left 100% top 45%, center;
   }
   66.66% {
     /* Fourth 0.5s: Windows 3 and 4 disappear */
-    mask-size: calc(100% / 6) 50%, calc(100% / 6) 50%, calc(100% / 6) 0%,
-      calc(100% / 6) 0%, calc(100% / 6) 50%, calc(100% / 6) 50%, 100% 100%;
+    mask-size: calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h),
+      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), 100% 100%;
     mask-position: left 0% top 20%, left 20% top 10%, left 40% top 0%,
       left 60% top 100%, left 80% top 25%, left 100% top 45%, center;
-    -webkit-mask-size: calc(100% / 6) 50%, calc(100% / 6) 50%, calc(100% / 6) 0%,
-      calc(100% / 6) 0%, calc(100% / 6) 50%, calc(100% / 6) 50%, 100% 100%;
+    -webkit-mask-size: calc(100% / 6) var(--strip-h),
+      calc(100% / 6) var(--strip-h), calc(100% / 6) 0%, calc(100% / 6) 0%,
+      calc(100% / 6) var(--strip-h), calc(100% / 6) var(--strip-h), 100% 100%;
     -webkit-mask-position: left 0% top 20%, left 20% top 10%, left 40% top 0%,
       left 60% top 100%, left 80% top 25%, left 100% top 45%, center;
   }
   83.33% {
     /* Fifth 0.5s: Windows 2 and 5 disappear */
-    mask-size: calc(100% / 6) 50%, calc(100% / 6) 0%, calc(100% / 6) 0%,
-      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) 50%, 100% 100%;
+    mask-size: calc(100% / 6) var(--strip-h), calc(100% / 6) 0%,
+      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) 0%,
+      calc(100% / 6) var(--strip-h), 100% 100%;
     mask-position: left 0% top 20%, left 20% top 0%, left 40% top 0%,
       left 60% top 100%, left 80% top 100%, left 100% top 45%, center;
-    -webkit-mask-size: calc(100% / 6) 50%, calc(100% / 6) 0%, calc(100% / 6) 0%,
-      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) 50%, 100% 100%;
+    -webkit-mask-size: calc(100% / 6) var(--strip-h), calc(100% / 6) 0%,
+      calc(100% / 6) 0%, calc(100% / 6) 0%, calc(100% / 6) 0%,
+      calc(100% / 6) var(--strip-h), 100% 100%;
     -webkit-mask-position: left 0% top 20%, left 20% top 0%, left 40% top 0%,
       left 60% top 100%, left 80% top 100%, left 100% top 45%, center;
   }

@@ -43,7 +43,7 @@ const HEADER_HEIGHT_MOBILE = 64;
 const Service = ({ heading, image, description, index }) => {
   return (
     <div
-      className="bg-white px-4 pt-16 pb-5 sm:py-5 md:py-28 md:px-16 h-full slide sticky md:-top-10 snap-top"
+      className="bg-white px-4 pt-16 pb-5 sm:py-5 md:py-28 md:px-16 h-full slide sticky top-0 lg:-top-15 xl:-top-10 snap-top"
       id={`slide-${index}`}
     >
       <div className="mx-auto max-w-[1260px] flex flex-col sm:flex-row gap-5 md:gap-12 w-full text-black items-center h-[619px] justify-center">
@@ -85,16 +85,23 @@ const Services = () => {
     slides.forEach((card, idx) => {
       if (idx < 2) {
         mm.add(
-          { isMobile: "(max-width: 640px)", isDesktop: "(min-width: 768px)" },
+          { 
+            isMobile: "(max-width: 640px)", 
+            isLg: "(min-width: 1024px) and (max-width: 1279px)",
+            isXl: "(min-width: 1280px)"
+          },
           (context) => {
-            const { isDesktop } = context.conditions;
+            const { isLg, isXl } = context.conditions;
+            const isDesktop = isLg || isXl;
 
             gsap.to(card, {
               ease: "power1.inOut",
               scrollTrigger: {
                 trigger: card,
-                start: isDesktop
+                start: isXl
                   ? "100vh-=185px top"
+                  : isLg
+                  ? "100vh-=150px top"
                   : `top top+=${HEADER_HEIGHT_MOBILE - 20}px`,
                 end: isDesktop ? "bottom 15%" : "bottom top",
                 scrub: true,

@@ -6,10 +6,9 @@ import logo from "../../../public/assets/logo-light.svg";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -18,20 +17,14 @@ const Hero = () => {
       // Set initial state - hide intro section
       gsap.set("#intro", { opacity: 0, visibility: "hidden" });
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%", // when the top of the section is 80% from the viewport top
-          once: true, // animation runs only once
-        },
-      });
+      // Play animation immediately on page load (not scroll-triggered)
+      const tl = gsap.timeline({ delay: 0.5 });
 
       tl.to("#logo", {
         scale: 10,
         opacity: 0,
         display: "none",
         duration: 1,
-        delay: 0.3,
       }).to(
         "#intro",
         {
@@ -49,7 +42,7 @@ const Hero = () => {
   return (
     <div
       ref={sectionRef}
-      className="flex flex-col justify-center items-center h-[calc(100vh-85px)] w-full relative"
+      className="flex flex-col justify-center items-center h-[calc(100vh-85px)] min-h-[600px] w-full relative"
     >
       <Image
         src={aboutUsImg}
@@ -58,17 +51,17 @@ const Hero = () => {
       />
       {/* overlay */}
       <div className="h-full w-full absolute bg-black opacity-50" />
-      <div className="absolute h-full w-full flex flex-col justify-between p-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center p-4 gap-12 lg:gap-20">
         <div className="flex-1 flex items-center justify-center">
           <Image
             src={logo}
             alt="Logo"
-            className="h-[136px] sm:h-[340px] w-[453px]"
+            className="h-[120px] md:h-[220px] lg:h-[340px] w-auto"
             id="logo"
           />
         </div>
         <div
-          className="relative sm:left-[10%] right-0 bg-primary py-5 px-4 sm:p-10 space-y-3 rounded-sm sm:rounded-[12px] w-full5/6 sm:w-[1090px] opacity-0"
+          className="relative xl:left-[10%] bg-primary py-8 px-6 sm:p-10 space-y-3 rounded-lg w-[92%] sm:w-[90%] xl:w-[1090px] mx-auto lg:mx-0 opacity-0"
           id="intro"
         >
           <h4 className="font-primary font-bold text-[28px] sm:text-4xl">

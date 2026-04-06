@@ -273,6 +273,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
           <button
             onClick={() => setExpand(false)}
             className="text-[#0e2143] focus:outline-none p-2"
+            suppressHydrationWarning
           >
             <X size={32} />
           </button>
@@ -286,6 +287,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
                   <button
                     onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
                     className="flex items-center justify-between w-full uppercase font-primary font-bold text-xl tracking-widest text-[#0e2143]"
+                    suppressHydrationWarning
                   >
                     <span>{item.name}</span>
                     <MdOutlineKeyboardArrowDown 
@@ -369,6 +371,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
         <div className="flex justify-between max-w-full items-center w-full">
           {/* Logo and Navigation Container */}
           <div className="flex items-center gap-[44px] md:gap-[44px] lg:gap-[44px]">
+           <Link href="/"> 
             <Image
               src={useGradient ? logoDark : useLightLogo ? logoLight : logoDark}
               alt="Logo"
@@ -376,6 +379,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
               height={59.522}
               className="h-[35.809px] w-[47px] md:h-[36px] md:w-[48px] lg:h-[59.522px] lg:w-[79.373px] flex-shrink-0"
             />
+           </Link> 
             {/* Desktop/Tablet Navigation */}
             <nav
               className={`hidden md:flex ${textColor} font-primary font-semibold text-[18px] md:text-[16px] lg:text-[18px] tracking-[0.36px] md:tracking-[0.32px] lg:tracking-[0.36px] uppercase items-center gap-[32px] flex-shrink-0`}
@@ -392,6 +396,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
                         <button
                           ref={productsTriggerRef}
                           className="flex items-center gap-[8px] cursor-pointer hover:opacity-80"
+                          suppressHydrationWarning
                         >
                           <span className="uppercase">{item.name}</span>
                           <MdOutlineKeyboardArrowDown
@@ -516,6 +521,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
                   ? "text-white"
                   : "text-[#0e2143]"
               } w-6 h-6 md:w-[24px] md:h-[24px] z-10`}
+              suppressHydrationWarning
             >
               {isSearchOpen ? (
                 <X className="w-6 h-6 md:w-[24px] md:h-[24px]" />
@@ -567,6 +573,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
               onClick={toggleMenu}
               className={`${textColor} md:hidden z-50 focus:outline-none`}
               aria-label="Toggle Menu"
+              suppressHydrationWarning
             >
               {expand ? <X size={28} /> : <GiHamburgerMenu size={24} />}
             </button>
