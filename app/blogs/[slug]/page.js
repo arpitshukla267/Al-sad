@@ -6,46 +6,23 @@ import Footer from '../../Footer';
 import BlogHero from './components/BlogHero';
 import BlogContent from './components/BlogContent';
 import RelatedArticles from './components/RelatedArticles';
+import Link from 'next/link';
+
+import { ARTICLES } from '../../../lib/blogData';
 
 const BlogPostPage = ({ params }) => {
-	// In a real app, you would fetch the blog post data based on params.slug
-	const blogPost = {
-		title: 'Trade without limits: How the UAE is setting new global standards',
-		category: 'NEWS',
-		date: 'June 10th',
-		readTime: '4 min read',
-		content: [
-			{
-				type: 'paragraph',
-				text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.',
-			},
-			{
-				type: 'image',
-				src: '/assets/images/blog.webp',
-			},
-			{
-				type: 'paragraph',
-				text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.',
-			},
-			{
-				type: 'heading',
-				text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
-			},
-			{
-				type: 'paragraph',
-				text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.',
-			},
-			{
-				type: 'image',
-				src: '/assets/images/blog.webp',
-			},
-			{
-				type: 'paragraph',
-				text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet.',
-			},
-		],
-		author: 'Author',
-	};
+	const unwrappedParams = React.use(params);
+	const blogId = parseInt(unwrappedParams.slug);
+	const blogPost = ARTICLES.find(post => post.id === blogId);
+
+	if (!blogPost) {
+		return (
+			<div className="flex flex-col items-center justify-center min-h-screen">
+				<h1 className="text-2xl font-bold">Article not found</h1>
+				<Link href="/blogs" className="mt-4 text-blue-600 underline">Back to Blogs</Link>
+			</div>
+		);
+	}
 
 	return (
 		<div className="flex flex-col overflow-x-hidden min-h-screen">
@@ -60,7 +37,7 @@ const BlogPostPage = ({ params }) => {
 							<BlogContent content={blogPost.content} author={blogPost.author} />
 						</div>
 					</div>
-					<RelatedArticles />
+					<RelatedArticles currentId={blogPost.id} />
 				</div>
 			</main>
 		</div>

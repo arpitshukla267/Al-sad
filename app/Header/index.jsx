@@ -199,11 +199,7 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
   const toggleMenu = () => setExpand((prev) => !prev);
 
   useEffect(() => {
-    if (productsDropdownOpen && productsTriggerRef.current) {
-      const triggerRect = productsTriggerRef.current.getBoundingClientRect();
-      const offset = triggerRect.left;
-      setAlignOffset(-offset);
-    }
+    // Offset logic removed as we are moving away from full-screen width
   }, [productsDropdownOpen]);
 
   // Multi-phase GSAP animation for search bar toggle
@@ -414,20 +410,15 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
                       </PopoverTrigger>
                       <PopoverContent
                         side="bottom"
-                        align="start"
-                        sideOffset={0}
-                        alignOffset={alignOffset}
-                        className={`w-screen max-w-none p-0 rounded-none border-0 ${
+                        align="center"
+                        sideOffset={14}
+                        className={`w-[95vw] lg:w-[1100px] p-0 rounded-2xl border border-white border-opacity-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden ${
                           useGradient || !isDarkBackground
                             ? "bg-white"
                             : "bg-[#0e2143]"
                         }`}
-                        style={{
-                          width: "100vw",
-                          maxWidth: "100vw",
-                        }}
                       >
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0 py-4 max-w-[1260px] mx-auto px-4 md:px-[50px] lg:px-[90px] xl:px-[170px]">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-10 p-8 lg:p-10">
                           {productCategories.map((category, catIdx) => (
                             <div
                               key={catIdx}
@@ -440,15 +431,15 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
                               }}
                             >
                               {/* Category Title - Clickable to Layer 1 */}
-                              <Link
-                                href={`/products/${category.id}`}
-                                onClick={() => setProductsDropdownOpen(false)}
-                                className={`block text-sm font-primary font-semibold uppercase tracking-[0.28px] mb-3 pb-2 border-b hover:opacity-80 transition-opacity ${
-                                  useGradient || !isDarkBackground
-                                    ? "text-[#0e2143] border-[#0e2143] border-opacity-20"
-                                    : "text-white border-white border-opacity-20"
-                                }`}
-                              >
+                                <Link
+                                  href={`/products/${category.id}`}
+                                  onClick={() => setProductsDropdownOpen(false)}
+                                  className={`flex items-start text-base font-primary font-bold uppercase tracking-[0.05em] mb-4 pb-3 border-b-2 h-[80px] hover:pl-1 transition-all duration-300 ${
+                                    useGradient || !isDarkBackground
+                                      ? "text-[#0e2143] border-[#0e2143] border-opacity-10"
+                                      : "text-white border-white border-opacity-10"
+                                  }`}
+                                >
                                 {category.name}
                               </Link>
                               {/* Subcategories */}
@@ -479,10 +470,10 @@ const Header = ({ isDarkBackground = false, useGradient = false }) => {
                                         onClick={() =>
                                           setProductsDropdownOpen(false)
                                         }
-                                        className={`block text-xs font-secondary font-normal hover:opacity-80 transition-opacity ${
+                                        className={`block text-[13px] font-secondary font-medium hover:pl-2 transition-all duration-200 ${
                                           useGradient || !isDarkBackground
-                                            ? "text-[#0e2143]"
-                                            : "text-white"
+                                            ? "text-[#0e2143] opacity-70 hover:opacity-100"
+                                            : "text-white opacity-70 hover:opacity-100"
                                         }`}
                                       >
                                         {subcat.name}

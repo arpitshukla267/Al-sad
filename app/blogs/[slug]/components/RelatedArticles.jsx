@@ -3,31 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import articleImg from '../../../../public/assets/images/article.webp';
-
-const RELATED_ARTICLES = [
-	{
-		id: 1,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-	{
-		id: 2,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-	{
-		id: 3,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-];
+import { ARTICLES } from '../../../../lib/blogData';
 
 const RelatedArticleCard = ({ article }) => {
 	return (
@@ -68,7 +44,9 @@ const RelatedArticleCard = ({ article }) => {
 	);
 };
 
-const RelatedArticles = () => {
+const RelatedArticles = ({ currentId }) => {
+	const relatedArticles = ARTICLES.filter(article => article.id !== currentId).slice(0, 3);
+
 	return (
 		<div className="bg-primary w-full py-12 sm:py-16 md:py-20 lg:py-[92px] px-4 sm:px-6 md:px-12 lg:px-[90px]">
 			<div className="max-w-7xl mx-auto">
@@ -76,7 +54,7 @@ const RelatedArticles = () => {
 					Related Articles
 				</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 lg:gap-[72px]">
-					{RELATED_ARTICLES.map((article) => (
+					{relatedArticles.map((article) => (
 						<RelatedArticleCard key={article.id} article={article} />
 					))}
 				</div>

@@ -3,52 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import articleImg from '../../../public/assets/images/article.webp';
-
-const ARTICLES = [
-	{
-		id: 1,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-	{
-		id: 2,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-	{
-		id: 3,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-	{
-		id: 4,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-	{
-		id: 5,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-	{
-		id: 6,
-		image: articleImg,
-		category: 'NEWS',
-		date: '10th July 2025',
-		title: 'Trade without limits: How the UAE is setting new global standards',
-	},
-];
+import { ARTICLES } from '../../../lib/blogData';
 
 const ArticleCard = ({ article }) => {
 	return (
@@ -88,11 +43,14 @@ const ArticleCard = ({ article }) => {
 };
 
 const ArticleGrid = ({ selectedCategory }) => {
+	// Exclude the featured article (id: 1) from the grid
+	const nonFeaturedArticles = ARTICLES.filter((article) => article.id !== 1);
+
 	// Filter articles based on selected category
 	const filteredArticles =
 		selectedCategory === 'All'
-			? ARTICLES
-			: ARTICLES.filter(
+			? nonFeaturedArticles
+			: nonFeaturedArticles.filter(
 					(article) =>
 						article.category.toLowerCase() === selectedCategory.toLowerCase()
 			  );
