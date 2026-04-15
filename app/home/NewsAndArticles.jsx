@@ -1,22 +1,24 @@
-import React from "react";
-import articleImg from "../../public/assets/images/article.webp";
+import Link from "next/link";
 import Image from "next/image";
-
 import { ARTICLES } from "../../lib/blogData";
 
 const Article = ({ image, heading, description, id }) => {
   return (
-    <article className="space-y-5 overflow-hidden">
-      <div className="h-[232px] w-full relative">
-        <Image src={image} alt={heading} fill className="object-cover" />
-      </div>
-      <div>
-        <h4 className="font-semibold text-lg sm:text-2xl line-clamp-2">{heading}</h4>
-        <p className="font-secondary font-medium text-sm sm:text-md mt-2 line-clamp-3">
-          {description}
-        </p>
-      </div>
-    </article>
+    <Link href={`/blogs/${id}`} className="block group">
+      <article className="space-y-5 overflow-hidden">
+        <div className="h-[232px] w-full relative">
+          <Image src={image} alt={heading} fill className="object-cover" />
+        </div>
+        <div>
+          <h4 className="font-semibold text-lg sm:text-2xl line-clamp-2 group-hover:underline">
+            {heading}
+          </h4>
+          <p className="font-secondary font-medium text-sm sm:text-md mt-2 line-clamp-3">
+            {description}
+          </p>
+        </div>
+      </article>
+    </Link>
   );
 };
 

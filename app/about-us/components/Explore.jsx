@@ -33,18 +33,20 @@ const Explore = () => {
       <h3 className="text-2xl md:text-5xl font-semibold md:font-bold font-primary">
         Explore
       </h3>
-      <div className="flex gap-6 md:gap-15 overflow-x-auto w-full scrollbar-hide scroll-smooth snap-x snap-mandatory">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-15 w-full scroll-smooth">
         {FEATURES.map((p) => (
-          <div className="space-y-3 flex-shrink-0 snap-center" key={p.id}>
-            <Link href={p.route}>
-            <Image
-              src={p.image}
-              alt="People"
-              className="w-[329px]  h-[264px] object-cover rounded-md"
-              priority
-            />
-
-            <p className="text-md md:text-2xl font-semibold">{p.title}</p>
+          <div className="space-y-3 w-full" key={p.id}>
+            <Link href={p.route} className="block w-full">
+              <div className="relative w-full h-[200px] sm:h-[264px] md:h-[350px] lg:h-[450px]">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  className="object-cover rounded-md"
+                  priority
+                />
+              </div>
+              <p className="text-md md:text-2xl font-semibold mt-2">{p.title}</p>
             </Link>
           </div>
         ))}

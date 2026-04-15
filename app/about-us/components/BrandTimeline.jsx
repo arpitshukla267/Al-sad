@@ -27,8 +27,6 @@ const TIMELINE = [
       { src: timelineOne, position: "top-40 left-10" },
       { src: timelineTwo, position: "top-10 right-5" },
     ],
-    imageDes:
-      "We were the leading importer & supplier for Brass Product (made in India) ",
   },
   {
     id: 2,
